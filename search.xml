@@ -11,9 +11,7 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
 <p>在 Hexo 站点配置文件 <code>_config.html</code> 中加入 sitemap 插件:  </p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 通用站点地图</span></span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br></pre></td></tr></table></figure>
-
-
-
+<h3 id="社交图标设置"><a href="#社交图标设置" class="headerlink" title="社交图标设置"></a>社交图标设置</h3><p><a href="https://blog.dlzhang.com/posts/89dad1c1/" target="_blank" rel="noopener">https://blog.dlzhang.com/posts/89dad1c1/</a></p>
 <p>参考文章:<br><a href="https://tding.top/archives/42c38b10.html" target="_blank" rel="noopener">Hexo-NexT (v7.0+) 主题配置 </a></p>
 ]]></content>
       <categories>
