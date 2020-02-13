@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="qiaofeng.xyz/"/>
-  <updated>2020-02-13T00:48:51.682Z</updated>
+  <updated>2020-02-13T04:16:50.017Z</updated>
   <id>qiaofeng.xyz/</id>
   
   <author>
@@ -17,44 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Github &amp; Hexo &amp; Next 搭建自己的网站博客</title>
-    <link href="qiaofeng.xyz/2020/02/13/Github%20&amp;%20Hexo%20&amp;%20Next%20%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%AB%99%E5%8D%9A%E5%AE%A2/"/>
-    <id>qiaofeng.xyz/2020/02/13/Github%20&amp;%20Hexo%20&amp;%20Next%20%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%AB%99%E5%8D%9A%E5%AE%A2/</id>
-    <published>2020-02-13T00:47:36.070Z</published>
-    <updated>2020-02-13T00:48:51.682Z</updated>
+    <title>Next中的个性化设计.md</title>
+    <link href="qiaofeng.xyz/archives/a204f157.html"/>
+    <id>qiaofeng.xyz/archives/a204f157.html</id>
+    <published>2020-02-13T04:15:16.000Z</published>
+    <updated>2020-02-13T04:16:50.017Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;blockquote
-        
-      
+      &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;Stay hungry, Stay foolish &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;Hexo-站点地图-sitemap-生成&quot;&gt;&lt;a href=&quot;#Hexo-站点地图-sitemap-生成&quot; class=&quot;headerlink&quot; title=&quot;Hexo 站点地图 sitemap 生成&quot;&gt;&lt;/a&gt;Hexo 站点地图 sitemap 生成&lt;/h3&gt;
     
     </summary>
     
     
+      <category term="Tech" scheme="qiaofeng.xyz/categories/Tech/"/>
+    
+    
+      <category term="Next" scheme="qiaofeng.xyz/tags/Next/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="qiaofeng.xyz/2020/02/12/hello-world/"/>
-    <id>qiaofeng.xyz/2020/02/12/hello-world/</id>
-    <published>2020-02-12T15:20:12.324Z</published>
-    <updated>2020-02-12T15:20:12.324Z</updated>
+    <title>Github &amp; Hexo &amp; Next 搭建自己的网站博客</title>
+    <link href="qiaofeng.xyz/archives/b0ad7e73.html"/>
+    <id>qiaofeng.xyz/archives/b0ad7e73.html</id>
+    <published>2020-02-13T00:47:36.070Z</published>
+    <updated>2020-02-13T03:13:40.182Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
+      &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;Stay hungry, Stay foolish &lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;获得域名&quot;&gt;&lt;a href=&quot;#获得域名&quot; class=&quot;headerlink&quot; title=&quot;获得域名&quot;&gt;&lt;/a&gt;获得域名&lt;/h3&gt;&lt;p&gt;其实没有域名就用 Github 自带的 &lt;code&gt;username.github.io&lt;/code&gt; 也是可以的, 不过为了方(zhuang)便(bi)&lt;/p&gt;
     
     </summary>
     

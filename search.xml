@@ -1,28 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Github &amp; Hexo &amp; Next 搭建自己的网站博客</title>
-    <url>/2020/02/13/Github%20&amp;%20Hexo%20&amp;%20Next%20%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E7%AB%99%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<blockquote class="blockquote-center"><p>世间所有的相遇，都是久别重逢</p>
+    <title>Next中的个性化设计.md</title>
+    <url>/archives/a204f157.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center"><p>Stay hungry, Stay foolish </p>
 </blockquote>
+
+<h3 id="Hexo-站点地图-sitemap-生成"><a href="#Hexo-站点地图-sitemap-生成" class="headerlink" title="Hexo 站点地图 sitemap 生成"></a>Hexo 站点地图 sitemap 生成</h3><a id="more"></a>
+<p>安装插件:  </p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
+<p>在 Hexo 站点配置文件 <code>_config.html</code> 中加入 sitemap 插件:  </p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 通用站点地图</span></span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br></pre></td></tr></table></figure>
+
+
+
+<p>参考文章:<br><a href="https://tding.top/archives/42c38b10.html" target="_blank" rel="noopener">Hexo-NexT (v7.0+) 主题配置 </a></p>
 ]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>Next</tag>
+      </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/02/12/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+    <title>Github &amp; Hexo &amp; Next 搭建自己的网站博客</title>
+    <url>/archives/b0ad7e73.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center"><p>Stay hungry, Stay foolish </p>
+</blockquote>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
+<h3 id="获得域名"><a href="#获得域名" class="headerlink" title="获得域名"></a>获得域名</h3><p>其实没有域名就用 Github 自带的 <code>username.github.io</code> 也是可以的, 不过为了方(zhuang)便(bi)</p>
+<a id="more"></a>]]></content>
   </entry>
 </search>
