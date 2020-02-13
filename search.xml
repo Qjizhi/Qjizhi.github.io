@@ -11,8 +11,8 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
 <p>在 Hexo 站点配置文件 <code>_config.html</code> 中加入 sitemap 插件:  </p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 通用站点地图</span></span><br><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br></pre></td></tr></table></figure>
-<h3 id="社交图标设置"><a href="#社交图标设置" class="headerlink" title="社交图标设置"></a>社交图标设置</h3><p><a href="https://blog.dlzhang.com/posts/89dad1c1/" target="_blank" rel="noopener">https://blog.dlzhang.com/posts/89dad1c1/</a></p>
-<p>参考文章:<br><a href="https://tding.top/archives/42c38b10.html" target="_blank" rel="noopener">Hexo-NexT (v7.0+) 主题配置 </a></p>
+<h3 id="社交图标设置"><a href="#社交图标设置" class="headerlink" title="社交图标设置"></a>社交图标设置</h3><p>设置 B站, 豆瓣等中国特色的社交图标, 这是找到为数不多的方案但是在 Next 7.7 版本中我还没有成功.<br><a href="https://blog.dlzhang.com/posts/89dad1c1/" target="_blank" rel="noopener">https://blog.dlzhang.com/posts/89dad1c1/</a></p>
+<h3 id="背景图片设置"><a href="#背景图片设置" class="headerlink" title="背景图片设置"></a>背景图片设置</h3><p><strong>参考资料:</strong><br><a href="https://tding.top/archives/42c38b10.html" target="_blank" rel="noopener">Hexo-NexT (v7.0+) 主题配置 </a></p>
 ]]></content>
       <categories>
         <category>Tech</category>
@@ -27,7 +27,20 @@
     <content><![CDATA[<blockquote class="blockquote-center"><p>Stay hungry, Stay foolish </p>
 </blockquote>
 
-<h3 id="获得域名"><a href="#获得域名" class="headerlink" title="获得域名"></a>获得域名</h3><p>其实没有域名就用 Github 自带的 <code>username.github.io</code> 也是可以的, 不过为了方(zhuang)便(bi)</p>
-<a id="more"></a>]]></content>
+<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><p>各种软件版本:<br>Hexo 4.2.0 是博客网站的模板<br>Next 7.7.1 是页面主题的模板</p>
+<h2 id="1-步骤"><a href="#1-步骤" class="headerlink" title="1. 步骤"></a>1. 步骤</h2><h3 id="1-1-获得域名"><a href="#1-1-获得域名" class="headerlink" title="1.1 获得域名"></a>1.1 获得域名</h3><p>其实没有域名就用 Github 自带的 <code>username.github.io</code> 也是可以的, 不过为了方(zhuang)便(bi), 还是建议去购买一个, 为了之后可以用七牛云作为图床, 阿里百度腾讯云都提供这个服务, 我这里用的是<a href="https://wanwang.aliyun.com/domain/com/?spm=5176.10695662.1158081.1.336944c2mF3IpF&aly_as=G8cOPB8P" target="_blank" rel="noopener">阿里云域名注册</a>, 常见的 <code>.com</code>, <code>.cn</code>, 都比较贵或者已经被注册, <code>.xyz</code>, <code>.top</code>, <code>.tech</code> 都是不错的选择.</p>
+<a id="more"></a>
+
+<h3 id="1-2-配置Git和Github"><a href="#1-2-配置Git和Github" class="headerlink" title="1.2 配置Git和Github"></a>1.2 配置Git和Github</h3><p>这里就简单说下吧, 新建一个仓库, 仓库名为 <code>用户名.github.io</code>, 这个用户名使用你的GitHub帐号名称代替的所以我的仓库名是 <code>Qjizhi.hithub.io</code>.  </p>
+<p><strong>参考资料:</strong></p>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>Next</tag>
+        <tag>Hexo</tag>
+        <tag>Github</tag>
+      </tags>
   </entry>
 </search>
