@@ -21,15 +21,15 @@
     var CONFIG = {"hostname":"www.qiaofeng.xyz","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Stay hungry, Stay foolish    1. 前言各种软件版本:Hexo 4.2.0 是博客网站的模板Next 7.7.1 是页面主题的模板 2. 步骤2.1 获得域名其实没有域名就用 Github 自带的 username.github.io 也是可以的, 不过为了方(zhuang)便(bi), 还是建议去购买一个, 为了之后可以用七牛云作为图床, 阿里百度腾讯云都提供这个服务">
+  <meta name="description" content="Stay hungry, Stay foolish    1. 前言各种软件版本:Hexo 4.2.0 编译静态网站的工具Next 7.7.1 是页面主题的模板 (截止2020.02.13 最新版本, 不同版本之间有较大区别, 尤其是5.X和7.X之间)Git 版本无所谓 版本控制软件Github 代码托管网站 2. 步骤2.1 获得域名其实没有域名就用 Github 自带的 username.g">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Github &amp; Hexo &amp; Next 搭建自己的网站博客">
 <meta property="og:url" content="https://www.qiaofeng.xyz/archives/b0ad7e73.html">
 <meta property="og:site_name" content="QiaoFeng&#39;s Blog">
-<meta property="og:description" content="Stay hungry, Stay foolish    1. 前言各种软件版本:Hexo 4.2.0 是博客网站的模板Next 7.7.1 是页面主题的模板 2. 步骤2.1 获得域名其实没有域名就用 Github 自带的 username.github.io 也是可以的, 不过为了方(zhuang)便(bi), 还是建议去购买一个, 为了之后可以用七牛云作为图床, 阿里百度腾讯云都提供这个服务">
+<meta property="og:description" content="Stay hungry, Stay foolish    1. 前言各种软件版本:Hexo 4.2.0 编译静态网站的工具Next 7.7.1 是页面主题的模板 (截止2020.02.13 最新版本, 不同版本之间有较大区别, 尤其是5.X和7.X之间)Git 版本无所谓 版本控制软件Github 代码托管网站 2. 步骤2.1 获得域名其实没有域名就用 Github 自带的 username.g">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-02-13T00:47:36.070Z">
-<meta property="article:modified_time" content="2020-02-13T05:41:36.330Z">
+<meta property="article:modified_time" content="2020-02-14T02:22:12.216Z">
 <meta property="article:author" content="Qiao Feng">
 <meta property="article:tag" content="Next">
 <meta property="article:tag" content="Hexo">
@@ -216,10 +216,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-02-13 08:47:36 / Modified: 13:41:36" itemprop="dateCreated datePublished" datetime="2020-02-13T08:47:36+08:00">2020-02-13</time>
+              <time title="Created: 2020-02-13 08:47:36" itemprop="dateCreated datePublished" datetime="2020-02-13T08:47:36+08:00">2020-02-13</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-14 10:22:12" itemprop="dateModified" datetime="2020-02-14T10:22:12+08:00">2020-02-14</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -259,7 +265,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>340</span>
+              <span>780</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -281,11 +287,24 @@
         <blockquote class="blockquote-center"><p>Stay hungry, Stay foolish </p>
 </blockquote>
 
-<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>各种软件版本:<br>Hexo 4.2.0 是博客网站的模板<br>Next 7.7.1 是页面主题的模板</p>
+<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>各种软件版本:<br><strong>Hexo</strong> 4.2.0 编译静态网站的工具<br><strong>Next</strong> 7.7.1 是页面主题的模板 (截止2020.02.13 最新版本, 不同版本之间有较大区别, 尤其是5.X和7.X之间)<br><strong>Git</strong> 版本无所谓 版本控制软件<br><strong>Github</strong> 代码托管网站</p>
 <h2 id="2-步骤"><a href="#2-步骤" class="headerlink" title="2. 步骤"></a>2. 步骤</h2><h3 id="2-1-获得域名"><a href="#2-1-获得域名" class="headerlink" title="2.1 获得域名"></a>2.1 获得域名</h3><p>其实没有域名就用 Github 自带的 <code>username.github.io</code> 也是可以的, 不过为了方(zhuang)便(bi), 还是建议去购买一个, 为了之后可以用七牛云作为图床, 阿里百度腾讯云都提供这个服务, 我这里用的是<a href="https://wanwang.aliyun.com/domain/com/?spm=5176.10695662.1158081.1.336944c2mF3IpF&aly_as=G8cOPB8P" target="_blank" rel="noopener">阿里云域名注册</a>, 常见的 <code>.com</code>, <code>.cn</code>, 都比较贵或者已经被注册, <code>.xyz</code>, <code>.top</code>, <code>.tech</code> 都是不错的选择.</p>
 <a id="more"></a>
 
-<h3 id="2-2-配置Git和Github"><a href="#2-2-配置Git和Github" class="headerlink" title="2.2 配置Git和Github"></a>2.2 配置Git和Github</h3><p>这里就简单说下吧, 新建一个仓库, 仓库名为 <code>用户名.github.io</code>, 这个用户名使用你的GitHub帐号名称代替的所以我的仓库名是 <code>Qjizhi.hithub.io</code>.  </p>
+<h3 id="2-2-配置Git和Github"><a href="#2-2-配置Git和Github" class="headerlink" title="2.2 配置Git和Github"></a>2.2 配置Git和Github</h3><p>这里就简单说下吧, 新建一个仓库, 仓库名为 <code>用户名.github.io</code>, 这个用户名使用你的GitHub帐号名称代替的所以我的仓库名是 <code>Qjizhi.hithub.io</code>. </p>
+<h3 id="2-3-部署"><a href="#2-3-部署" class="headerlink" title="2.3 部署"></a>2.3 部署</h3><p>主机记录     记录类型     记录值</p>
+<ul>
+<li>A     192.30.252.153<br>@     A     192.30.252.154<br>www     CNAME     你的用户名.github.io</li>
+</ul>
+<p>主机记录就是域名前缀，常见用法有：</p>
+<ul>
+<li>www：解析后的域名为 www.你的域名  </li>
+<li>@：直接解析主域名 你的域名</li>
+<li>*：泛解析，匹配其他所有域名 *.你的域名</li>
+</ul>
+<p>要指向空间商提供的 IP 地址，选择「类型 A」，要指向一个域名，选择「类型 CNAME」  </p>
+<p>上面「192.30.252.153」,「192.30.252.154」就是GitHub提供的IP地址。<br>域名这边已经配置好，但还没结束，我们再来到HEXO博客的目录，进入source目录，新建一个CNAME文件，没有任何后缀名，编辑内容为：amuuncle.site</p>
+<h2 id="3-高级功能"><a href="#3-高级功能" class="headerlink" title="3. 高级功能"></a>3. 高级功能</h2><h3 id="3-1-同时托管到-Github-和-Coding-网站"><a href="#3-1-同时托管到-Github-和-Coding-网站" class="headerlink" title="3.1 同时托管到 Github 和 Coding 网站"></a>3.1 同时托管到 Github 和 Coding 网站</h3><h3 id="3-2-百度站点收录"><a href="#3-2-百度站点收录" class="headerlink" title="3.2 百度站点收录"></a>3.2 百度站点收录</h3><h3 id="3-3-Next-主题个性化设"><a href="#3-3-Next-主题个性化设" class="headerlink" title="3.3 Next 主题个性化设"></a>3.3 Next 主题个性化设</h3><p>请参考这篇博客</p>
 <p><strong>参考资料:</strong></p>
 
     </div>
@@ -413,7 +432,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-前言"><span class="nav-number">1.</span> <span class="nav-text">1. 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-步骤"><span class="nav-number">2.</span> <span class="nav-text">2. 步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-获得域名"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 获得域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-配置Git和Github"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 配置Git和Github</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-前言"><span class="nav-number">1.</span> <span class="nav-text">1. 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-步骤"><span class="nav-number">2.</span> <span class="nav-text">2. 步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-获得域名"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 获得域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-配置Git和Github"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 配置Git和Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-部署"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-高级功能"><span class="nav-number">3.</span> <span class="nav-text">3. 高级功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-同时托管到-Github-和-Coding-网站"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 同时托管到 Github 和 Coding 网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-百度站点收录"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 百度站点收录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-Next-主题个性化设"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 Next 主题个性化设</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

@@ -45,14 +45,14 @@
     <link href="https://www.qiaofeng.xyz/archives/b0ad7e73.html"/>
     <id>https://www.qiaofeng.xyz/archives/b0ad7e73.html</id>
     <published>2020-02-13T00:47:36.070Z</published>
-    <updated>2020-02-13T05:41:36.330Z</updated>
+    <updated>2020-02-14T02:22:12.216Z</updated>
     
     <summary type="html">
     
       &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;Stay hungry, Stay foolish &lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;1-前言&quot;&gt;&lt;a href=&quot;#1-前言&quot; class=&quot;headerlink&quot; title=&quot;1. 前言&quot;&gt;&lt;/a&gt;1. 前言&lt;/h2&gt;&lt;p&gt;各种软件版本:&lt;br&gt;Hexo 4.2.0 是博客网站的模板&lt;br&gt;Next 7.7.1 是页面主题的模板&lt;/p&gt;
+&lt;h2 id=&quot;1-前言&quot;&gt;&lt;a href=&quot;#1-前言&quot; class=&quot;headerlink&quot; title=&quot;1. 前言&quot;&gt;&lt;/a&gt;1. 前言&lt;/h2&gt;&lt;p&gt;各种软件版本:&lt;br&gt;&lt;strong&gt;Hexo&lt;/strong&gt; 4.2.0 编译静态网站的工具&lt;br&gt;&lt;strong&gt;Next&lt;/strong&gt; 7.7.1 是页面主题的模板 (截止2020.02.13 最新版本, 不同版本之间有较大区别, 尤其是5.X和7.X之间)&lt;br&gt;&lt;strong&gt;Git&lt;/strong&gt; 版本无所谓 版本控制软件&lt;br&gt;&lt;strong&gt;Github&lt;/strong&gt; 代码托管网站&lt;/p&gt;
 &lt;h2 id=&quot;2-步骤&quot;&gt;&lt;a href=&quot;#2-步骤&quot; class=&quot;headerlink&quot; title=&quot;2. 步骤&quot;&gt;&lt;/a&gt;2. 步骤&lt;/h2&gt;&lt;h3 id=&quot;2-1-获得域名&quot;&gt;&lt;a href=&quot;#2-1-获得域名&quot; class=&quot;headerlink&quot; title=&quot;2.1 获得域名&quot;&gt;&lt;/a&gt;2.1 获得域名&lt;/h3&gt;&lt;p&gt;其实没有域名就用 Github 自带的 &lt;code&gt;username.github.io&lt;/code&gt; 也是可以的, 不过为了方(zhuang)便(bi), 还是建议去购买一个, 为了之后可以用七牛云作为图床, 阿里百度腾讯云都提供这个服务, 我这里用的是&lt;a href=&quot;https://wanwang.aliyun.com/domain/com/?spm=5176.10695662.1158081.1.336944c2mF3IpF&amp;aly_as=G8cOPB8P&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;阿里云域名注册&lt;/a&gt;, 常见的 &lt;code&gt;.com&lt;/code&gt;, &lt;code&gt;.cn&lt;/code&gt;, 都比较贵或者已经被注册, &lt;code&gt;.xyz&lt;/code&gt;, &lt;code&gt;.top&lt;/code&gt;, &lt;code&gt;.tech&lt;/code&gt; 都是不错的选择.&lt;/p&gt;
     
     </summary>
