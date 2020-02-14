@@ -10,5 +10,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: http://qiaofeng.xyz/sitemap.xml
-Sitemap: http://qiaofeng.xyz/baidusitemap.xml
+Sitemap: https://qiaofeng.xyz/sitemap.xml
+Sitemap: https://qiaofeng.xyz/baidusitemap.xml
