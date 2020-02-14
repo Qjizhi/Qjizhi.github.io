@@ -23,20 +23,28 @@
     var CONFIG = {"hostname":"www.qiaofeng.xyz","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="1. 前言各种软件版本:Hexo 4.2.0 编译静态网站的工具Next 7.7.1 是页面主题的模板 (截止2020.02.13 最新版本, 不同版本之间有较大区别, 尤其是5.X和7.X之间)Git 版本无所谓 版本控制软件Github 代码托管网站">
+  <meta name="description" content="1. 前言各种软件版本:nodejs 9.11.1 Hexo依赖这个软件Hexo 4.2.0 编译静态网站的工具Next 7.7.1 是页面主题的模板 (截止2020.02.13 最新版本, 不同版本之间有较大区别, 尤其是5.X和7.X之间)Git 版本无所谓 版本控制软件Github 代码托管网站">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Github &amp; Hexo &amp; Next 搭建自己的网站博客">
 <meta property="og:url" content="https://www.qiaofeng.xyz/archives/b0ad7e73.html">
-<meta property="og:site_name" content="QiaoFeng&#39;s Blog">
-<meta property="og:description" content="1. 前言各种软件版本:Hexo 4.2.0 编译静态网站的工具Next 7.7.1 是页面主题的模板 (截止2020.02.13 最新版本, 不同版本之间有较大区别, 尤其是5.X和7.X之间)Git 版本无所谓 版本控制软件Github 代码托管网站">
+<meta property="og:site_name" content="Planet of Imagination">
+<meta property="og:description" content="1. 前言各种软件版本:nodejs 9.11.1 Hexo依赖这个软件Hexo 4.2.0 编译静态网站的工具Next 7.7.1 是页面主题的模板 (截止2020.02.13 最新版本, 不同版本之间有较大区别, 尤其是5.X和7.X之间)Git 版本无所谓 版本控制软件Github 代码托管网站">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2020/02/14/9y4DYpb3ePEsGNB.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/14/8BdaEXJrCimfykp.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/14/pKbCvj98tW15Frg.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/14/ahUiGAS2PdTQ7Dt.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/14/vSTsGdI3l6B1eJN.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/14/C4IewP9lAa5HbSq.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/14/ynNugH5XckUmleO.png">
 <meta property="article:published_time" content="2020-02-13T00:47:36.070Z">
-<meta property="article:modified_time" content="2020-02-14T06:35:53.745Z">
+<meta property="article:modified_time" content="2020-02-14T16:01:29.012Z">
 <meta property="article:author" content="Qiao Feng">
 <meta property="article:tag" content="Next">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Github">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/02/14/9y4DYpb3ePEsGNB.png">
 
 <link rel="canonical" href="https://www.qiaofeng.xyz/archives/b0ad7e73.html">
 
@@ -50,7 +58,7 @@
   };
 </script>
 
-  <title>Github & Hexo & Next 搭建自己的网站博客 | QiaoFeng's Blog</title>
+  <title>Github & Hexo & Next 搭建自己的网站博客 | Planet of Imagination</title>
   
 
 
@@ -81,7 +89,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="QiaoFeng's Blog" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Planet of Imagination" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -95,7 +103,7 @@
     <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">QiaoFeng's Blog</span>
+        <span class="site-title">Planet of Imagination</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -211,7 +219,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="QiaoFeng's Blog">
+      <meta itemprop="name" content="Planet of Imagination">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -232,7 +240,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-14 14:35:53" itemprop="dateModified" datetime="2020-02-14T14:35:53+08:00">2020-02-14</time>
+                <time title="Modified: 2020-02-15 00:01:29" itemprop="dateModified" datetime="2020-02-15T00:01:29+08:00">2020-02-15</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -280,14 +288,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>2.5k</span>
+              <span>3.6k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>2 mins.</span>
+              <span>3 mins.</span>
             </span>
 
         </div>
@@ -299,7 +307,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>各种软件版本:<br><strong>Hexo</strong> 4.2.0 编译静态网站的工具<br><strong>Next</strong> 7.7.1 是页面主题的模板 (截止2020.02.13 最新版本, 不同版本之间有较大区别, 尤其是5.X和7.X之间)<br><strong>Git</strong> 版本无所谓 版本控制软件<br><strong>Github</strong> 代码托管网站</p>
+        <h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>各种软件版本:<br><strong>nodejs</strong> 9.11.1 Hexo依赖这个软件<br><strong>Hexo</strong> 4.2.0 编译静态网站的工具<br><strong>Next</strong> 7.7.1 是页面主题的模板 (截止2020.02.13 最新版本, 不同版本之间有较大区别, 尤其是5.X和7.X之间)<br><strong>Git</strong> 版本无所谓 版本控制软件<br><strong>Github</strong> 代码托管网站</p>
 <a id="more"></a>
 
 <h2 id="2-步骤"><a href="#2-步骤" class="headerlink" title="2. 步骤"></a>2. 步骤</h2><h3 id="2-1-获得域名"><a href="#2-1-获得域名" class="headerlink" title="2.1 获得域名"></a>2.1 获得域名</h3><p>其实没有域名就用 Github 自带的 <code>username.github.io</code> 也是可以的, 不过为了方(zhuang)便(bi), 还是建议去购买一个, 为了之后可以用七牛云作为图床, 阿里百度腾讯云都提供这个服务, 我这里用的是<a href="https://wanwang.aliyun.com/domain/com/?spm=5176.10695662.1158081.1.336944c2mF3IpF&aly_as=G8cOPB8P" target="_blank" rel="noopener">阿里云域名注册</a>, 常见的 <code>.com</code>, <code>.cn</code>, 都比较贵或者已经被注册, <code>.xyz</code>, <code>.top</code>, <code>.tech</code> 都是不错的选择.</p>
@@ -312,13 +320,16 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># g 代表generate</span></span><br><span class="line">hexo g</span><br><span class="line"><span class="comment"># s 代表 server</span></span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 <p>然后在浏览器中打开 <code>localhost:4000</code>, 如果可以看到博客就说明没有问题, 回到刚刚的命令行窗口 <code>Ctrl+c</code> 结束.</p>
 <h3 id="2-4-更换-Next-主题"><a href="#2-4-更换-Next-主题" class="headerlink" title="2.4 更换 Next 主题"></a>2.4 更换 Next 主题</h3><p>进入 <code>blog</code> 文件夹, 可以看到有个 <code>themes</code> 文件夹, 在空白处右键 <code>Git Bash Here</code>, 克隆Github 上的仓库:  </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next.git</span><br></pre></td></tr></table></figure>
-<p>将文件夹改名文为 <code>next</code>.<br>这时要提到两个 <code>_config.yml</code> 文件, 一个在 <code>blog</code> 根目录下, 叫做<strong>站点配置文件</strong>, 一个在<code>blog/themes/next</code> 下, 叫做<strong>主题配置文件</strong>.<br>将第一个 <code>_config.yml</code> 文件下的 <code>theme: landscape</code> 修改为 <code>theme: next</code>.<br>然后再试试新主题是否可以显示:  </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">```  </span><br><span class="line">然后在浏览器中打开 localhost:4000, 如果可以看到博客就说明没有问题, 回到刚刚的命令行窗口 Ctrl+c 结束.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">### 2.4 配置并部署到 Github</span></span><br><span class="line">新建一个仓库, 仓库名为 `用户名.github.io`, 这个用户名使用你的GitHub帐号名称代替的所以我的仓库名是 `Qjizhi.github.io`.   </span><br><span class="line">在刚刚的命令行窗口, 配置 `Github` 账号并添加 ssh密钥:  </span><br><span class="line">```bash</span><br><span class="line"><span class="comment"># 配置Github账号</span></span><br><span class="line">git config --global user.name <span class="string">"你的GitHub用户名"</span></span><br><span class="line">git config --global user.email <span class="string">"你的GitHub注册邮箱"</span></span><br><span class="line"><span class="comment"># 生成秘钥</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">"你的GitHub注册邮箱"</span></span><br><span class="line"><span class="comment"># 三个回车即可</span></span><br></pre></td></tr></table></figure>
-<p>复制 <code>C盘/用户/.ssh</code> 目录下 <code>id_rsa.pub</code> 内的密钥, 然后打开 <code>Github-Settings-keys</code> 的界面, 新建 new SSH Key, 把刚刚的密钥粘贴到 Key下面, Title 随便填:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 会克隆最新版本的NexT</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next.git</span><br></pre></td></tr></table></figure>
+<p>将文件夹改名文为 <code>next</code>.<br>这时要提到两个 <code>_config.yml</code> 文件, 一个在 <code>blog</code> 根目录下, 叫做 <strong>站点配置文件</strong>, 一个在<code>blog/themes/next</code> 下, 叫做 <strong>主题配置文件</strong>.<br>将第一个 <code>_config.yml</code> 文件下的 <code>theme: landscape</code> 修改为 <code>theme: next</code>.<br>然后再试试新主题是否可以显示:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br><span class="line">```  </span><br><span class="line">然后在浏览器中打开 localhost:4000, 如果可以看到博客换了风格就说明没有问题, 回到刚刚的命令行窗口 Ctrl+c 结束.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">### 2.4 配置并部署到 Github</span></span><br><span class="line">到Github网页右上角 `New Repository` 新建一个仓库, 仓库名为 `用户名.github.io`, 这个用户名使用你的GitHub帐号名称代替的所以我的仓库名是 `Qjizhi.github.io`.   </span><br><span class="line"></span><br><span class="line">![火狐截图_2020-02-14T13-32-26.832Z.png](https://i.loli.net/2020/02/14/KLNH4hsnzjcQ8XT.png)</span><br><span class="line"></span><br><span class="line">在刚刚的命令行窗口, 配置 `Github` 账号并添加 ssh密钥:  </span><br><span class="line">```bash</span><br><span class="line"><span class="comment"># 配置Github账号</span></span><br><span class="line">git config --global user.name <span class="string">"你的GitHub用户名"</span></span><br><span class="line">git config --global user.email <span class="string">"你的GitHub注册邮箱"</span></span><br><span class="line"><span class="comment"># 生成秘钥</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">"你的GitHub注册邮箱"</span></span><br><span class="line"><span class="comment"># 三个回车即可</span></span><br></pre></td></tr></table></figure>
+<p>用笔记本 <code>C盘/用户/.ssh</code> 目录下 <code>id_rsa.pub</code> 的文件并复制文件内的密钥, 然后打开 Github网页 <code>右上角头像-Settings-SSH and GPG keys</code> 的界面, 新建 <code>New SSH Key</code>, 把刚刚的密钥粘贴到 Key下面, Title 随便填:  </p>
+<p><img src="https://i.loli.net/2020/02/14/9y4DYpb3ePEsGNB.png" alt="ssh_key.png"></p>
 <p>然后验证一下:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 
+
+<p><img src="https://i.loli.net/2020/02/14/8BdaEXJrCimfykp.png" alt="ssh_ver.png"></p>
 <p>再次打开站点配置文件 <code>_config.yml</code>, 找到 <code>deploy</code> 这一行修改为如下内容:  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">- <span class="built_in">type</span>: git</span><br><span class="line">  repository: </span><br><span class="line">    <span class="comment"># 这里修改为你对应的仓库地址</span></span><br><span class="line">    github: https://github.com/Qjizhi/Qjizhi.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 
@@ -326,9 +337,38 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 <p>然后执行以下命令:  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line"><span class="comment"># d指的是depoly</span></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>这是就可以在 <code>用户名.github.io</code> 网站看到你的博客了.    </p>
+<p>这时就可以在浏览器中输入 <code>用户名.github.io</code> 网站看到你的博客了.    </p>
 <h3 id="2-5-绑定域名"><a href="#2-5-绑定域名" class="headerlink" title="2.5 绑定域名"></a>2.5 绑定域名</h3><p>如果你觉得上面的网站名字已经足够好了就省略下面的步骤吧, 如果你已经购买了域名,可以按照下面的步骤将github上的网站与之绑定.    </p>
-<h4 id="2-5-1-解析域名"><a href="#2-5-1-解析域名" class="headerlink" title="2.5.1 解析域名:"></a>2.5.1 解析域名:</h4><p>首先要去 阿里云(或者你购买域名的其他云平台) 解析域名：<br>| 主机记录 | 记录类型 | 记录值 |<br>|  —-  | —-  |  —-  |<br>| @ | A | 192.30.252.153 |<br>| @ | A | 192.30.252.154 |<br>| www | CNAME | 你的用户名.github.io |<br>| @ | CNAME | 你的用户名.github.io | </p>
+<h4 id="2-5-1-解析域名"><a href="#2-5-1-解析域名" class="headerlink" title="2.5.1 解析域名:"></a>2.5.1 解析域名:</h4><p>首先要去 阿里云(或者你购买域名的其他云平台) 解析域名：  </p>
+<table>
+<thead>
+<tr>
+<th>主机记录</th>
+<th>记录类型</th>
+<th>记录值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@</td>
+<td>A</td>
+<td>192.30.252.153</td>
+</tr>
+<tr>
+<td>@</td>
+<td>A</td>
+<td>192.30.252.154</td>
+</tr>
+<tr>
+<td>www</td>
+<td>CNAME</td>
+<td>你的用户名.github.io</td>
+</tr>
+<tr>
+<td>@</td>
+<td>CNAME</td>
+<td>你的用户名.github.io</td>
+</tr>
+</tbody></table>
 <p>主机记录就是域名前缀，常见用法有：</p>
 <ul>
 <li>www：解析后的域名为 www.你的域名  </li>
@@ -338,12 +378,36 @@
 <p>要指向空间商提供的 IP 地址，选择 <code>类型 A</code> ，要指向一个域名，选择 <code>类型 CNAME</code>  </p>
 <p>上面 <code>192.30.252.153</code> , <code>192.30.252.154</code> 就是GitHub提供的IP地址。  </p>
 <h4 id="2-5-2-添加-CNAME"><a href="#2-5-2-添加-CNAME" class="headerlink" title="2.5.2 添加 CNAME"></a>2.5.2 添加 <code>CNAME</code></h4><p>域名这边已经配置好，但还没结束，我们再来到HEXO博客的目录，进入source目录，新建一个CNAME文件，没有任何后缀名，编辑内容为：qiaofeng.xyz (这里替换为你购买的域名)</p>
-<h4 id="2-5-3-设置仓库"><a href="#2-5-3-设置仓库" class="headerlink" title="2.5.3 设置仓库"></a>2.5.3 设置仓库</h4><p>进入之前创建的仓库，点击settings，设置Custom domain，输入你的域名.<br>完成以上三步在命令行窗口中再次输入：</p>
+<p><img src="https://i.loli.net/2020/02/14/pKbCvj98tW15Frg.png" alt="图片1.png"></p>
+<h4 id="2-5-3-设置仓库"><a href="#2-5-3-设置仓库" class="headerlink" title="2.5.3 设置仓库"></a>2.5.3 设置仓库</h4><p>进入之前创建的仓库，点击settings，设置Custom domain，输入你的域名.  </p>
+<p><img src="https://i.loli.net/2020/02/14/ahUiGAS2PdTQ7Dt.png" alt="github_3.png"></p>
+<p>完成以上三步在命令行窗口中再次输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 <p>这时打开你的域名就可以看到你的博客了.</p>
-<h2 id="3-高级功能"><a href="#3-高级功能" class="headerlink" title="3. 高级功能"></a>3. 高级功能</h2><h3 id="3-1-同时部署到-Github-和-Coding-网站"><a href="#3-1-同时部署到-Github-和-Coding-网站" class="headerlink" title="3.1 同时部署到 Github 和 Coding 网站"></a>3.1 同时部署到 Github 和 Coding 网站</h3><p>因为 Github 不让百度爬虫, 同时因为服务器在国外, 所以访问速度较慢. 所以考虑用国内的 Coding (但是话说回来这个也比较坑啊, 很不稳定).   </p>
-<h3 id="3-2-百度站点收录"><a href="#3-2-百度站点收录" class="headerlink" title="3.2 百度站点收录"></a>3.2 百度站点收录</h3><h3 id="3-3-Next-主题个性化设"><a href="#3-3-Next-主题个性化设" class="headerlink" title="3.3 Next 主题个性化设"></a>3.3 Next 主题个性化设</h3><p>请参考这篇博客</p>
-<p><strong>参考资料:</strong><br><a href="http://dugblog.coding.me/Hexo/20180616-build-blog-hexo-next-windows.html" target="_blank" rel="noopener">Windows下用Hexo框架和Next主题搭建个人Blog </a><br><a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">GitHub+Hexo 搭建个人网站详细教程</a><br><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">Hexo 官方文档</a><br><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT 官方文档</a>  </p>
+<h3 id="2-6-写博客"><a href="#2-6-写博客" class="headerlink" title="2.6 写博客"></a>2.6 写博客</h3><p>在命令行窗口输入:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这里 n 代表 new</span></span><br><span class="line">hexo n <span class="string">'文章标题'</span></span><br></pre></td></tr></table></figure>
+<p>可以在以下路径看到新建的blog <code>blog/source/_post/文章标题.md</code>, 学习写博客需要学习 <a href="http://www.markdown.cn/" target="_blank" rel="noopener">Markdown</a> 语法, 当然我这篇文章都是这样写出来的.</p>
+<h2 id="3-高级功能"><a href="#3-高级功能" class="headerlink" title="3. 高级功能"></a>3. 高级功能</h2><h3 id="3-1-同时部署到-Github-和-Coding-网站"><a href="#3-1-同时部署到-Github-和-Coding-网站" class="headerlink" title="3.1 同时部署到 Github 和 Coding 网站"></a>3.1 同时部署到 Github 和 Coding 网站</h3><p>因为 Github 不让百度爬虫, 同时因为服务器在国外, 所以访问速度较慢. 所以考虑用国内的 Coding (但是话说回来这个也比较坑啊, 很不稳定).  </p>
+<h4 id="3-1-1-注册Coding"><a href="#3-1-1-注册Coding" class="headerlink" title="3.1.1 注册Coding"></a>3.1.1 注册Coding</h4><p>去<a href="https://coding.net/" target="_blank" rel="noopener">官网</a>类似注册Github, 自从2020.01起, coding就改版了,没有个人版同时和腾讯云平台合并了,所以有一些变化.</p>
+<h4 id="3-1-2-部署-ssh-密钥"><a href="#3-1-2-部署-ssh-密钥" class="headerlink" title="3.1.2 部署 ssh 密钥"></a>3.1.2 部署 ssh 密钥</h4><p>类似部署Github密钥</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"你的Coding注册邮箱"</span></span><br></pre></td></tr></table></figure>
+<p>这里会遇到新生成的密钥文件覆盖之前Github的文件的问题, 所以在命令行出现 <code>Enter file...</code> 的时候出入文件名字, 然后在三次回车.<br>参考:<a href="https://www.jianshu.com/p/c02f07a93177" target="_blank" rel="noopener">github和coding共存</a> </p>
+<h4 id="3-1-3-创建项目"><a href="#3-1-3-创建项目" class="headerlink" title="3.1.3 创建项目"></a>3.1.3 创建项目</h4><p>projectname 和 username 最好保持一致,</p>
+<h4 id="3-1-4-部署coding仓库"><a href="#3-1-4-部署coding仓库" class="headerlink" title="3.1.4 部署coding仓库"></a>3.1.4 部署coding仓库</h4><p>在站点配置文件, 添加coding的仓库:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">- <span class="built_in">type</span>: git</span><br><span class="line">  repository: </span><br><span class="line">    github: https://github.com/Qjizhi/Qjizhi.github.io.git</span><br><span class="line">    coding: https://e.coding.net/qiaofeng001/qiaofeng001.coding.me.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<h4 id="3-1-5-开启-Coding-Pages-服务"><a href="#3-1-5-开启-Coding-Pages-服务" class="headerlink" title="3.1.5 开启 Coding Pages 服务"></a>3.1.5 开启 Coding Pages 服务</h4><p>在 <code>项目-构建与部署-静态网站</code>下, 开启静态网站服务.</p>
+<p><img src="https://i.loli.net/2020/02/14/vSTsGdI3l6B1eJN.png" alt="coding.png"></p>
+<h4 id="3-1-6-解析域名"><a href="#3-1-6-解析域名" class="headerlink" title="3.1.6 解析域名"></a>3.1.6 解析域名</h4><p>下图是我解析的域名:  </p>
+<p><img src="https://i.loli.net/2020/02/14/C4IewP9lAa5HbSq.png" alt="ali_domain.png"></p>
+<h4 id="3-1-7-Coding-绑定自定义域名"><a href="#3-1-7-Coding-绑定自定义域名" class="headerlink" title="3.1.7 Coding 绑定自定义域名"></a>3.1.7 Coding 绑定自定义域名</h4><p>下图是绑定好的状态:  </p>
+<p><img src="https://i.loli.net/2020/02/14/ynNugH5XckUmleO.png" alt="coding_0.png">  </p>
+<p>如果你之前已经部署到了 GitHub Pages 并开启了 HTTPS，那么直接在设置页面绑定你自己的域名，SSL/TLS 安全证书就会显示申请错误。</p>
+<p>申请错误原因是：在验证域名所有权时会定位到 Github Pages 的主机上导致 SSL 证书申请失败。</p>
+<p>正确的做法是：先去域名 DNS 把 GitHub 的解析暂停掉，然后再重新申请 SSL 证书，大约十秒左右就能申请成功，然后开启强制 HTTPS 访问。</p>
+<h3 id="3-2-百度站点收录"><a href="#3-2-百度站点收录" class="headerlink" title="3.2 百度站点收录"></a>3.2 百度站点收录</h3><p>这个简单说就是让百度搜索的时候可以出现你博客的内容, 不然写了很多没人看岂不是自娱自乐? </p>
+<p>waiting to update…</p>
+<h3 id="3-3-Next-主题个性化设计"><a href="#3-3-Next-主题个性化设计" class="headerlink" title="3.3 Next 主题个性化设计"></a>3.3 Next 主题个性化设计</h3><p>请参考这篇博客<br><a href="https://www.qiaofeng.xyz/archives/a204f157.htmlNext中的个性化设计">Next中的个性化设计</a></p>
+<p><strong>参考资料:</strong><br><a href="http://dugblog.coding.me/Hexo/20180616-build-blog-hexo-next-windows.html" target="_blank" rel="noopener">Windows下用Hexo框架和Next主题搭建个人Blog </a><br><a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">GitHub+Hexo 搭建个人网站详细教程</a><br><a href="https://segmentfault.com/a/1190000017986794?utm_source=tag-newest" target="_blank" rel="noopener">超详细Hexo+Github Page搭建技术博客教程【持续更新】</a><br><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">Hexo 官方文档</a><br><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT 官方文档</a>  </p>
 <blockquote class="blockquote-center"><p>Stay hungry, Stay foolish </p>
 </blockquote>
     </div>
@@ -472,7 +536,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-前言"><span class="nav-number">1.</span> <span class="nav-text">1. 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-步骤"><span class="nav-number">2.</span> <span class="nav-text">2. 步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-获得域名"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 获得域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-安装依赖软件"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 安装依赖软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-安装-Hexo"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 安装 Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-更换-Next-主题"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 更换 Next 主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-绑定域名"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 绑定域名</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-1-解析域名"><span class="nav-number">2.5.1.</span> <span class="nav-text">2.5.1 解析域名:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-2-添加-CNAME"><span class="nav-number">2.5.2.</span> <span class="nav-text">2.5.2 添加 CNAME</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-3-设置仓库"><span class="nav-number">2.5.3.</span> <span class="nav-text">2.5.3 设置仓库</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-高级功能"><span class="nav-number">3.</span> <span class="nav-text">3. 高级功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-同时部署到-Github-和-Coding-网站"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 同时部署到 Github 和 Coding 网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-百度站点收录"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 百度站点收录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-Next-主题个性化设"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 Next 主题个性化设</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-前言"><span class="nav-number">1.</span> <span class="nav-text">1. 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-步骤"><span class="nav-number">2.</span> <span class="nav-text">2. 步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-获得域名"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 获得域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-安装依赖软件"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 安装依赖软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-安装-Hexo"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 安装 Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-更换-Next-主题"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 更换 Next 主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-绑定域名"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 绑定域名</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-1-解析域名"><span class="nav-number">2.5.1.</span> <span class="nav-text">2.5.1 解析域名:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-2-添加-CNAME"><span class="nav-number">2.5.2.</span> <span class="nav-text">2.5.2 添加 CNAME</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-3-设置仓库"><span class="nav-number">2.5.3.</span> <span class="nav-text">2.5.3 设置仓库</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-写博客"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 写博客</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-高级功能"><span class="nav-number">3.</span> <span class="nav-text">3. 高级功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-同时部署到-Github-和-Coding-网站"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 同时部署到 Github 和 Coding 网站</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-1-注册Coding"><span class="nav-number">3.1.1.</span> <span class="nav-text">3.1.1 注册Coding</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-2-部署-ssh-密钥"><span class="nav-number">3.1.2.</span> <span class="nav-text">3.1.2 部署 ssh 密钥</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-3-创建项目"><span class="nav-number">3.1.3.</span> <span class="nav-text">3.1.3 创建项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-4-部署coding仓库"><span class="nav-number">3.1.4.</span> <span class="nav-text">3.1.4 部署coding仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-5-开启-Coding-Pages-服务"><span class="nav-number">3.1.5.</span> <span class="nav-text">3.1.5 开启 Coding Pages 服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-6-解析域名"><span class="nav-number">3.1.6.</span> <span class="nav-text">3.1.6 解析域名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-7-Coding-绑定自定义域名"><span class="nav-number">3.1.7.</span> <span class="nav-text">3.1.7 Coding 绑定自定义域名</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-百度站点收录"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 百度站点收录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-Next-主题个性化设计"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 Next 主题个性化设计</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -550,13 +614,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
-    <span title="Symbols count total">3k</span>
+    <span title="Symbols count total">4k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">Reading time total &asymp;</span>
-    <span title="Reading time total">3 mins.</span>
+    <span title="Reading time total">4 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
   </div>
