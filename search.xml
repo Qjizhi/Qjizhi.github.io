@@ -28,9 +28,9 @@
 </blockquote>
 
 <h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>各种软件版本:<br><strong>Hexo</strong> 4.2.0 编译静态网站的工具<br><strong>Next</strong> 7.7.1 是页面主题的模板 (截止2020.02.13 最新版本, 不同版本之间有较大区别, 尤其是5.X和7.X之间)<br><strong>Git</strong> 版本无所谓 版本控制软件<br><strong>Github</strong> 代码托管网站</p>
-<h2 id="2-步骤"><a href="#2-步骤" class="headerlink" title="2. 步骤"></a>2. 步骤</h2><h3 id="2-1-获得域名"><a href="#2-1-获得域名" class="headerlink" title="2.1 获得域名"></a>2.1 获得域名</h3><p>其实没有域名就用 Github 自带的 <code>username.github.io</code> 也是可以的, 不过为了方(zhuang)便(bi), 还是建议去购买一个, 为了之后可以用七牛云作为图床, 阿里百度腾讯云都提供这个服务, 我这里用的是<a href="https://wanwang.aliyun.com/domain/com/?spm=5176.10695662.1158081.1.336944c2mF3IpF&aly_as=G8cOPB8P" target="_blank" rel="noopener">阿里云域名注册</a>, 常见的 <code>.com</code>, <code>.cn</code>, 都比较贵或者已经被注册, <code>.xyz</code>, <code>.top</code>, <code>.tech</code> 都是不错的选择.</p>
 <a id="more"></a>
 
+<h2 id="2-步骤"><a href="#2-步骤" class="headerlink" title="2. 步骤"></a>2. 步骤</h2><h3 id="2-1-获得域名"><a href="#2-1-获得域名" class="headerlink" title="2.1 获得域名"></a>2.1 获得域名</h3><p>其实没有域名就用 Github 自带的 <code>username.github.io</code> 也是可以的, 不过为了方(zhuang)便(bi), 还是建议去购买一个, 为了之后可以用七牛云作为图床, 阿里百度腾讯云都提供这个服务, 我这里用的是<a href="https://wanwang.aliyun.com/domain/com/?spm=5176.10695662.1158081.1.336944c2mF3IpF&aly_as=G8cOPB8P" target="_blank" rel="noopener">阿里云域名注册</a>, 常见的 <code>.com</code>, <code>.cn</code>, 都比较贵或者已经被注册, <code>.xyz</code>, <code>.top</code>, <code>.tech</code> 都是不错的选择.</p>
 <h3 id="2-2-安装依赖软件"><a href="#2-2-安装依赖软件" class="headerlink" title="2.2 安装依赖软件"></a>2.2 安装依赖软件</h3><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">nodejs</a><br><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">Git</a> &amp; <a href="https://blog.csdn.net/sishen47k/article/details/80211002" target="_blank" rel="noopener">Git 中文详细安装教程</a>    &amp; <a href="https://www.liaoxuefeng.com/wiki896043488029600" target="_blank" rel="noopener">廖雪峰的官方网站-Git教程</a><br><a href="https://notepad-plus-plus.org/" target="_blank" rel="noopener">Nodepad++</a> (编辑一些零星文件,我用的vscode)  </p>
 <h3 id="2-3-安装-Hexo"><a href="#2-3-安装-Hexo" class="headerlink" title="2.3 安装 Hexo"></a>2.3 安装 Hexo</h3><p>在自己想存放自己博客的地方鼠标右键 <code>Git Bash Here</code>, 然后在命令行窗口中安装 <code>Hexo</code>:  </p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
@@ -56,7 +56,7 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line"><span class="comment"># d指的是depoly</span></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 <p>这是就可以在 <code>用户名.github.io</code> 网站看到你的博客了.    </p>
 <h3 id="2-5-绑定域名"><a href="#2-5-绑定域名" class="headerlink" title="2.5 绑定域名"></a>2.5 绑定域名</h3><p>如果你觉得上面的网站名字已经足够好了就省略下面的步骤吧, 如果你已经购买了域名,可以按照下面的步骤将github上的网站与之绑定.    </p>
-<h4 id="2-5-1-解析域名"><a href="#2-5-1-解析域名" class="headerlink" title="2.5.1 解析域名:"></a>2.5.1 解析域名:</h4><p>首先要去 阿里云(或者你购买域名的其他云平台) 解析域名：<br>| 主机记录 | 右对齐 | 居中对齐 |<br>| :—-:| :—-: | :—-: |<br>| @ | A | 192.30.252.153 |<br>| @ | A | 192.30.252.154 |<br>| www | CNAME | 你的用户名.github.io |  </p>
+<h4 id="2-5-1-解析域名"><a href="#2-5-1-解析域名" class="headerlink" title="2.5.1 解析域名:"></a>2.5.1 解析域名:</h4><p>首先要去 阿里云(或者你购买域名的其他云平台) 解析域名：<br>| 主机记录 | 记录类型 | 记录值 |<br>|  —-  | —-  |  —-  |<br>| @ | A | 192.30.252.153 |<br>| @ | A | 192.30.252.154 |<br>| www | CNAME | 你的用户名.github.io |<br>| @ | CNAME | 你的用户名.github.io | </p>
 <p>主机记录就是域名前缀，常见用法有：</p>
 <ul>
 <li>www：解析后的域名为 www.你的域名  </li>
