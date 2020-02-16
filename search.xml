@@ -114,7 +114,7 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 <p>然后执行以下命令:  </p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line"><span class="comment"># d指的是depoly</span></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>这时就可以在浏览器中输入 <code>用户名.github.io</code> 网站看到你的博客了.    </p>
+<p>deploy的过程中可能会输入账号密码, 有的时候是用户名,有的时候是注册邮箱,多试几次,这时就可以在浏览器中输入 <code>用户名.github.io</code> 网站看到你的博客了.    </p>
 <h3 id="2-5-绑定域名"><a href="#2-5-绑定域名" class="headerlink" title="2.5 绑定域名"></a>2.5 绑定域名</h3><p>如果你觉得上面的网站名字已经足够好了就省略下面的步骤吧, 如果你已经购买了域名,可以按照下面的步骤将github上的网站与之绑定.    </p>
 <h4 id="2-5-1-解析域名"><a href="#2-5-1-解析域名" class="headerlink" title="2.5.1 解析域名:"></a>2.5.1 解析域名:</h4><p>首先要去 阿里云(或者你购买域名的其他云平台) 解析域名：  </p>
 <table>
