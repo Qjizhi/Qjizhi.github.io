@@ -199,6 +199,8 @@
 <h4 id="3-2-3-自动推送"><a href="#3-2-3-自动推送" class="headerlink" title="3.2.3 自动推送"></a>3.2.3 自动推送</h4><p>修改主题配置文件把 baidu_push 设置为 true:  </p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">baidu_push: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>这样在 <code>hexo deploy</code> 就会同时部署到 <code>Github</code> <code>Coding</code> 和 百度站点上了.</p>
+<p><img src="https://i.loli.net/2020/02/16/5i3KxVcZRswdYFy.png" alt="图片1.png"></p>
+<p>这里出现了 <code>{&quot;error&quot;:401,&quot;message&quot;:&quot;site sid is empty&quot;}</code> 据说是提交太频繁了,之前提交都是 success, 过两天再提交一次看看吧.  </p>
 <h3 id="3-3-为博客设置永久链接"><a href="#3-3-为博客设置永久链接" class="headerlink" title="3.3 为博客设置永久链接"></a>3.3 为博客设置永久链接</h3><p>设置永久链接的目的是防止修改文章标题或者时间导致链接失效, 这里需要安装下面的插件:  </p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
 <p>同时修改站点配置文件如下:  </p>
