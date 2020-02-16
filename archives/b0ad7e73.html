@@ -37,8 +37,9 @@
 <meta property="og:image" content="https://i.loli.net/2020/02/14/vSTsGdI3l6B1eJN.png">
 <meta property="og:image" content="https://i.loli.net/2020/02/14/C4IewP9lAa5HbSq.png">
 <meta property="og:image" content="https://i.loli.net/2020/02/14/ynNugH5XckUmleO.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/16/9vAiDkus2fFH6YG.png">
 <meta property="article:published_time" content="2020-02-13T00:47:36.070Z">
-<meta property="article:modified_time" content="2020-02-14T16:01:29.012Z">
+<meta property="article:modified_time" content="2020-02-16T12:35:29.718Z">
 <meta property="article:author" content="Qiao Feng">
 <meta property="article:tag" content="Next">
 <meta property="article:tag" content="Hexo">
@@ -240,7 +241,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-15 00:01:29" itemprop="dateModified" datetime="2020-02-15T00:01:29+08:00">2020-02-15</time>
+                <time title="Modified: 2020-02-16 20:35:29" itemprop="dateModified" datetime="2020-02-16T20:35:29+08:00">2020-02-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -288,14 +289,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>3.6k</span>
+              <span>4.8k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>3 mins.</span>
+              <span>4 mins.</span>
             </span>
 
         </div>
@@ -405,8 +406,30 @@
 <p>申请错误原因是：在验证域名所有权时会定位到 Github Pages 的主机上导致 SSL 证书申请失败。</p>
 <p>正确的做法是：先去域名 DNS 把 GitHub 的解析暂停掉，然后再重新申请 SSL 证书，大约十秒左右就能申请成功，然后开启强制 HTTPS 访问。</p>
 <h3 id="3-2-百度站点收录"><a href="#3-2-百度站点收录" class="headerlink" title="3.2 百度站点收录"></a>3.2 百度站点收录</h3><p>这个简单说就是让百度搜索的时候可以出现你博客的内容, 不然写了很多没人看岂不是自娱自乐? </p>
-<p>waiting to update…</p>
-<h3 id="3-3-Next-主题个性化设计"><a href="#3-3-Next-主题个性化设计" class="headerlink" title="3.3 Next 主题个性化设计"></a>3.3 Next 主题个性化设计</h3><p>请参考这篇博客<br><a href="https://www.qiaofeng.xyz/archives/a204f157.htmlNext中的个性化设计">Next中的个性化设计</a></p>
+<h4 id="3-2-1-添加、验证站点"><a href="#3-2-1-添加、验证站点" class="headerlink" title="3.2.1 添加、验证站点"></a>3.2.1 添加、验证站点</h4><p>在主题配置文件 <code>_config.yml</code> 把验证代码写上去:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Baidu Webmaster tools verification.</span></span><br><span class="line"><span class="comment"># See: https://ziyuan.baidu.com/site</span></span><br><span class="line">baidu_site_verification: 98DgmxZD6c</span><br></pre></td></tr></table></figure>
+<p>生成、部署后进行验证即可.</p>
+<h4 id="3-2-2-链接提交"><a href="#3-2-2-链接提交" class="headerlink" title="3.2.2 链接提交"></a>3.2.2 链接提交</h4><p>主动推送最为快速的提交方式，是被百度收录最快的推送方式。主动推送的实现原理如下：</p>
+<p>新链接的产生， hexo generate 会产生一个文本文件，里面包含最新的链接<br>新链接的提交， hexo deploy 会从上述文件中读取链接，提交至百度搜索引擎</p>
+<p>安装插件:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-baidu-url-submit --save</span><br></pre></td></tr></table></figure>
+<p>然后在站点配置文件 <code>_config.yml</code> 添加：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">baidu_url_submit:</span><br><span class="line">  count: 5 				     <span class="comment">## 提交最新的五个链接</span></span><br><span class="line">  host: qiaofeng.xyz	     <span class="comment">## 百度站长平台中注册的域名</span></span><br><span class="line">  token: xxxxxxxxxxx	 <span class="comment">## 准入秘钥</span></span><br><span class="line">  path: baidu_urls.txt <span class="comment">## 文本文档的地址， 新链接会保存在此文本文档里</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2020/02/16/9vAiDkus2fFH6YG.png" alt="火狐截图_2020-02-16T12-28-54.979Z.png"></p>
+<p>加入新的 deployer-baidu_url_submitter:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">- <span class="built_in">type</span>: git</span><br><span class="line">  repository: </span><br><span class="line">    github: https://github.com/Qjizhi/Qjizhi.github.io.git</span><br><span class="line">    coding: https://e.coding.net/qiaofeng001/qiaofeng001.coding.me.git</span><br><span class="line">  branch: master</span><br><span class="line">  <span class="comment"># other deployer</span></span><br><span class="line">- <span class="built_in">type</span>: baidu_url_submitter</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-2-3-自动推送"><a href="#3-2-3-自动推送" class="headerlink" title="3.2.3 自动推送"></a>3.2.3 自动推送</h4><p>修改主题配置文件把 baidu_push 设置为 true:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">baidu_push: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>这样在 <code>hexo deploy</code> 就会同时部署到 <code>Github</code> <code>Coding</code> 和 百度站点上了.</p>
+<h3 id="3-3-为博客设置永久链接"><a href="#3-3-为博客设置永久链接" class="headerlink" title="3.3 为博客设置永久链接"></a>3.3 为博客设置永久链接</h3><p>设置永久链接的目的是防止修改文章标题或者时间导致链接失效, 这里需要安装下面的插件:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+<p>同时修改站点配置文件如下:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment"># If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line">url: https://www.qiaofeng.xyz</span><br><span class="line">root: /</span><br><span class="line"></span><br><span class="line">permalink: archives/:abbrlink.html</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32  <span class="comment"># 算法：crc16(default) and crc32</span></span><br><span class="line">  rep: hex    <span class="comment"># 进制：dec(default) and hex</span></span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-4-图床相关"><a href="#3-4-图床相关" class="headerlink" title="3.4 图床相关"></a>3.4 图床相关</h3><p>常用的有几个:<br>这个目前临时用: <a href="https://sm.ms/" target="_blank" rel="noopener">SM.MS</a><br>微博图床的插件, Google 和 Firefox 都有<br>七牛云,但是需要域名备案,目前在备案中…</p>
+<h3 id="3-5-Next-主题个性化设计"><a href="#3-5-Next-主题个性化设计" class="headerlink" title="3.5 Next 主题个性化设计"></a>3.5 Next 主题个性化设计</h3><p>请参考这篇博客<br><a href="https://www.qiaofeng.xyz/archives/a204f157.html">Next中的个性化设计</a></p>
 <p><strong>参考资料:</strong><br><a href="http://dugblog.coding.me/Hexo/20180616-build-blog-hexo-next-windows.html" target="_blank" rel="noopener">Windows下用Hexo框架和Next主题搭建个人Blog </a><br><a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">GitHub+Hexo 搭建个人网站详细教程</a><br><a href="https://segmentfault.com/a/1190000017986794?utm_source=tag-newest" target="_blank" rel="noopener">超详细Hexo+Github Page搭建技术博客教程【持续更新】</a><br><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">Hexo 官方文档</a><br><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT 官方文档</a>  </p>
 <blockquote class="blockquote-center"><p>Stay hungry, Stay foolish </p>
 </blockquote>
@@ -415,6 +438,14 @@
     
     
     
+      
+  <div class="popular-posts-header">相关阅读</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\archives\a204f157.html" rel="bookmark">Next中的个性化设计</a></div>
+    </li>
+  </ul>
+
         <div class="reward-container">
   <div>客官赏杯拿铁呗?</div>
   <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
@@ -473,8 +504,8 @@
     <div class="post-nav">
       <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/archives/a204f157.html" rel="next" title="Next中的个性化设计.md">
-      Next中的个性化设计.md <i class="fa fa-chevron-right"></i>
+    <a href="/archives/a204f157.html" rel="next" title="Next中的个性化设计">
+      Next中的个性化设计 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -536,7 +567,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-前言"><span class="nav-number">1.</span> <span class="nav-text">1. 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-步骤"><span class="nav-number">2.</span> <span class="nav-text">2. 步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-获得域名"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 获得域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-安装依赖软件"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 安装依赖软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-安装-Hexo"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 安装 Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-更换-Next-主题"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 更换 Next 主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-绑定域名"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 绑定域名</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-1-解析域名"><span class="nav-number">2.5.1.</span> <span class="nav-text">2.5.1 解析域名:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-2-添加-CNAME"><span class="nav-number">2.5.2.</span> <span class="nav-text">2.5.2 添加 CNAME</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-3-设置仓库"><span class="nav-number">2.5.3.</span> <span class="nav-text">2.5.3 设置仓库</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-写博客"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 写博客</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-高级功能"><span class="nav-number">3.</span> <span class="nav-text">3. 高级功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-同时部署到-Github-和-Coding-网站"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 同时部署到 Github 和 Coding 网站</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-1-注册Coding"><span class="nav-number">3.1.1.</span> <span class="nav-text">3.1.1 注册Coding</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-2-部署-ssh-密钥"><span class="nav-number">3.1.2.</span> <span class="nav-text">3.1.2 部署 ssh 密钥</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-3-创建项目"><span class="nav-number">3.1.3.</span> <span class="nav-text">3.1.3 创建项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-4-部署coding仓库"><span class="nav-number">3.1.4.</span> <span class="nav-text">3.1.4 部署coding仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-5-开启-Coding-Pages-服务"><span class="nav-number">3.1.5.</span> <span class="nav-text">3.1.5 开启 Coding Pages 服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-6-解析域名"><span class="nav-number">3.1.6.</span> <span class="nav-text">3.1.6 解析域名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-7-Coding-绑定自定义域名"><span class="nav-number">3.1.7.</span> <span class="nav-text">3.1.7 Coding 绑定自定义域名</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-百度站点收录"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 百度站点收录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-Next-主题个性化设计"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 Next 主题个性化设计</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-前言"><span class="nav-number">1.</span> <span class="nav-text">1. 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-步骤"><span class="nav-number">2.</span> <span class="nav-text">2. 步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-获得域名"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 获得域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-安装依赖软件"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 安装依赖软件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-安装-Hexo"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 安装 Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-更换-Next-主题"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 更换 Next 主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-绑定域名"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 绑定域名</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-1-解析域名"><span class="nav-number">2.5.1.</span> <span class="nav-text">2.5.1 解析域名:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-2-添加-CNAME"><span class="nav-number">2.5.2.</span> <span class="nav-text">2.5.2 添加 CNAME</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-3-设置仓库"><span class="nav-number">2.5.3.</span> <span class="nav-text">2.5.3 设置仓库</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-写博客"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 写博客</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-高级功能"><span class="nav-number">3.</span> <span class="nav-text">3. 高级功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-同时部署到-Github-和-Coding-网站"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 同时部署到 Github 和 Coding 网站</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-1-注册Coding"><span class="nav-number">3.1.1.</span> <span class="nav-text">3.1.1 注册Coding</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-2-部署-ssh-密钥"><span class="nav-number">3.1.2.</span> <span class="nav-text">3.1.2 部署 ssh 密钥</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-3-创建项目"><span class="nav-number">3.1.3.</span> <span class="nav-text">3.1.3 创建项目</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-4-部署coding仓库"><span class="nav-number">3.1.4.</span> <span class="nav-text">3.1.4 部署coding仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-5-开启-Coding-Pages-服务"><span class="nav-number">3.1.5.</span> <span class="nav-text">3.1.5 开启 Coding Pages 服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-6-解析域名"><span class="nav-number">3.1.6.</span> <span class="nav-text">3.1.6 解析域名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-7-Coding-绑定自定义域名"><span class="nav-number">3.1.7.</span> <span class="nav-text">3.1.7 Coding 绑定自定义域名</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-百度站点收录"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 百度站点收录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-1-添加、验证站点"><span class="nav-number">3.2.1.</span> <span class="nav-text">3.2.1 添加、验证站点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-2-链接提交"><span class="nav-number">3.2.2.</span> <span class="nav-text">3.2.2 链接提交</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-3-自动推送"><span class="nav-number">3.2.3.</span> <span class="nav-text">3.2.3 自动推送</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-为博客设置永久链接"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 为博客设置永久链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-图床相关"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 图床相关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-Next-主题个性化设计"><span class="nav-number">3.5.</span> <span class="nav-text">3.5 Next 主题个性化设计</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -614,13 +645,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
-    <span title="Symbols count total">4k</span>
+    <span title="Symbols count total">9k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">Reading time total &asymp;</span>
-    <span title="Reading time total">4 mins.</span>
+    <span title="Reading time total">9 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
   </div>
