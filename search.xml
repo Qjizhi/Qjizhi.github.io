@@ -71,6 +71,8 @@
 <h3 id="13-文章原创声明"><a href="#13-文章原创声明" class="headerlink" title="13. 文章原创声明"></a>13. 文章原创声明</h3><p>修改主题配置文件<code>_config.yml</code>:  </p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">creative_commons:</span><br><span class="line">  license: by-nc-sa</span><br><span class="line">  sidebar: <span class="literal">false</span></span><br><span class="line">  post: <span class="literal">true</span>       <span class="comment"># 默认显示版权信息</span></span><br><span class="line">  language:</span><br></pre></td></tr></table></figure>
 
+<h3 id="14-备案号"><a href="#14-备案号" class="headerlink" title="14. 备案号"></a>14. 备案号</h3><p>修改主题配置文件<code>_config.yml</code>:  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">beian:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  icp: 京ICP备20005888号-1</span><br><span class="line">  <span class="comment"># The digit in the num of gongan beian.</span></span><br><span class="line">  gongan_id: </span><br><span class="line">  <span class="comment"># The full num of gongan beian.</span></span><br><span class="line">  gongan_num: </span><br><span class="line">  <span class="comment"># The icon for gongan beian. See: http://www.beian.gov.cn/portal/download</span></span><br><span class="line">  gongan_icon_url: https://s1.ax1x.com/2018/10/09/iJ5NX6.png</span><br></pre></td></tr></table></figure>
 
 <p><strong>参考资料:</strong><br><a href="https://tding.top/archives/42c38b10.html" target="_blank" rel="noopener">Hexo-NexT (v7.0+) 主题配置 </a></p>
 <blockquote class="blockquote-center"><p>Stay hungry, Stay foolish </p>
