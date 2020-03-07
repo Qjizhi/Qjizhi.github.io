@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>kitti点云可视化以及pcd格式转换bin</title>
+    <url>/archives/7751fd2.html</url>
+    <content><![CDATA[<p><a href="https://link.zhihu.com/?target=https%3A//github.com/Qjizhi/kitti-velodyne-viewer">Github链接</a> 欢迎Star.    </p>
+<h3 id="1-kitti数据可视化工具："><a href="#1-kitti数据可视化工具：" class="headerlink" title="1. kitti数据可视化工具："></a>1. kitti数据可视化工具：</h3><p>依赖<a href="https://link.zhihu.com/?target=https%3A//github.com/pyqtgraph/pyqtgraph">pyqtgraph</a>  </p>
+<p>使用:<br>确保文件架结构如下所示:  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">dataset&#x2F;KITTI&#x2F;object&#x2F;</span><br><span class="line"></span><br><span class="line">    velodyne&#x2F;</span><br><span class="line">        training&#x2F;</span><br><span class="line">            000003.bin</span><br><span class="line">        testing&#x2F;</span><br><span class="line"></span><br><span class="line">    calib&#x2F;</span><br><span class="line">        training&#x2F;</span><br><span class="line">            000003.txt</span><br><span class="line">        testing&#x2F;</span><br><span class="line"></span><br><span class="line">    label&#x2F;</span><br><span class="line">        training&#x2F;</span><br><span class="line">            000003.txt</span><br><span class="line">        testing&#x2F;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python kitti.py</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2020/03/07/uLm8NkJXPtBCcpq.png" alt="teaser.png"></p>
+<h3 id="2-pcd-to-bin格式转换"><a href="#2-pcd-to-bin格式转换" class="headerlink" title="2. .pcd to .bin格式转换"></a>2. <code>.pcd</code> to <code>.bin</code>格式转换</h3><p>使用:  </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># pcdfolder is where `.pcd` files are stores</span></span><br><span class="line">python pcd2bin.py covert pcdfolder binfolder</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-bin-to-pcd格式转换"><a href="#3-bin-to-pcd格式转换" class="headerlink" title="3. .bin to .pcd格式转换"></a>3. <code>.bin</code> to <code>.pcd</code>格式转换</h3><p>目前该方法都是基于C++ PCL点云库开发的, 可以参考这篇文章<a href="https://github.com/HTLife/kitti_velodyne_bin_to_pcd" target="_blank" rel="noopener">kitti_velodyne_bin_to_pcd</a></p>
+<blockquote class="blockquote-center"><p>Stay hungry, Stay foolish </p>
+</blockquote>]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>Github</tag>
+        <tag>Kitti</tag>
+        <tag>Lidar</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Next中的个性化设计</title>
     <url>/archives/a204f157.html</url>
     <content><![CDATA[<h3 id="1-NexT-主题选择"><a href="#1-NexT-主题选择" class="headerlink" title="1. NexT 主题选择"></a>1. <code>NexT</code> 主题选择</h3><p><code>NexT</code> 一共提供了 4 种首页样式，按照自己喜好选择一个，取消前面的注释 <code>#</code> 并注释掉 <code>#</code> 其他三个：</p>

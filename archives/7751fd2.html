@@ -23,19 +23,24 @@
     var CONFIG = {"hostname":"www.qiaofeng.xyz","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="+layout: false +---               404">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Planet of Imagination">
-<meta property="og:url" content="https://www.qiaofeng.xyz/404.html">
+  <meta name="description" content="Github链接 欢迎Star.     1. kitti数据可视化工具：依赖pyqtgraph   使用:确保文件架结构如下所示:   12345678910111213141516dataset&#x2F;KITTI&#x2F;object&#x2F;    velodyne&#x2F;        training&#x2F;            000003.bin        te">
+<meta property="og:type" content="article">
+<meta property="og:title" content="kitti点云可视化以及pcd格式转换bin">
+<meta property="og:url" content="https://www.qiaofeng.xyz/archives/7751fd2.html">
 <meta property="og:site_name" content="Planet of Imagination">
-<meta property="og:description" content="+layout: false +---               404">
+<meta property="og:description" content="Github链接 欢迎Star.     1. kitti数据可视化工具：依赖pyqtgraph   使用:确保文件架结构如下所示:   12345678910111213141516dataset&#x2F;KITTI&#x2F;object&#x2F;    velodyne&#x2F;        training&#x2F;            000003.bin        te">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-02-12T15:02:35.927Z">
-<meta property="article:modified_time" content="2020-02-12T15:02:35.927Z">
+<meta property="og:image" content="https://i.loli.net/2020/03/07/uLm8NkJXPtBCcpq.png">
+<meta property="article:published_time" content="2020-03-07T06:37:24.000Z">
+<meta property="article:modified_time" content="2020-03-07T06:44:57.700Z">
 <meta property="article:author" content="Qiao Feng">
+<meta property="article:tag" content="Github">
+<meta property="article:tag" content="Kitti">
+<meta property="article:tag" content="Lidar">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/03/07/uLm8NkJXPtBCcpq.png">
 
-<link rel="canonical" href="https://www.qiaofeng.xyz/404.html">
+<link rel="canonical" href="https://www.qiaofeng.xyz/archives/7751fd2.html">
 
 
 <script id="page-configurations">
@@ -43,12 +48,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false
+    isPost: true
   };
 </script>
 
-  <title> | Planet of Imagination
-  </title>
+  <title>kitti点云可视化以及pcd格式转换bin | Planet of Imagination</title>
   
 
 
@@ -79,6 +83,7 @@
   </style>
 </noscript>
 
+<link rel="alternate" href="/atom.xml" title="Planet of Imagination" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -190,61 +195,202 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
           <div class="content">
             
 
   <div class="posts-expand">
-    
-    
-    
-    <div class="post-block" lang="en">
-      <header class="post-header">
-
-<h1 class="post-title" itemprop="name headline">
-</h1>
-
-<div class="post-meta">
+      
   
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="https://www.qiaofeng.xyz/archives/7751fd2.html">
 
-</div>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/profile_cat.jpg">
+      <meta itemprop="name" content="Qiao Feng">
+      <meta itemprop="description" content="">
+    </span>
 
-</header>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Planet of Imagination">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          kitti点云可视化以及pcd格式转换bin
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-03-07 14:37:24 / Modified: 14:44:57" itemprop="dateCreated datePublished" datetime="2020-03-07T14:37:24+08:00">2020-03-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tech/" itemprop="url" rel="index">
+                    <span itemprop="name">Tech</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span id="/archives/7751fd2.html" class="post-meta-item leancloud_visitors" data-flag-title="kitti点云可视化以及pcd格式转换bin" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/archives/7751fd2.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/archives/7751fd2.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>468</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+        <p><a href="https://link.zhihu.com/?target=https%3A//github.com/Qjizhi/kitti-velodyne-viewer">Github链接</a> 欢迎Star.    </p>
+<h3 id="1-kitti数据可视化工具："><a href="#1-kitti数据可视化工具：" class="headerlink" title="1. kitti数据可视化工具："></a>1. kitti数据可视化工具：</h3><p>依赖<a href="https://link.zhihu.com/?target=https%3A//github.com/pyqtgraph/pyqtgraph">pyqtgraph</a>  </p>
+<p>使用:<br>确保文件架结构如下所示:  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">dataset&#x2F;KITTI&#x2F;object&#x2F;</span><br><span class="line"></span><br><span class="line">    velodyne&#x2F;</span><br><span class="line">        training&#x2F;</span><br><span class="line">            000003.bin</span><br><span class="line">        testing&#x2F;</span><br><span class="line"></span><br><span class="line">    calib&#x2F;</span><br><span class="line">        training&#x2F;</span><br><span class="line">            000003.txt</span><br><span class="line">        testing&#x2F;</span><br><span class="line"></span><br><span class="line">    label&#x2F;</span><br><span class="line">        training&#x2F;</span><br><span class="line">            000003.txt</span><br><span class="line">        testing&#x2F;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python kitti.py</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2020/03/07/uLm8NkJXPtBCcpq.png" alt="teaser.png"></p>
+<h3 id="2-pcd-to-bin格式转换"><a href="#2-pcd-to-bin格式转换" class="headerlink" title="2. .pcd to .bin格式转换"></a>2. <code>.pcd</code> to <code>.bin</code>格式转换</h3><p>使用:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pcdfolder is where `.pcd` files are stores</span></span><br><span class="line">python pcd2bin.py covert pcdfolder binfolder</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-bin-to-pcd格式转换"><a href="#3-bin-to-pcd格式转换" class="headerlink" title="3. .bin to .pcd格式转换"></a>3. <code>.bin</code> to <code>.pcd</code>格式转换</h3><p>目前该方法都是基于C++ PCL点云库开发的, 可以参考这篇文章<a href="https://github.com/HTLife/kitti_velodyne_bin_to_pcd" target="_blank" rel="noopener">kitti_velodyne_bin_to_pcd</a></p>
+<blockquote class="blockquote-center"><p>Stay hungry, Stay foolish </p>
+</blockquote>
+    </div>
+
+    
+    
+    
       
+  <div class="popular-posts-header">相关阅读</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="\archives\b0ad7e73.html" rel="bookmark">Github & Hexo & Next 搭建自己的网站博客</a></div>
+    </li>
+  </ul>
+
+        <div class="reward-container">
+  <div>客官赏杯拿铁呗?</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
       
-      <div class="post-body">
-          +layout: false
-+---
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>404</title>
-<link rel="alternate" href="/atom.xml" title="Planet of Imagination" type="application/atom+xml">
-</head>
-
-<body>
-    <script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="utf-8"
-        homePageUrl="/" homePageName="返回"></script>
-</body>
-
-</html>
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.jpg" alt="Qiao Feng WeChat Pay">
+        <p>WeChat Pay</p>
       </div>
       
-      
-      
-    </div>
-    
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="Qiao Feng Alipay">
+        <p>Alipay</p>
+      </div>
 
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Qiao Feng
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://www.qiaofeng.xyz/archives/7751fd2.html" title="kitti点云可视化以及pcd格式转换bin">https://www.qiaofeng.xyz/archives/7751fd2.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Github/" rel="tag"><i class="fa fa-tag"></i> Github</a>
+              <a href="/tags/Kitti/" rel="tag"><i class="fa fa-tag"></i> Kitti</a>
+              <a href="/tags/Lidar/" rel="tag"><i class="fa fa-tag"></i> Lidar</a>
+          </div>
+
+        
+  <div class="post-widgets">
+    <div class="wp_rating">
+      <div id="wpac-rating"></div>
+    </div>
+  </div>
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/archives/a204f157.html" rel="prev" title="Next中的个性化设计">
+      <i class="fa fa-chevron-left"></i> Next中的个性化设计
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
     
-    
-    
+  </article>
+  
+  
+  
+
   </div>
 
 
@@ -297,6 +443,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-kitti数据可视化工具："><span class="nav-number">1.</span> <span class="nav-text">1. kitti数据可视化工具：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-pcd-to-bin格式转换"><span class="nav-number">2.</span> <span class="nav-text">2. .pcd to .bin格式转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-bin-to-pcd格式转换"><span class="nav-number">3.</span> <span class="nav-text">3. .bin to .pcd格式转换</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

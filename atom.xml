@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.qiaofeng.xyz/"/>
-  <updated>2020-03-02T13:48:13.032Z</updated>
+  <updated>2020-03-07T06:44:57.700Z</updated>
   <id>https://www.qiaofeng.xyz/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>kitti点云可视化以及pcd格式转换bin</title>
+    <link href="https://www.qiaofeng.xyz/archives/7751fd2.html"/>
+    <id>https://www.qiaofeng.xyz/archives/7751fd2.html</id>
+    <published>2020-03-07T06:37:24.000Z</published>
+    <updated>2020-03-07T06:44:57.700Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://link.zhihu.com/?target=https%3A//github.com/Qjizhi/kitti-velodyne-viewer&quot;&gt;Github链接&lt;/a&gt; 欢迎Star.    &lt;/p&gt;
+&lt;h3
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Tech" scheme="https://www.qiaofeng.xyz/categories/Tech/"/>
+    
+    
+      <category term="Github" scheme="https://www.qiaofeng.xyz/tags/Github/"/>
+    
+      <category term="Kitti" scheme="https://www.qiaofeng.xyz/tags/Kitti/"/>
+    
+      <category term="Lidar" scheme="https://www.qiaofeng.xyz/tags/Lidar/"/>
+    
+  </entry>
   
   <entry>
     <title>Next中的个性化设计</title>
