@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.qiaofeng.xyz/"/>
-  <updated>2020-03-07T06:44:57.700Z</updated>
+  <updated>2020-03-07T06:45:23.056Z</updated>
   <id>https://www.qiaofeng.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.qiaofeng.xyz/archives/7751fd2.html"/>
     <id>https://www.qiaofeng.xyz/archives/7751fd2.html</id>
     <published>2020-03-07T06:37:24.000Z</published>
-    <updated>2020-03-07T06:44:57.700Z</updated>
+    <updated>2020-03-07T06:45:23.056Z</updated>
     
     <summary type="html">
     
@@ -40,11 +40,11 @@
       <category term="Tech" scheme="https://www.qiaofeng.xyz/categories/Tech/"/>
     
     
-      <category term="Github" scheme="https://www.qiaofeng.xyz/tags/Github/"/>
-    
       <category term="Kitti" scheme="https://www.qiaofeng.xyz/tags/Kitti/"/>
     
       <category term="Lidar" scheme="https://www.qiaofeng.xyz/tags/Lidar/"/>
+    
+      <category term="Github" scheme="https://www.qiaofeng.xyz/tags/Github/"/>
     
   </entry>
   
@@ -87,11 +87,11 @@
       <category term="Tech" scheme="https://www.qiaofeng.xyz/categories/Tech/"/>
     
     
+      <category term="Github" scheme="https://www.qiaofeng.xyz/tags/Github/"/>
+    
       <category term="Next" scheme="https://www.qiaofeng.xyz/tags/Next/"/>
     
       <category term="Hexo" scheme="https://www.qiaofeng.xyz/tags/Hexo/"/>
-    
-      <category term="Github" scheme="https://www.qiaofeng.xyz/tags/Github/"/>
     
   </entry>
   
