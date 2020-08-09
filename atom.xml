@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.qiaofeng.xyz/"/>
-  <updated>2020-08-09T06:30:04.601Z</updated>
+  <updated>2020-08-09T05:49:08.632Z</updated>
   <id>https://www.qiaofeng.xyz/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>kitti点云可视化以及pcd格式转换bin</title>
+    <link href="https://www.qiaofeng.xyz/archives/7751fd2.html"/>
+    <id>https://www.qiaofeng.xyz/archives/7751fd2.html</id>
+    <published>2020-03-07T06:37:24.000Z</published>
+    <updated>2020-08-09T05:49:08.632Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://link.zhihu.com/?target=https%3A//github.com/Qjizhi/kitti-velodyne-viewer&quot;&gt;Github链接&lt;/a&gt; 欢迎Star.    &lt;/p&gt;
+&lt;h3 id=&quot;1-kitti数据可视化工具：&quot;&gt;&lt;a href=&quot;#1-kitti数据可视化工具：&quot; class=&quot;headerlink&quot; title=&quot;1. kitti数据可视化工具：&quot;&gt;&lt;/a&gt;1. kitti数据可视化工具：&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/03/07/uLm8NkJXPtBCcpq.png&quot; alt=&quot;teaser.png&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Tech" scheme="https://www.qiaofeng.xyz/categories/Tech/"/>
+    
+    
+      <category term="Github" scheme="https://www.qiaofeng.xyz/tags/Github/"/>
+    
+      <category term="Kitti" scheme="https://www.qiaofeng.xyz/tags/Kitti/"/>
+    
+      <category term="Lidar" scheme="https://www.qiaofeng.xyz/tags/Lidar/"/>
+    
+  </entry>
   
   <entry>
     <title>TensorRT介绍(一)</title>
@@ -42,32 +68,6 @@
       <category term="TensorRT" scheme="https://www.qiaofeng.xyz/tags/TensorRT/"/>
     
       <category term="Onnx" scheme="https://www.qiaofeng.xyz/tags/Onnx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>kitti点云可视化以及pcd格式转换bin</title>
-    <link href="https://www.qiaofeng.xyz/archives/7751fd2.html"/>
-    <id>https://www.qiaofeng.xyz/archives/7751fd2.html</id>
-    <published>2020-03-07T06:37:24.000Z</published>
-    <updated>2020-08-09T05:49:08.632Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://link.zhihu.com/?target=https%3A//github.com/Qjizhi/kitti-velodyne-viewer&quot;&gt;Github链接&lt;/a&gt; 欢迎Star.    &lt;/p&gt;
-&lt;h3 id=&quot;1-kitti数据可视化工具：&quot;&gt;&lt;a href=&quot;#1-kitti数据可视化工具：&quot; class=&quot;headerlink&quot; title=&quot;1. kitti数据可视化工具：&quot;&gt;&lt;/a&gt;1. kitti数据可视化工具：&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/03/07/uLm8NkJXPtBCcpq.png&quot; alt=&quot;teaser.png&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Tech" scheme="https://www.qiaofeng.xyz/categories/Tech/"/>
-    
-    
-      <category term="Github" scheme="https://www.qiaofeng.xyz/tags/Github/"/>
-    
-      <category term="Kitti" scheme="https://www.qiaofeng.xyz/tags/Kitti/"/>
-    
-      <category term="Lidar" scheme="https://www.qiaofeng.xyz/tags/Lidar/"/>
     
   </entry>
   
