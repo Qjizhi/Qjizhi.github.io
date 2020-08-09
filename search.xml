@@ -29,6 +29,19 @@
       </tags>
   </entry>
   <entry>
+    <title>TensorRT介绍(一)</title>
+    <url>/archives/f70b13cc.html</url>
+    <content><![CDATA[<blockquote class="blockquote-center"><p>Stay hungry, Stay foolish </p>
+</blockquote>]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>TensorRT</tag>
+        <tag>Onnx</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Next中的个性化设计</title>
     <url>/archives/a204f157.html</url>
     <content><![CDATA[<h3 id="1-NexT-主题选择"><a href="#1-NexT-主题选择" class="headerlink" title="1. NexT 主题选择"></a>1. <code>NexT</code> 主题选择</h3><p><code>NexT</code> 一共提供了 4 种首页样式，按照自己喜好选择一个，取消前面的注释 <code>#</code> 并注释掉 <code>#</code> 其他三个：</p>

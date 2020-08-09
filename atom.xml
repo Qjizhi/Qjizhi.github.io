@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.qiaofeng.xyz/"/>
-  <updated>2020-03-07T06:53:42.399Z</updated>
+  <updated>2020-08-09T05:49:08.632Z</updated>
   <id>https://www.qiaofeng.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.qiaofeng.xyz/archives/7751fd2.html"/>
     <id>https://www.qiaofeng.xyz/archives/7751fd2.html</id>
     <published>2020-03-07T06:37:24.000Z</published>
-    <updated>2020-03-07T06:53:42.399Z</updated>
+    <updated>2020-08-09T05:49:08.632Z</updated>
     
     <summary type="html">
     
@@ -39,6 +39,35 @@
       <category term="Kitti" scheme="https://www.qiaofeng.xyz/tags/Kitti/"/>
     
       <category term="Lidar" scheme="https://www.qiaofeng.xyz/tags/Lidar/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TensorRT介绍(一)</title>
+    <link href="https://www.qiaofeng.xyz/archives/f70b13cc.html"/>
+    <id>https://www.qiaofeng.xyz/archives/f70b13cc.html</id>
+    <published>2020-03-07T06:37:24.000Z</published>
+    <updated>2020-08-09T06:30:04.601Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;p&gt;Stay hungry, Stay foolish
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Tech" scheme="https://www.qiaofeng.xyz/categories/Tech/"/>
+    
+    
+      <category term="TensorRT" scheme="https://www.qiaofeng.xyz/tags/TensorRT/"/>
+    
+      <category term="Onnx" scheme="https://www.qiaofeng.xyz/tags/Onnx/"/>
     
   </entry>
   
