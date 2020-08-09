@@ -57,11 +57,11 @@
       <category term="Tech" scheme="https://www.qiaofeng.xyz/categories/Tech/"/>
     
     
-      <category term="Github" scheme="https://www.qiaofeng.xyz/tags/Github/"/>
-    
       <category term="Kitti" scheme="https://www.qiaofeng.xyz/tags/Kitti/"/>
     
       <category term="Lidar" scheme="https://www.qiaofeng.xyz/tags/Lidar/"/>
+    
+      <category term="Github" scheme="https://www.qiaofeng.xyz/tags/Github/"/>
     
   </entry>
   
@@ -106,9 +106,9 @@
     
       <category term="Next" scheme="https://www.qiaofeng.xyz/tags/Next/"/>
     
-      <category term="Hexo" scheme="https://www.qiaofeng.xyz/tags/Hexo/"/>
-    
       <category term="Github" scheme="https://www.qiaofeng.xyz/tags/Github/"/>
+    
+      <category term="Hexo" scheme="https://www.qiaofeng.xyz/tags/Hexo/"/>
     
   </entry>
   
