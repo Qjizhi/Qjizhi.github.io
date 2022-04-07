@@ -6,5 +6,5 @@ date: 2021-03-01
 venue: '2021 Conference on Computer Vision and Pattern Recognition (CVPR 2021)'
 # paperurl: ''
 link: 'https://arxiv.org/abs/2103.12579'
-citation: 'Li, S., Gong, K., Liu, C. H., Wang, Y., Qiao, F., & Cheng, X. (2021). Metasaug: Meta semantic augmentation for long-tailed visual recognition. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 5212-5221).'
+citation: 'Li, Shuang, Kaixiong Gong, Chi Harold Liu, Yulin Wang, Feng Qiao, and Xinjing Cheng. Conference on Computer Vision and Pattern Recognition (2021)'
 ---
