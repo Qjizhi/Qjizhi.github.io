@@ -45,3 +45,35 @@ author_profile: true
 </table>
 
 ## Projects
+<table frame=hsides>
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead>
+</thead>
+<tbody>
+
+<tr>
+<td markdown="span" style="text-align: center;vertical-align: middle;"><img src="{{ site.baseurl }}/images/lidar_3d_detection.png"></td>
+<td markdown="span" style="vertical-align: middle;">
+    **3D object detection and tracking using multi-lidars**<br>
+    <details>
+    <span style="font-size: 14px">3D object detection and tracking using multi-lidars. Inputs are sequential point clouds from multi lidars and the model can get the 3d information of objects including position, size, orientation, class, and freespace(also as known as drivable area) and also lanes. The model is both deployed on GPU with TensorRT and soc chip, which meets the needs of real-time detection.</span>
+    </details>
+    </td>
+</tr>
+
+<tr>
+<td markdown="span" style="text-align: center;vertical-align: middle;"><img src="{{ site.baseurl }}/images/mono_camera_3d_detection.jpg"></td>
+<td markdown="span" style="vertical-align: middle;">
+    **3D object detection and tracking using monocular camera**<br>
+    [code](https://github.com/Qjizhi/TensorRT-CenterNet-3D)<br>
+    <details>
+    <span style="font-size: 14px">3D object detection and tracking using a monocular camera. Inputs are sequential images and the model can get the 3d information of objects including position, size, orientation, and class. The model is deployed on GPU with TensorRT, inference speed reaches 50 Hz.</span>
+    </details>
+    </td>
+</tr>
+
+</tbody>
+</table>
