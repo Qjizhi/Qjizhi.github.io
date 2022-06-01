@@ -16,8 +16,8 @@ permalink: /projects/
 <tbody>
 
 <tr>
-<td markdown="span" style="vertical-align: middle; padding-bottom: 3em;"><img src="{{ site.baseurl }}/images/2022_cvpr_stcrowd.png"></td>
-<td markdown="span" style="vertical-align: middle; padding-bottom: 3em;">
+<td markdown="span" style="text-align: center;vertical-align: middle;"><img src="{{ site.baseurl }}/images/2022_cvpr_stcrowd.png"></td>
+<td markdown="span" style="vertical-align: middle;">
     **STCrowd: A Multimodal Dataset for Pedestrian Perception in Crowded Scenes.**<br>
     Peishan Cong, Xinge Zhu, **Feng Qiao**, Yiming Ren, Xidong Peng, Yuenan Hou, Lan Xu, Ruigang Yang, Dinesh Manocha, Yuexin Ma.<br>
     Conference on Computer Vision and Pattern Recognition (CVPR), 2022<br>
@@ -29,8 +29,8 @@ permalink: /projects/
 </tr>
 
 <tr>
-<td markdown="span" style="vertical-align: middle; padding-bottom: 3em;"><img src="{{ site.baseurl }}/images/2021_cvpr_metasaug.png"></td>
-<td markdown="span" style="vertical-align: middle; padding-bottom: 3em;">
+<td markdown="span" style="text-align: center;vertical-align: middle;"><img src="{{ site.baseurl }}/images/2021_cvpr_metasaug.png"></td>
+<td markdown="span" style="vertical-align: middle;">
     **MetaSAug: Meta Semantic Augmentation for Long-Tailed Visual Recognition**<br>
     Li, Shuang, Kaixiong Gong, Chi Harold Liu, Yulin Wang, **Feng Qiao**, and Xinjing Cheng.<br>
     Conference on Computer Vision and Pattern Recognition (CVPR), 2021<br>
