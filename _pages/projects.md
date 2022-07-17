@@ -55,6 +55,16 @@ permalink: /projects/
 <tbody>
 
 <tr>
+<td markdown="span" style="text-align: center;vertical-align: middle;"><img src="{{ site.baseurl }}/images/3d_recon_fisheye_stereo.gif"></td>
+<td markdown="span" style="vertical-align: middle;">
+    **3D reconstruction with stereo fisheye cameras**<br>
+    <details>
+    <span style="font-size: 14px">Unsupervised depth estimation with stereo fisheye cameras.</span>
+    </details>
+    </td>
+</tr>
+
+<tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;"><img src="{{ site.baseurl }}/images/stereo_depth_estimation.png"></td>
 <td markdown="span" style="vertical-align: middle;">
     **Self-supervised depth estimation uisng stereo cameras**<br>
