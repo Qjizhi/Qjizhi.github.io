@@ -12,14 +12,14 @@ main:
   # - title: "Portfolio"
   #   url: /portfolio/
 
-  - title: "Research and Projects"
-    url: /projects/ 
+  # - title: "Research and Projects"
+  #   url: /projects/ 
 
-  - title: "Honors and Activities"
-    url: /honors_and_activities/ 
+  # - title: "Honors and Activities"
+  #   url: /honors_and_activities/ 
 
-  - title: "CV"
-    url: /cv/
+  # - title: "CV"
+  #   url: /cv/
 
   # - title: "Guide"
   #   url: /markdown/

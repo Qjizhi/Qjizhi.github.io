@@ -57,9 +57,9 @@ permalink: /projects/
 <tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;"><img src="{{ site.baseurl }}/images/uda_pls.png"></td>
 <td markdown="span" style="vertical-align: middle;">
-    **Unsupervised Domain Adaptation in Power Line Segmentation of Aerial Images**<br>
+    **QuadFormer: Quadruple Transformer for Unsupervised Domain Adaptation in Power Line Segmentation of Aerial Images**<br>
     <details>
-    <span style="font-size: 14px">Unsupervised Domain Adaptation in Power Line Segmentation of Aerial Images.</span>
+    <span style="font-size: 14px">we propose QuadFormer, a novel framework designed for domain adaptive semantic segmentation. The hierarchical quadruple transformer combines cross-attention and self-attention mechanisms to adapt transferable context. Based on cross-attentive and self-attentive feature representations, we introduce a pseudo label correction scheme to online denoise the pseudo labels and reduce the domain gap. Additionally, we present two datasets - ARPLSyn and ARPLReal to further advance research in unsupervised domain adaptive powerline segmentations.</span>
     </details>
     </td>
 </tr>
