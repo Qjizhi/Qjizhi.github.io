@@ -55,6 +55,17 @@ permalink: /projects/
 <tbody>
 
 <tr>
+<td markdown="span" style="text-align: center;vertical-align: middle;"><img src="{{ site.baseurl }}/images/uda_pls.png"></td>
+<td markdown="span" style="vertical-align: middle;">
+    **Unsupervised Domain Adaptation in Power Line Segmentation of Aerial Images**<br>
+    <details>
+    <span style="font-size: 14px">Unsupervised Domain Adaptation in Power Line Segmentation of Aerial Images.</span>
+    </details>
+    </td>
+</tr>
+
+
+<tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;"><img src="{{ site.baseurl }}/images/3d_recon_fisheye_stereo.gif"></td>
 <td markdown="span" style="vertical-align: middle;">
     **3D reconstruction with stereo fisheye cameras**<br>
