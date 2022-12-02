@@ -23,6 +23,18 @@ I'm currently looking for a phd position. [CV](/files/pdf/Feng_Resume_2022.pdf) 
 <tbody>
 
 <tr>
+<td markdown="span" style="text-align: center;vertical-align: middle;"><img src="{{ site.baseurl }}/images/uda_pls.png"></td>
+<td markdown="span" style="vertical-align: middle;">
+    **QuadFormer: Quadruple Transformer for Unsupervised Domain Adaptation in Power Line Segmentation of Aerial Images**<br>
+    Pratyaksh Prabhav Rao<sup>*</sup>, **Feng Qiao**<sup>*</sup>, Weide Zhang, Yiliang Xu, Yong Deng, Guangbin Wu, Qiang Zhang.<br>
+    [[arxiv](https://arxiv.org/abs/2211.16988)]<br>
+    <details>
+    <span style="font-size: 14px">we propose QuadFormer, a novel framework designed for domain adaptive semantic segmentation. The hierarchical quadruple transformer combines cross-attention and self-attention mechanisms to adapt transferable context. Based on cross-attentive and self-attentive feature representations, we introduce a pseudo label correction scheme to online denoise the pseudo labels and reduce the domain gap. Additionally, we present two datasets - ARPLSyn and ARPLReal to further advance research in unsupervised domain adaptive powerline segmentations.</span>
+    </details>
+    </td>
+</tr>
+
+<tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;"><img src="{{ site.baseurl }}/images/2022_cvpr_stcrowd.png"></td>
 <td markdown="span" style="vertical-align: middle;">
     **STCrowd: A Multimodal Dataset for Pedestrian Perception in Crowded Scenes.**<br>
@@ -44,16 +56,6 @@ I'm currently looking for a phd position. [CV](/files/pdf/Feng_Resume_2022.pdf) 
     [[paper](https://arxiv.org/abs/2103.12579)] [[code](https://github.com/BIT-DA/MetaSAug)]<br>
     <details>
     <span style="font-size: 14px">We propose a novel approach to learn transformed semantic directions with meta-learning automatically. In specific, the augmentation strategy during training is dynamically optimized, aiming to minimize the loss on a small balanced validation set, which is approximated via a meta update step. Extensive empirical results on CIFAR-LT-10/100, ImageNet-LT, and iNaturalist 2017/2018 validate the effectiveness of our method.</span>
-    </details>
-    </td>
-</tr>
-
-<tr>
-<td markdown="span" style="text-align: center;vertical-align: middle;"><img src="{{ site.baseurl }}/images/uda_pls.png"></td>
-<td markdown="span" style="vertical-align: middle;">
-    **QuadFormer: Quadruple Transformer for Unsupervised Domain Adaptation in Power Line Segmentation of Aerial Images**<br>
-    <details>
-    <span style="font-size: 14px">we propose QuadFormer, a novel framework designed for domain adaptive semantic segmentation. The hierarchical quadruple transformer combines cross-attention and self-attention mechanisms to adapt transferable context. Based on cross-attentive and self-attentive feature representations, we introduce a pseudo label correction scheme to online denoise the pseudo labels and reduce the domain gap. Additionally, we present two datasets - ARPLSyn and ARPLReal to further advance research in unsupervised domain adaptive powerline segmentations.</span>
     </details>
     </td>
 </tr>
