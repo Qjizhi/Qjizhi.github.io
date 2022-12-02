@@ -13,7 +13,7 @@ I’m an applied deep learning scientist, mainly focusing on designing perceptio
 I'm currently looking for a phd position. [CV](/files/pdf/Feng_Resume_2022.pdf) can be found here. Feel free to reach out :)
 
 ## Research  
-<table frame=hsides>
+<table frame=hsides style="border-left-style: none;border-right-style: none;">
 <colgroup>
 <col width="30%" />
 <col width="70%" />
@@ -23,8 +23,8 @@ I'm currently looking for a phd position. [CV](/files/pdf/Feng_Resume_2022.pdf) 
 <tbody>
 
 <tr>
-<td markdown="span" style="text-align: center;vertical-align: middle;"><img src="{{ site.baseurl }}/images/uda_pls.png"></td>
-<td markdown="span" style="vertical-align: middle;">
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/uda_pls.png"></td>
+<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **QuadFormer: Quadruple Transformer for Unsupervised Domain Adaptation in Power Line Segmentation of Aerial Images**<br>
     Pratyaksh Prabhav Rao<sup>*</sup>, **Feng Qiao**<sup>*</sup>, Weide Zhang, Yiliang Xu, Yong Deng, Guangbin Wu, Qiang Zhang.<br>
     [[arxiv](https://arxiv.org/abs/2211.16988)]<br>
@@ -35,8 +35,8 @@ I'm currently looking for a phd position. [CV](/files/pdf/Feng_Resume_2022.pdf) 
 </tr>
 
 <tr>
-<td markdown="span" style="text-align: center;vertical-align: middle;"><img src="{{ site.baseurl }}/images/2022_cvpr_stcrowd.png"></td>
-<td markdown="span" style="vertical-align: middle;">
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2022_cvpr_stcrowd.png"></td>
+<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **STCrowd: A Multimodal Dataset for Pedestrian Perception in Crowded Scenes.**<br>
     Peishan Cong, Xinge Zhu, **Feng Qiao**, Yiming Ren, Xidong Peng, Yuenan Hou, Lan Xu, Ruigang Yang, Dinesh Manocha, Yuexin Ma.<br>
     Conference on Computer Vision and Pattern Recognition (CVPR), 2022<br>
@@ -48,8 +48,8 @@ I'm currently looking for a phd position. [CV](/files/pdf/Feng_Resume_2022.pdf) 
 </tr>
 
 <tr>
-<td markdown="span" style="text-align: center;vertical-align: middle;"><img src="{{ site.baseurl }}/images/2021_cvpr_metasaug.png"></td>
-<td markdown="span" style="vertical-align: middle;">
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2021_cvpr_metasaug.png"></td>
+<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **MetaSAug: Meta Semantic Augmentation for Long-Tailed Visual Recognition**<br>
     Li, Shuang, Kaixiong Gong, Chi Harold Liu, Yulin Wang, **Feng Qiao**, and Xinjing Cheng.<br>
     Conference on Computer Vision and Pattern Recognition (CVPR), 2021<br>
@@ -64,7 +64,7 @@ I'm currently looking for a phd position. [CV](/files/pdf/Feng_Resume_2022.pdf) 
 </table>
 
 ## Projects
-<table frame=hsides>
+<table frame=hsides style="border-left-style: none;border-right-style: none;">
 <colgroup>
 <col width="30%" />
 <col width="70%" />
@@ -76,8 +76,8 @@ I'm currently looking for a phd position. [CV](/files/pdf/Feng_Resume_2022.pdf) 
 
 
 <tr>
-<td markdown="span" style="text-align: center;vertical-align: middle;"><img src="{{ site.baseurl }}/images/3d_recon_fisheye_stereo.gif"></td>
-<td markdown="span" style="vertical-align: middle;">
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/3d_recon_fisheye_stereo.gif"></td>
+<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **3D reconstruction with stereo fisheye cameras**<br>
     <details>
     <span style="font-size: 14px">Unsupervised depth estimation with stereo fisheye cameras.</span>
@@ -86,8 +86,8 @@ I'm currently looking for a phd position. [CV](/files/pdf/Feng_Resume_2022.pdf) 
 </tr>
 
 <tr>
-<td markdown="span" style="text-align: center;vertical-align: middle;"><img src="{{ site.baseurl }}/images/stereo_depth_estimation.png"></td>
-<td markdown="span" style="vertical-align: middle;">
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/stereo_depth_estimation.png"></td>
+<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **Self-supervised depth estimation uisng stereo cameras**<br>
     <details>
     <span style="font-size: 14px">Depth estimation using stereo cameras. We use synthetic data to generate ground truth, and domain adaptation/generalization to make it perform also fantastic on real data.</span>
@@ -96,8 +96,8 @@ I'm currently looking for a phd position. [CV](/files/pdf/Feng_Resume_2022.pdf) 
 </tr>
 
 <tr>
-<td markdown="span" style="text-align: center;vertical-align: middle;"><img src="{{ site.baseurl }}/images/lidar_3d_detection.png"></td>
-<td markdown="span" style="vertical-align: middle;">
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/lidar_3d_detection.png"></td>
+<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **3D object detection and tracking using multi-lidars**<br>
     <details>
     <span style="font-size: 14px">3D object detection and tracking using multi-lidars. Inputs are sequential point clouds from multi lidars and the model can get the 3d information of objects including position, size, orientation, class, and freespace(also as known as drivable area) and also lanes. The model is both deployed on GPU with TensorRT and soc chip, which meets the needs of real-time detection.</span>
@@ -106,8 +106,8 @@ I'm currently looking for a phd position. [CV](/files/pdf/Feng_Resume_2022.pdf) 
 </tr>
 
 <tr>
-<td markdown="span" style="text-align: center;vertical-align: middle;"><img src="{{ site.baseurl }}/images/mono_camera_3d_detection.jpg"></td>
-<td markdown="span" style="vertical-align: middle;">
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/mono_camera_3d_detection.jpg"></td>
+<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **3D object detection and tracking using monocular camera**<br>
     [[code](https://github.com/Qjizhi/TensorRT-CenterNet-3D)]<br>
     <details>
