@@ -10,7 +10,7 @@ redirect_from:
 
 I’m an applied deep learning scientist, mainly focusing on designing perception algorithms for autonomous driving or drone systems. I have worked in the industry for 5+ years. I obtained my M.S. (major in autonomous driving) from [RWTH Aachen University](https://www.rwth-aachen.de/cms/~a/root/?lidx=1) in 2019. I got my B.S. from [Beijing Institute of Technology](https://english.bit.edu.cn/). My research areas mainly include 3d object detection, segmentation, depth estimation, and stereo matching.
 
-I'm currently looking for a phd position. [CV](/files/pdf/Feng_Resume_2022.pdf) can be found here. Feel free to reach out :)
+<!-- I'm currently looking for a phd position. [CV](/files/pdf/Feng_Resume_2022.pdf) can be found here. Feel free to reach out :) -->
 
 ## Research  
 <table frame=hsides style="border-left-style: none;border-right-style: none;">
