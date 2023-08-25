@@ -23,6 +23,19 @@ I’m an applied deep learning scientist, mainly focusing on designing perceptio
 <tbody>
 
 <tr>
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2023_bmvc_StereoFlowGAN.png"></td>
+<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
+    **StereoFlowGAN: Co-training for Stereo and Flow with Unsupervised Domain Adaptation**<br>
+    Zhexiao Xiong, **Feng Qiao**, Yu Zhang, Nathan Jacobs.<br>
+    The British Machine Vision Conference (BMVC), 2023<br>
+    <!-- [[arxiv](https://arxiv.org/abs/2211.16988)]<br> -->
+    <details>
+    <span style="font-size: 14px">We introduce a novel training strategy for stereo matching and optical flow estimation that utilizes image-to-image translation between synthetic and real image domains. Our approach enables the training of models that excel in real image scenarios while relying solely on ground-truth information from synthetic images. To facilitate task-agnostic domain adaptation and the training of task-specific components, we introduce a bidirectional feature warping module that handles both left-right and forward-backward directions. Experimental results show competitive performance over previous domain translation-based methods, which substantiate the efficacy of our proposed framework, effectively leveraging the benefits of unsupervised domain adaptation, stereo matching, and optical flow estimation.</span>
+    </details>
+    </td>
+</tr>
+
+<tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/uda_pls.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **QuadFormer: Quadruple Transformer for Unsupervised Domain Adaptation in Power Line Segmentation of Aerial Images**<br>
@@ -121,17 +134,16 @@ I’m an applied deep learning scientist, mainly focusing on designing perceptio
 
 ## Honors
 - 2016: outstanding graduates in BIT
-- 2013: national scholarship in BIT (ranking 1st)  
-        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; outstanding student leaders in BIT (Beijing Institute of Technology)
+- 2013: national scholarship in BIT (ranking 1st); outstanding student leaders in BIT (Beijing Institute of Technology)
 
 ## Activities
 
 ### Academic activities  
 
 - Conference Reviewer: CVPR 2023  
+- Journal Reviewer: Int. J. of Vehicle Design, Journal of Automobile Engineering, IET Intelligent Transport Systems
 
 ### Social activities   
 
-- 2016: served as a volunteer in China Foundation for Poverty Alleviation
-- 2015: served as a volunteer in China Foundation for Poverty Alleviation
+- Volunteer: China Foundation for Poverty Alleviation 2015, 2016
 

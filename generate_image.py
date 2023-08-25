@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import argparse
+import os
 
 parser = argparse.ArgumentParser(description='convert img to 384x512')
 parser.add_argument('--image', help='path to images')
@@ -9,6 +10,7 @@ parser.add_argument('--width', type=int, default=256, help='height to be resized
 
 args = parser.parse_args()
 
+name = args.image.split('/')[-1]
 dim = (args.width, args.height)
 ratio = args.height/args.width
 color = [255, 255, 255]
@@ -17,7 +19,7 @@ image = cv2.imread(args.image)
 # h, w, _ = image.shape
 # name = args.image.split('.')[0] + "_new.png"
 resized_dst = cv2.resize(image, dim, interpolation = cv2.INTER_AREA)
-cv2.imwrite(args.image, resized_dst)
+cv2.imwrite(os.path.join('./images', name), resized_dst)
 # if h/w < ratio:
 #     h_new = int(ratio*w)
 #     border = int(0.5*(h_new-h))
