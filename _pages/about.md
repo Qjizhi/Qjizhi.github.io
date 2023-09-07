@@ -28,7 +28,7 @@ I’m an applied deep learning scientist, mainly focusing on designing perceptio
     **StereoFlowGAN: Co-training for Stereo and Flow with Unsupervised Domain Adaptation**<br>
     Zhexiao Xiong, **Feng Qiao**, Yu Zhang, Nathan Jacobs.<br>
     The British Machine Vision Conference (BMVC), 2023<br>
-    <!-- [[arxiv](https://arxiv.org/abs/2211.16988)]<br> -->
+    [[paper](https://arxiv.org/abs/2309.01842)]<br>
     <details>
     <span style="font-size: 14px">We introduce a novel training strategy for stereo matching and optical flow estimation that utilizes image-to-image translation between synthetic and real image domains. Our approach enables the training of models that excel in real image scenarios while relying solely on ground-truth information from synthetic images. To facilitate task-agnostic domain adaptation and the training of task-specific components, we introduce a bidirectional feature warping module that handles both left-right and forward-backward directions. Experimental results show competitive performance over previous domain translation-based methods, which substantiate the efficacy of our proposed framework, effectively leveraging the benefits of unsupervised domain adaptation, stereo matching, and optical flow estimation.</span>
     </details>
@@ -40,7 +40,7 @@ I’m an applied deep learning scientist, mainly focusing on designing perceptio
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **QuadFormer: Quadruple Transformer for Unsupervised Domain Adaptation in Power Line Segmentation of Aerial Images**<br>
     Pratyaksh Prabhav Rao<sup>*</sup>, **Feng Qiao**<sup>*</sup>, Weide Zhang, Yiliang Xu, Yong Deng, Guangbin Wu, Qiang Zhang.<br>
-    [[arxiv](https://arxiv.org/abs/2211.16988)]<br>
+    [[preprint](https://arxiv.org/abs/2211.16988)]<br>
     <details>
     <span style="font-size: 14px">we propose QuadFormer, a novel framework designed for domain adaptive semantic segmentation. The hierarchical quadruple transformer combines cross-attention and self-attention mechanisms to adapt transferable context. Based on cross-attentive and self-attentive feature representations, we introduce a pseudo label correction scheme to online denoise the pseudo labels and reduce the domain gap. Additionally, we present two datasets - ARPLSyn and ARPLReal to further advance research in unsupervised domain adaptive powerline segmentations.</span>
     </details>
