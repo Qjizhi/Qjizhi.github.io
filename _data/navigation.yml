@@ -18,8 +18,8 @@ main:
   # - title: "Honors and Activities"
   #   url: /honors_and_activities/ 
 
-  # - title: "CV"
-  #   url: /cv/
+  - title: "CV"
+    url: /cv/
 
   # - title: "Guide"
   #   url: /markdown/

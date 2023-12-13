@@ -6,11 +6,12 @@ author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+  - /cv.html
 ---
 
-I’m an applied deep learning scientist, mainly focusing on designing perception algorithms for autonomous driving or drone systems. I have worked in the industry for 5+ years. I obtained my M.S. (major in autonomous driving) from [RWTH Aachen University](https://www.rwth-aachen.de/cms/~a/root/?lidx=1) in 2019. I got my B.S. from [Beijing Institute of Technology](https://english.bit.edu.cn/). My research areas mainly include 3d object detection, segmentation, depth estimation, and stereo matching.
+I’m an applied deep learning scientist, mainly focusing on designing perception algorithms for autonomous driving or drone systems. I have worked in the industry for 6+ years. I obtained my M.S. (major in autonomous driving) from [RWTH Aachen University](https://www.rwth-aachen.de/cms/~a/root/?lidx=1) in 2019. I got my B.S. from [Beijing Institute of Technology](https://english.bit.edu.cn/). My research areas mainly include Computer Vision, Deep Learning, and Robotics.
 
-<!-- I'm currently looking for a phd position. [CV](/files/pdf/Feng_Resume_2022.pdf) can be found here. Feel free to reach out :) -->
+I'm currently looking for a PhD position. Feel free to reach out!
 
 ## Research  
 <table frame=hsides style="border-left-style: none;border-right-style: none;">
@@ -23,7 +24,20 @@ I’m an applied deep learning scientist, mainly focusing on designing perceptio
 <tbody>
 
 <tr>
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2023_bmvc_StereoFlowGAN.png"></td>
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2024_CVPR_SAM3DSEG_resized.png"></td>
+<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
+    **SAM-guided Unsupervised Domain Adaptation for 3D Segmentation**<br>
+    Xidong Peng, Runnan Chen, **Feng Qiao**, Lingdong Kong, Youquan Liu, Tai Wang, Xinge Zhu, Yuexin Ma.<br>
+    Conference on Computer Vision and Pattern Recognition (CVPR), 2024 in submission<br>
+    [[paper](https://arxiv.org/abs/2310.08820v2)]<br>
+    <details>
+    <span style="font-size: 14px">Inspired by the remarkable generalization capabilities exhibited by the vision foundation model, SAM, in the realm of image segmentation, our approach leverages the wealth of general knowledge embedded within SAM to unify feature representations across diverse 3D domains and further solves the 3D domain adaptation problem. Specifically, we harness the corresponding images associated with point clouds to facilitate knowledge transfer and propose an innovative hybrid feature augmentation methodology, which significantly enhances the alignment between the 3D feature space and SAM's feature space, operating at both the scene and instance levels. Our method is evaluated on many widely-recognized datasets and achieves state-of-the-art performance.</span>
+    </details>
+    </td>
+</tr>
+
+<tr>
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2023_BMVC_StereoFlowGAN_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **StereoFlowGAN: Co-training for Stereo and Flow with Unsupervised Domain Adaptation**<br>
     Zhexiao Xiong, **Feng Qiao**, Yu Zhang, Nathan Jacobs.<br>
@@ -36,10 +50,24 @@ I’m an applied deep learning scientist, mainly focusing on designing perceptio
 </tr>
 
 <tr>
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2023_PRCV_DUFormer_resized.png"></td>
+<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
+    **DUFormer: Solving Power Line Detection Task in Aerial Images using Semantic Segmentation**<br>
+    Deyu An, Qiang Zhang, Jianshu Chao, Ting Li, **Feng Qiao**, Yong Deng, Zhenpeng Bian.<br>
+    Chinese Conference on Pattern Recognition and Computer Vision (PRCV), 2023<br>
+    [[paper](https://arxiv.org/abs/2304.05821)]<br>
+    <details>
+    <span style="font-size: 14px">We proposed DUFormer, a CNN-Transformer hybrid algorithm, is specifically designed to detect power lines in aerial images.</span>
+    </details>
+    </td>
+</tr>
+
+<tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/uda_pls.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **QuadFormer: Quadruple Transformer for Unsupervised Domain Adaptation in Power Line Segmentation of Aerial Images**<br>
-    Pratyaksh Prabhav Rao<sup>*</sup>, **Feng Qiao**<sup>*</sup>, Weide Zhang, Yiliang Xu, Yong Deng, Guangbin Wu, Qiang Zhang.<br>
+    Pratyaksh Prabhav Rao<sup>*</sup>, **Feng Qiao**<sup>*</sup>, Weide Zhang, Yiliang Xu, Yong Deng, Guangbin Wu, Qiang Zhang. <br>
+    International Conference on Robotics and Automation (ICRA), 2024 in submission<br>
     [[preprint](https://arxiv.org/abs/2211.16988)]<br>
     <details>
     <span style="font-size: 14px">we propose QuadFormer, a novel framework designed for domain adaptive semantic segmentation. The hierarchical quadruple transformer combines cross-attention and self-attention mechanisms to adapt transferable context. Based on cross-attentive and self-attentive feature representations, we introduce a pseudo label correction scheme to online denoise the pseudo labels and reduce the domain gap. Additionally, we present two datasets - ARPLSyn and ARPLReal to further advance research in unsupervised domain adaptive powerline segmentations.</span>
@@ -48,7 +76,7 @@ I’m an applied deep learning scientist, mainly focusing on designing perceptio
 </tr>
 
 <tr>
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2022_cvpr_stcrowd.png"></td>
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2022_CVPR_STCrowd_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **STCrowd: A Multimodal Dataset for Pedestrian Perception in Crowded Scenes.**<br>
     Peishan Cong, Xinge Zhu, **Feng Qiao**, Yiming Ren, Xidong Peng, Yuenan Hou, Lan Xu, Ruigang Yang, Dinesh Manocha, Yuexin Ma.<br>
@@ -61,7 +89,7 @@ I’m an applied deep learning scientist, mainly focusing on designing perceptio
 </tr>
 
 <tr>
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2021_cvpr_metasaug.png"></td>
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2021_CVPR_MetaSAug_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **MetaSAug: Meta Semantic Augmentation for Long-Tailed Visual Recognition**<br>
     Li, Shuang, Kaixiong Gong, Chi Harold Liu, Yulin Wang, **Feng Qiao**, and Xinjing Cheng.<br>
@@ -86,6 +114,25 @@ I’m an applied deep learning scientist, mainly focusing on designing perceptio
 </thead>
 <tbody>
 
+<tr>
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/Nerf_3D_Reconstruction.gif"></td>
+<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
+    **3D reconstruction of electric tower**<br>
+    <details>
+    <span style="font-size: 14px">3D reconstruction of electric tower using aerial images.</span>
+    </details>
+    </td>
+</tr>
+
+<tr>
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/TalkingFaceGeneration.gif"></td>
+<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
+    **Talking face generation**<br>
+    <details>
+    <span style="font-size: 14px">Multi stage talking face generation.</span>
+    </details>
+    </td>
+</tr>
 
 
 <tr>
@@ -99,7 +146,7 @@ I’m an applied deep learning scientist, mainly focusing on designing perceptio
 </tr>
 
 <tr>
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/stereo_depth_estimation.png"></td>
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/StereoMatching_Powerline_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **Self-supervised depth estimation uisng stereo cameras**<br>
     <details>
@@ -109,7 +156,7 @@ I’m an applied deep learning scientist, mainly focusing on designing perceptio
 </tr>
 
 <tr>
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/lidar_3d_detection.png"></td>
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/Lidar_Perception_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **3D object detection and tracking using multi-lidars**<br>
     <details>
@@ -133,14 +180,14 @@ I’m an applied deep learning scientist, mainly focusing on designing perceptio
 </table>
 
 ## Honors
-- 2016: outstanding graduates in BIT
-- 2013: national scholarship in BIT (ranking 1st); outstanding student leaders in BIT (Beijing Institute of Technology)
+- 2016: Outstanding Graduates at BIT (Beijing Institute of Technology).
+- 2013: National Scholarship at BIT (top 1%); Sutstanding Student Leaders at BIT.
 
 ## Activities
 
 ### Academic activities  
 
-- Conference Reviewer: CVPR 2023  
+- Conference Reviewer: CVPR 2023, 2024
 - Journal Reviewer: Int. J. of Vehicle Design, Journal of Automobile Engineering, IET Intelligent Transport Systems
 
 ### Social activities   
