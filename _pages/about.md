@@ -181,7 +181,7 @@ I'm currently looking for a PhD position. Feel free to reach out!
 
 ## Honors
 - 2016: Outstanding Graduates at BIT (Beijing Institute of Technology).
-- 2013: National Scholarship at BIT (top 1%); Sutstanding Student Leaders at BIT.
+- 2013: National Scholarship at BIT (top 1%); Outstanding Student Leaders at BIT.
 
 ## Activities
 
@@ -192,5 +192,5 @@ I'm currently looking for a PhD position. Feel free to reach out!
 
 ### Social activities   
 
-- Volunteer: China Foundation for Poverty Alleviation 2015, 2016
+- Volunteer: China Foundation for Poverty Alleviation 2013 - 2015
 
