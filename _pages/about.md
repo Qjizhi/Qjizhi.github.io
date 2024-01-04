@@ -13,7 +13,7 @@ I’m an applied deep learning scientist, mainly focusing on designing perceptio
 
 <!-- I'm currently looking for a PhD position. Feel free to reach out! -->
 
-## Research  
+## Research & Publications
 <table frame=hsides style="border-left-style: none;border-right-style: none;">
 <colgroup>
 <col width="30%" />
@@ -150,7 +150,7 @@ I’m an applied deep learning scientist, mainly focusing on designing perceptio
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **Self-supervised depth estimation uisng stereo cameras**<br>
     <details>
-    <span style="font-size: 14px">Depth estimation using stereo cameras. We use synthetic data to generate ground truth, and domain adaptation/generalization to make it perform also fantastic on real data.</span>
+    <span style="font-size: 14px">Depth estimation using stereo cameras. Synthetic data is utilized to generate ground truth, and domain adaptation/generalization is employed to ensure excellent performance on real data as well.</span>
     </details>
     </td>
 </tr>
@@ -160,7 +160,7 @@ I’m an applied deep learning scientist, mainly focusing on designing perceptio
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **3D object detection and tracking using multi-lidars**<br>
     <details>
-    <span style="font-size: 14px">3D object detection and tracking using multi-lidars. Inputs are sequential point clouds from multi lidars and the model can get the 3d information of objects including position, size, orientation, class, and freespace(also as known as drivable area) and also lanes. The model is both deployed on GPU with TensorRT and soc chip, which meets the needs of real-time detection.</span>
+    <span style="font-size: 14px">3D object detection and tracking using multi-lidars. Inputs are sequential point clouds from multi-lidars and the model can get the 3d information of objects including position, size, orientation, class, free space (also as known as drivable area), and lanes. The model is deployed on GPU with TensorRT and SoC chip, which meets the needs of real-time detection.</span>
     </details>
     </td>
 </tr>
@@ -171,7 +171,7 @@ I’m an applied deep learning scientist, mainly focusing on designing perceptio
     **3D object detection and tracking using monocular camera**<br>
     [[code](https://github.com/Qjizhi/TensorRT-CenterNet-3D)]<br>
     <details>
-    <span style="font-size: 14px">3D object detection and tracking using a monocular camera. Inputs are sequential images and the model can get the 3d information of objects including position, size, orientation, and class. The model is deployed on GPU with TensorRT, inference speed reaches 50 Hz.</span>
+    <span style="font-size: 14px">3D object detection and tracking using a monocular camera. The model takes sequential images as inputs and is capable of extracting 3D information about objects, including their position, size, orientation, and class. Deployment on a GPU with TensorRT enables the model to achieve an impressive inference speed of 50 Hz.</span>
     </details>
     </td>
 </tr>
@@ -179,18 +179,20 @@ I’m an applied deep learning scientist, mainly focusing on designing perceptio
 </tbody>
 </table>
 
-## Honors
-- 2016: Outstanding Graduates at BIT (Beijing Institute of Technology).
-- 2013: National Scholarship at BIT (top 1%); Outstanding Student Leaders at BIT.
+## Honors & Awards
+- Outstanding Graduates at Beijing Institute of Technology (2016).
+- Outstanding scholarship at Beijing Institute of Technology (2013-2015, 5 times).
+- Outstanding student leaders at Beijing Institute of Technology (2013).
+- National Scholarship (**top 1%**, highest scholarship in China) at Beijing Institute of Technology (2013).
 
 ## Activities
 
 ### Academic activities  
 
-- Conference Reviewer: CVPR 2023, 2024
-- Journal Reviewer: Int. J. of Vehicle Design, Journal of Automobile Engineering, IET Intelligent Transport Systems
+- Conference Reviewer: CVPR 2023, 2024.
+- Journal Reviewer: Int. J. of Vehicle Design; Journal of Automobile Engineering; IET Intelligent Transport Systems.
 
 ### Social activities   
 
-- Volunteer: China Foundation for Poverty Alleviation 2013 - 2015
+- Volunteer: China Foundation for Poverty Alleviation 2013-2015
 
