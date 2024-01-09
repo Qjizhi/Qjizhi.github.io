@@ -115,16 +115,6 @@ I’m an research scientist, mainly focusing on designing perception algorithms 
 <tbody>
 
 <tr>
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/Nerf_3D_Reconstruction.gif"></td>
-<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **3D reconstruction of electric tower**<br>
-    <details>
-    <span style="font-size: 14px">3D reconstruction of electric tower using aerial images.</span>
-    </details>
-    </td>
-</tr>
-
-<tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/TalkingFaceGeneration.gif"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **Talking face generation**<br>
@@ -134,6 +124,15 @@ I’m an research scientist, mainly focusing on designing perception algorithms 
     </td>
 </tr>
 
+<tr>
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/Nerf_3D_Reconstruction.gif"></td>
+<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
+    **3D reconstruction of electric tower**<br>
+    <details>
+    <span style="font-size: 14px">3D reconstruction of electric tower using aerial images.</span>
+    </details>
+    </td>
+</tr>
 
 <tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/3d_recon_fisheye_stereo.gif"></td>
