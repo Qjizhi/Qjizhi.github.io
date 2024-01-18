@@ -9,7 +9,7 @@ redirect_from:
   - /cv.html
 ---
 
-I’m an research scientist, mainly focusing on designing perception algorithms for autonomous driving or drone systems. I have worked in the industry for 5+ years. I obtained my M.S. from [RWTH Aachen University](https://www.rwth-aachen.de/cms/~a/root/?lidx=1) and B.S. from [Beijing Institute of Technology](https://english.bit.edu.cn/). My research areas mainly include Computer Vision, Deep Learning, and Robotics.
+I’m an research scientist, mainly focusing on designing perception algorithms for autonomous driving or drone systems. I have worked in the industry for 5+ years. I obtained my M.S. from [RWTH Aachen University](https://www.rwth-aachen.de/cms/~a/root/?lidx=1) and B.S. from [Beijing Institute of Technology](https://english.bit.edu.cn/). My research areas mainly include Computer Vision (3D Vision), Deep Learning (Domain Adaptation), and Robotics (Autonomous Driving Cars and UAVs).
 
 <!-- I'm currently looking for a PhD position. Feel free to reach out! -->
 
