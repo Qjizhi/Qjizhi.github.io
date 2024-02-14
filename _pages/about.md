@@ -188,11 +188,11 @@ I’m an research scientist, mainly focusing on designing perception algorithms 
 
 ### Academic activities  
 
-- Conference Reviewer: CVPR 2023, 2024.
+- Conference Reviewer: CVPR 2023, 2024; ECCV 2024.
 - Journal Reviewer: Int. J. of Vehicle Design; Journal of Automobile Engineering; IET Intelligent Transport Systems.
 
 ### Social activities   
 
-- Volunteer: China Foundation for Poverty Alleviation 2013-2015
+- Volunteer: China Foundation for Poverty Alleviation 2013-2015.
 
 <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=I4K7gWFNrdDIDmSZTw8QHh_-JwYR7BFe6cwCLm24rw4&cl=ffffff&w=a"></script>
