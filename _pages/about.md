@@ -147,7 +147,7 @@ I’m an research scientist, mainly focusing on designing perception algorithms 
 <tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/StereoMatching_Powerline_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **Self-supervised depth estimation uisng stereo cameras**<br>
+    **Self-supervised depth estimation using stereo cameras**<br>
     <details>
     <span style="font-size: 14px">Depth estimation using stereo cameras. Synthetic data is utilized to generate ground truth, and domain adaptation/generalization is employed to ensure excellent performance on real data as well.</span>
     </details>
@@ -179,6 +179,7 @@ I’m an research scientist, mainly focusing on designing perception algorithms 
 </table>
 
 ## Honors & Awards
+
 - Outstanding Graduates at Beijing Institute of Technology (2016).
 - Outstanding scholarship at Beijing Institute of Technology (2013-2015, 5 times).
 - Outstanding student leaders at Beijing Institute of Technology (2013).
