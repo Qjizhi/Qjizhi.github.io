@@ -9,8 +9,7 @@ redirect_from:
   - /cv.html
 ---
 
-I’m an research scientist, mainly focusing on designing perception algorithms for autonomous driving or drone systems. I have worked in the industry for 5+ years. I obtained my M.S. from [RWTH Aachen University](https://www.rwth-aachen.de/cms/~a/root/?lidx=1) and B.S. from [Beijing Institute of Technology](https://english.bit.edu.cn/). My research areas mainly include Computer Vision (3D Vision), Deep Learning (Domain Adaptation), and Robotics (Autonomous Driving Cars and UAVs).
-
+I’m an incoming PhD student in the [Computer Science & Engineering Department](https://cse.wustl.edu/index.html) at [Washington University in St. Louis](https://wustl.edu/). I have over 5 years of industry experience focusing on designing perception algorithms for autonomous driving and drone systems. I obtained my M.S. from [RWTH Aachen University](https://www.rwth-aachen.de/cms/~a/root/?lidx=1) and B.S. from [Beijing Institute of Technology](https://english.bit.edu.cn/). My research areas mainly include Computer Vision, Deep Learning, and Robotics.
 
 ## Research & Publications
 <table frame=hsides style="border-left-style: none;border-right-style: none;">
@@ -23,11 +22,24 @@ I’m an research scientist, mainly focusing on designing perception algorithms 
 <tbody>
 
 <tr>
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2024_ECCV_MCPDepth_resized.png"></td>
+<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
+    **MCPDepth: Panorama Depth Estimation from Multi Cylindrical Panorama by Stereo Matching.n**<br>
+    **Feng Qiao**, Zhexiao Xiong, Nathan Jacobs, Xinge Zhu, Yuexin Ma, Qiumeng He.<br>
+    European Conference on Computer Vision (ECCV), 2024 in submission<br>
+    <!-- [[paper](https://arxiv.org/]<br> -->
+    <details>
+    <span style="font-size: 14px">We introduce Multi-Cylindrical Panoramic Depth Estimation (MCPDepth), a two-stage framework for omnidirectional depth estimation via stereo matching between multiple panoramas. MCPDepth uses cylindrical panoramas for initial stereo matching and then fuses the resulting depth maps across views. A circular attention module is used to overcome the distortion along the vertical axis. MCPDepth uses only standard network components, making deployment to embedded devices significantly simpler than prior approaches that require custom kernels. We theoretically and experimentally compare spherical and cylindrical projections for stereo matching, highlighting the advantages of the cylindrical projection. MCPDepth achieves state-of-the-art performance with an 18.8% reduction in mean absolute error (MAE) for depth on the outdoor, synthetic dataset Deep360 and a 19.9% reduction on the indoor, real-scene dataset 3D60. The code is attached and will be available after acceptance.</span>
+    </details>
+    </td>
+</tr>
+
+<tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2024_CVPR_SAM3DSEG_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **SAM-guided Unsupervised Domain Adaptation for 3D Segmentation**<br>
     Xidong Peng, Runnan Chen, **Feng Qiao**, Lingdong Kong, Youquan Liu, Tai Wang, Xinge Zhu, Yuexin Ma.<br>
-    Conference on Computer Vision and Pattern Recognition (CVPR), 2024 in submission<br>
+    European Conference on Computer Vision (ECCV), 2024 in submission<br>
     [[paper](https://arxiv.org/abs/2310.08820v2)]<br>
     <details>
     <span style="font-size: 14px">Inspired by the remarkable generalization capabilities exhibited by the vision foundation model, SAM, in the realm of image segmentation, our approach leverages the wealth of general knowledge embedded within SAM to unify feature representations across diverse 3D domains and further solves the 3D domain adaptation problem. Specifically, we harness the corresponding images associated with point clouds to facilitate knowledge transfer and propose an innovative hybrid feature augmentation methodology, which significantly enhances the alignment between the 3D feature space and SAM's feature space, operating at both the scene and instance levels. Our method is evaluated on many widely-recognized datasets and achieves state-of-the-art performance.</span>
@@ -66,7 +78,7 @@ I’m an research scientist, mainly focusing on designing perception algorithms 
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **QuadFormer: Quadruple Transformer for Unsupervised Domain Adaptation in Power Line Segmentation of Aerial Images**<br>
     Pratyaksh Prabhav Rao<sup>*</sup>, **Feng Qiao**<sup>*</sup>, Weide Zhang, Yiliang Xu, Yong Deng, Guangbin Wu, Qiang Zhang. <br>
-    International Conference on Robotics and Automation (ICRA), 2024 in submission<br>
+    International Conference on Ubiquitous Robots (UR), 2024<br>
     [[preprint](https://arxiv.org/abs/2211.16988)]<br>
     <details>
     <span style="font-size: 14px">we propose QuadFormer, a novel framework designed for domain adaptive semantic segmentation. The hierarchical quadruple transformer combines cross-attention and self-attention mechanisms to adapt transferable context. Based on cross-attentive and self-attentive feature representations, we introduce a pseudo label correction scheme to online denoise the pseudo labels and reduce the domain gap. Additionally, we present two datasets - ARPLSyn and ARPLReal to further advance research in unsupervised domain adaptive powerline segmentations.</span>
