@@ -110,11 +110,16 @@ $large                      : 1200px;
 $x-large                    : 1800px;
 */
 
-$small                      : 600px !default;
-$medium                     : 768px !default;
+// $small                      : 600px !default;
+// $medium                     : 768px !default;
+// $medium-wide                : 900px !default;
+// $large                      : 925px !default;
+// $x-large                    : 1280px !default;
+$small                      : 500px !default;
+$medium                     : 668px !default;
 $medium-wide                : 900px !default;
-$large                      : 925px !default;
-$x-large                    : 1280px !default;
+$large                      : 1125px !default;
+$x-large                    : 1580px !default;
 
 /*
    Grid
