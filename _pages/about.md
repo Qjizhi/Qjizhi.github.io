@@ -17,22 +17,22 @@ I’m an incoming PhD student in the [Computer Science & Engineering Department]
         display: flex;
         align-items: center;
         font-size: 22px; /* Larger font size */
-        color: red; /* Red color */
+        color: #007bff; /* Blue color */
         font-weight: bold; /* Bold text */
     }
 
     .triangle {
         width: 0;
         height: 0;
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-        border-top: 10px solid black;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-left: 10px solid black; /* Pointing to the right */
         margin-right: 8px;
         transition: transform 0.3s;
     }
 
     .triangle.open {
-        transform: rotate(180deg);
+        transform: rotate(90deg);
     }
 
     .news-content {
@@ -89,12 +89,10 @@ I’m an incoming PhD student in the [Computer Science & Engineering Department]
 <tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2024_ECCV_MCPDepth_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    <span style="font-size: 18px;">
-        **MCPDepth: Panorama Depth Estimation from Multi Cylindrical Panorama by Stereo Matching**<br>
-        **Feng Qiao**, Zhexiao Xiong, Nathan Jacobs, Xinge Zhu, Yuexin Ma, Qiumeng He.<br>
-        European Conference on Computer Vision (ECCV), 2024 in submission<br>
-        <!-- [[paper](https://arxiv.org/abs/2310.08820v2)]<br> -->
-    </span>
+    **MCPDepth: Panorama Depth Estimation from Multi Cylindrical Panorama by Stereo Matching**<br>
+    **Feng Qiao**, Zhexiao Xiong, Nathan Jacobs, Xinge Zhu, Yuexin Ma, Qiumeng He.<br>
+    European Conference on Computer Vision (ECCV), 2024 in submission<br>
+    <!-- [[paper](https://arxiv.org/abs/2310.08820v2)]<br> -->
     <details>
     <span style="font-size: 14px">We introduce Multi-Cylindrical Panoramic Depth Estimation (MCPDepth), a two-stage framework for omnidirectional depth estimation via stereo matching between multiple panoramas. MCPDepth uses cylindrical panoramas for initial stereo matching and then fuses the resulting depth maps across views. A circular attention module is used to overcome the distortion along the vertical axis. MCPDepth uses only standard network components, making deployment to embedded devices significantly simpler than prior approaches that require custom kernels. We theoretically and experimentally compare spherical and cylindrical projections for stereo matching, highlighting the advantages of the cylindrical projection. MCPDepth achieves state-of-the-art performance with an 18.8% reduction in mean absolute error (MAE) for depth on the outdoor, synthetic dataset Deep360 and a 19.9% reduction on the indoor, real-scene dataset 3D60. The code is attached and will be available after acceptance.</span>
     </details>
@@ -104,12 +102,10 @@ I’m an incoming PhD student in the [Computer Science & Engineering Department]
 <tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2024_CVPR_SAM3DSEG_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    <span style="font-size: 18px;">
-        **SAM-guided Unsupervised Domain Adaptation for 3D Segmentation**<br>
-        Xidong Peng, Runnan Chen, **Feng Qiao**, Lingdong Kong, Youquan Liu, Tai Wang, Xinge Zhu, Yuexin Ma.<br>
-        European Conference on Computer Vision (ECCV), 2024 in submission<br>
-        [[paper](https://arxiv.org/abs/2310.08820v2)]<br>
-    </span>
+    **SAM-guided Unsupervised Domain Adaptation for 3D Segmentation**<br>
+    Xidong Peng, Runnan Chen, **Feng Qiao**, Lingdong Kong, Youquan Liu, Tai Wang, Xinge Zhu, Yuexin Ma.<br>
+    European Conference on Computer Vision (ECCV), 2024 in submission<br>
+    [[paper](https://arxiv.org/abs/2310.08820v2)]<br>
     <details>
     <span style="font-size: 14px">Inspired by the remarkable generalization capabilities exhibited by the vision foundation model, SAM, in the realm of image segmentation, our approach leverages the wealth of general knowledge embedded within SAM to unify feature representations across diverse 3D domains and further solves the 3D domain adaptation problem. Specifically, we harness the corresponding images associated with point clouds to facilitate knowledge transfer and propose an innovative hybrid feature augmentation methodology, which significantly enhances the alignment between the 3D feature space and SAM's feature space, operating at both the scene and instance levels. Our method is evaluated on many widely-recognized datasets and achieves state-of-the-art performance.</span>
     </details>
@@ -119,12 +115,10 @@ I’m an incoming PhD student in the [Computer Science & Engineering Department]
 <tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2023_BMVC_StereoFlowGAN_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    <span style="font-size: 18px;">
-        **StereoFlowGAN: Co-training for Stereo and Flow with Unsupervised Domain Adaptation**<br>
-        Zhexiao Xiong, **Feng Qiao**, Yu Zhang, Nathan Jacobs.<br>
-        The British Machine Vision Conference (BMVC), 2023<br>
-        [[paper](https://arxiv.org/abs/2309.01842)]<br>
-    </span>
+    **StereoFlowGAN: Co-training for Stereo and Flow with Unsupervised Domain Adaptation**<br>
+    Zhexiao Xiong, **Feng Qiao**, Yu Zhang, Nathan Jacobs.<br>
+    The British Machine Vision Conference (BMVC), 2023<br>
+    [[paper](https://arxiv.org/abs/2309.01842)]<br>
     <details>
     <span style="font-size: 14px">We introduce a novel training strategy for stereo matching and optical flow estimation that utilizes image-to-image translation between synthetic and real image domains. Our approach enables the training of models that excel in real image scenarios while relying solely on ground-truth information from synthetic images. To facilitate task-agnostic domain adaptation and the training of task-specific components, we introduce a bidirectional feature warping module that handles both left-right and forward-backward directions. Experimental results show competitive performance over previous domain translation-based methods, which substantiate the efficacy of our proposed framework, effectively leveraging the benefits of unsupervised domain adaptation, stereo matching, and optical flow estimation.</span>
     </details>
@@ -134,12 +128,10 @@ I’m an incoming PhD student in the [Computer Science & Engineering Department]
 <tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2023_PRCV_DUFormer_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    <span style="font-size: 18px;">
-        **DUFormer: Solving Power Line Detection Task in Aerial Images using Semantic Segmentation**<br>
-        Deyu An, Qiang Zhang, Jianshu Chao, Ting Li, **Feng Qiao**, Yong Deng, Zhenpeng Bian.<br>
-        Chinese Conference on Pattern Recognition and Computer Vision (PRCV), 2023<br>
-        [[paper](https://arxiv.org/abs/2304.05821)]<br>
-    </span>
+    **DUFormer: Solving Power Line Detection Task in Aerial Images using Semantic Segmentation**<br>
+    Deyu An, Qiang Zhang, Jianshu Chao, Ting Li, **Feng Qiao**, Yong Deng, Zhenpeng Bian.<br>
+    Chinese Conference on Pattern Recognition and Computer Vision (PRCV), 2023<br>
+    [[paper](https://arxiv.org/abs/2304.05821)]<br>
     <details>
     <span style="font-size: 14px">We proposed DUFormer, a CNN-Transformer hybrid algorithm, is specifically designed to detect power lines in aerial images.</span>
     </details>
@@ -149,12 +141,10 @@ I’m an incoming PhD student in the [Computer Science & Engineering Department]
 <tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/uda_pls.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    <span style="font-size: 18px;">
         **QuadFormer: Quadruple Transformer for Unsupervised Domain Adaptation in Power Line Segmentation of Aerial Images**<br>
         Pratyaksh Prabhav Rao<sup>*</sup>, **Feng Qiao**<sup>*</sup>, Weide Zhang, Yiliang Xu, Yong Deng, Guangbin Wu, Qiang Zhang. <br>
         International Conference on Ubiquitous Robots (UR), 2024<br>
         [[preprint](https://arxiv.org/abs/2211.16988)]<br>
-    </span>
     <details>
     <span style="font-size: 14px">we propose QuadFormer, a novel framework designed for domain adaptive semantic segmentation. The hierarchical quadruple transformer combines cross-attention and self-attention mechanisms to adapt transferable context. Based on cross-attentive and self-attentive feature representations, we introduce a pseudo label correction scheme to online denoise the pseudo labels and reduce the domain gap. Additionally, we present two datasets - ARPLSyn and ARPLReal to further advance research in unsupervised domain adaptive powerline segmentations.</span>
     </details>
@@ -164,12 +154,10 @@ I’m an incoming PhD student in the [Computer Science & Engineering Department]
 <tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2022_CVPR_STCrowd_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    <span style="font-size: 18px;">
-        **STCrowd: A Multimodal Dataset for Pedestrian Perception in Crowded Scenes.**<br>
-        Peishan Cong, Xinge Zhu, **Feng Qiao**, Yiming Ren, Xidong Peng, Yuenan Hou, Lan Xu, Ruigang Yang, Dinesh Manocha, Yuexin Ma.<br>
-        Conference on Computer Vision and Pattern Recognition (CVPR), 2022<br>
-        [[paper](https://arxiv.org/abs/2204.01026)] [[code](https://github.com/4dvlab/stcrowd)]<br>
-    </span>
+    **STCrowd: A Multimodal Dataset for Pedestrian Perception in Crowded Scenes.**<br>
+    Peishan Cong, Xinge Zhu, **Feng Qiao**, Yiming Ren, Xidong Peng, Yuenan Hou, Lan Xu, Ruigang Yang, Dinesh Manocha, Yuexin Ma.<br>
+    Conference on Computer Vision and Pattern Recognition (CVPR), 2022<br>
+    [[paper](https://arxiv.org/abs/2204.01026)] [[code](https://github.com/4dvlab/stcrowd)]<br>
     <details>
     <span style="font-size: 14px">We introduce a large-scale multimodal dataset,STCrowd. Specifically, in STCrowd, there are a total of 219 K pedestrian instances and 20 persons per frame on average, with various levels of occlusion. We provide synchronized LiDAR point clouds and camera images as well as their corresponding 3D labels and joint IDs. STCrowd can be used for various tasks, including LiDAR-only, image-only, and sensor-fusion based pedestrian detection and tracking. We provide baselines for most of the tasks. In addition, considering the property of sparse global distribution and density-varying local distribution of pedestrians, we further propose a novel method, Density-aware Hierarchical heatmap Aggregation (DHA), to enhance pedestrian perception in crowded scenes. Extensive experiments show that our new method achieves state-of-the-art performance for pedestrian detection on various datasets.</span>
     </details>
@@ -179,12 +167,10 @@ I’m an incoming PhD student in the [Computer Science & Engineering Department]
 <tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2021_CVPR_MetaSAug_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    <span style="font-size: 18px;">
-        **MetaSAug: Meta Semantic Augmentation for Long-Tailed Visual Recognition**<br>
-        Li, Shuang, Kaixiong Gong, Chi Harold Liu, Yulin Wang, **Feng Qiao**, and Xinjing Cheng.<br>
-        Conference on Computer Vision and Pattern Recognition (CVPR), 2021<br>
-        [[paper](https://arxiv.org/abs/2103.12579)] [[code](https://github.com/BIT-DA/MetaSAug)]<br>
-    </span>
+    **MetaSAug: Meta Semantic Augmentation for Long-Tailed Visual Recognition**<br>
+    Li, Shuang, Kaixiong Gong, Chi Harold Liu, Yulin Wang, **Feng Qiao**, and Xinjing Cheng.<br>
+    Conference on Computer Vision and Pattern Recognition (CVPR), 2021<br>
+    [[paper](https://arxiv.org/abs/2103.12579)] [[code](https://github.com/BIT-DA/MetaSAug)]<br>
     <details>
     <span style="font-size: 14px">We propose a novel approach to learn transformed semantic directions with meta-learning automatically. In specific, the augmentation strategy during training is dynamically optimized, aiming to minimize the loss on a small balanced validation set, which is approximated via a meta update step. Extensive empirical results on CIFAR-LT-10/100, ImageNet-LT, and iNaturalist 2017/2018 validate the effectiveness of our method.</span>
     </details>
@@ -268,23 +254,29 @@ I’m an incoming PhD student in the [Computer Science & Engineering Department]
 </tbody>
 </table>
 
-## Honors & Awards
+## Honors and Awards
 
-- Outstanding Graduates at Beijing Institute of Technology (2016).
-- Outstanding scholarship at Beijing Institute of Technology (2013-2015, 5 times).
-- Outstanding student leaders at Beijing Institute of Technology (2013).
-- National Scholarship (**top 1%**, highest scholarship in China) at Beijing Institute of Technology (2013).
+<div class="honors-awards">
+    <ul>
+        <li>Outstanding Graduates at Beijing Institute of Technology (2016).</li>
+        <li>Outstanding scholarship at Beijing Institute of Technology (2013-2015, 5 times).</li>
+        <li>Outstanding student leaders at Beijing Institute of Technology (2013).</li>
+        <li>National Scholarship (<strong>top 1%</strong>, highest scholarship in China) at Beijing Institute of Technology (2013).</li>
+    </ul>
+</div>
 
 ## Activities
 
-### Academic activities  
+<div class="activities">
+    <ul>
+        <li>Reviewer for CVPR, 2023,2024</li>
+        <li>Reviewer for ECCV, 2024</li>
+        <li>Reviewer for IET Intelligent Transport Systems, 2024-present</li>
+        <li>Reviewer for IET Journal of Automobile Engineering, 2024-present</li>
+        <li>Reviewer for Int. J. of Vehicle Design, 2024-present</li>
+        <li>Volunteer for China Foundation for Poverty Alleviation, 2013-2015</li>
 
-- Conference Reviewer: CVPR 2023, 2024; ECCV 2024.
-- Journal Reviewer: Int. J. of Vehicle Design; Journal of Automobile Engineering; IET Intelligent Transport Systems.
+    </ul>
+</div>
 
-### Social activities   
-
-- Volunteer: China Foundation for Poverty Alleviation 2013-2015.
-
-<!-- <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=I4K7gWFNrdDIDmSZTw8QHh_-JwYR7BFe6cwCLm24rw4'></script> -->
 <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=I4K7gWFNrdDIDmSZTw8QHh_-JwYR7BFe6cwCLm24rw4'></script>
