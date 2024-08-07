@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Houses Map</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5NhKZNSl8-Fpreq8iciFdP-fj1E4hOgE"></script>
+    <script>
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                // center: {lat: 38.627003, lng: -90.199402}, // Set center to a default location
+                zoom: 11
+            });
+
+            // Define an array of house data
+            var houses = [
+                {
+                    address: '2026 Gladiator Dr, Fenton, MO 63026',
+                    price: '$275,000',
+                    bedrooms: '3B2B',
+                    schools: "746",
+                    minutes: 22,
+                    link: "https://www.redfin.com/MO/Fenton/2026-Gladiator-Dr-63026/home/62747806",
+                    lat: 38.53524,
+                    lng: -90.4865109
+                },
+                {
+                    address: '73 Richmond Center Ct, St Peters, MO 63376',
+                    price: '$289,900',
+                    bedrooms: '3B2B',
+                    schools: "667",
+                    minutes: 29,
+                    link: "https://www.redfin.com/MO/St-Peters/2-Burlington-at-Richmond-GRV-Unknown/home/186157378",
+                    lat: 38.8008904,
+                    lng: -90.66336299999999
+                },
+                {
+                    address: '236 Cedar Trail Dr, Ballwin, MO 63011',
+                    price: '$320,000',
+                    bedrooms: '3B3B',
+                    schools: "766",
+                    minutes: 21,
+                    link: "https://www.redfin.com/MO/Ballwin/236-Cedar-Trail-Dr-63011/home/93503696",
+                    lat: 38.6090817,
+                    lng: -90.5370638
+                },
+                {
+                    address: '457 Winter Bluff Dr, Fenton, MO 63026',
+                    price: '$309,000',
+                    bedrooms: '3B2.5B',
+                    schools: "555",
+                    minutes: 27,
+                    link: "https://www.redfin.com/MO/Fenton/457-Winter-Bluff-Dr-63026/home/80023663",
+                    lat: 38.4990494,
+                    lng: -90.4244855
+                },
+                {
+                    address: '37 Barrington Dr, St Peters, MO 63376',
+                    price: '$299,900',
+                    bedrooms: '3B2B',
+                    schools: "867",
+                    minutes: 33,
+                    link: "https://www.redfin.com/MO/Saint-Peters/37-Barrington-Dr-63376/home/103282622",
+                    lat: 38.7932111,
+                    lng: -90.68136319999999
+                },
+                {
+                    address: '637 Silver Maple Dr, Fenton, MO 63026',
+                    price: '$289,900',
+                    bedrooms: '3B3.5B',
+                    schools: "555",
+                    minutes: 28,
+                    link: "https://www.redfin.com/MO/Fenton/637-Silver-Maple-Dr-63026/home/62763193",
+                    lat: 38.50013879999999,
+                    lng: -90.4454938
+                },
+                {
+                    address: '2604 Winding Valley Dr, Fenton, MO 63026',
+                    price: '$323,900',
+                    bedrooms: '3B2.5B',
+                    schools: "555",
+                    minutes: 30,
+                    link: "https://www.redfin.com/MO/Fenton/Fenton/Berwick/home/188413506",
+                    lat: 38.4711261,
+                    lng: -90.4623446
+                },
+                {
+                    address: '219 Oakbriar Farm Dr, Ballwin, MO 63021',
+                    price: '$315,000',
+                    bedrooms: '3B2B',
+                    schools: "366",
+                    minutes: 30,
+                    link: "https://www.redfin.com/MO/Ballwin/219-Oakbriar-Farm-Dr-63021/home/93536336",
+                    lat: 38.5835726,
+                    lng: -90.57386609999999
+                },
+                {
+                    address: '1401 Bradington Dr, Fenton, MO 63026',
+                    price: '$279,900',
+                    bedrooms: '3B3B',
+                    schools: "746",
+                    minutes: 23,
+                    link: "https://www.redfin.com/MO/Fenton/1401-Bradington-Dr-63026/home/93587462",
+                    lat: 38.5254607,
+                    lng: -90.4787523
+                },
+                {
+                    address: '1242 Ponchartrain Lake Dr, Chesterfield, MO 63017',
+                    price: '$325,000',
+                    bedrooms: '3B2B',
+                    schools: "656",
+                    minutes: 18,
+                    link: "https://www.redfin.com/MO/Chesterfield/1242-Ponchartrain-Lake-Dr-63017/home/93475064",
+                    lat: 38.6542754,
+                    lng: -90.518823
+                },
+                {
+                    address: '40 Spring Gardens Ct UNIT 4B, Saint Charles, MO 63303',
+                    price: '$299,900',
+                    bedrooms: '3B3B',
+                    schools: "337",
+                    minutes: 25,
+                    link: "https://www.redfin.com/MO/Saint-Charles/40-Spring-Gardens-Ct-63303/unit-4B/home/103327151",
+                    lat: 38.7831229,
+                    lng: -90.557007
+                },
+                {
+                    address: '3 Albemarle Ct, O\'Fallon, MO 63368',
+                    price: '$350,000',
+                    bedrooms: '4B2.5B',
+                    schools: "897",
+                    minutes: 26,
+                    link: "https://www.redfin.com/MO/O-Fallon/3-Albemarle-Ct-63368/home/78188309",
+                    lat: 38.7294492,
+                    lng: -90.69815489999999
+                },
+                {
+                    address: '772 Vanderville Dr, Fenton, MO 63026',
+                    price: '$299,900',
+                    bedrooms: '3B3B',
+                    schools: "546",
+                    minutes: 23,
+                    link: "https://www.redfin.com/MO/Fenton/772-Vanderville-Dr-63026/home/93597039",
+                    lat: 38.5221399,
+                    lng: -90.4789545
+                },
+                {
+                    address: '1242 Ponchartrain Lake Dr, Chesterfield, MO 63017',
+                    price: '$325,000',
+                    bedrooms: '3B2B',
+                    schools: "656",
+                    minutes: 18,
+                    link: "https://www.redfin.com/MO/Chesterfield/1242-Ponchartrain-Lake-Dr-63017/home/93475064",
+                    lat: 38.6542754,
+                    lng: -90.518823
+                },
+                // Add more houses as needed
+            ];
+            // Calculate average latitude and longitude
+            var totalLat = 0;
+            var totalLng = 0;
+            for (var i = 0; i < houses.length; i++) {
+                totalLat += houses[i].lat;
+                totalLng += houses[i].lng;
+            }
+            var avgLat = totalLat / houses.length;
+            var avgLng = totalLng / houses.length;
+
+            // Set center to the average location
+            var averageLocation = new google.maps.LatLng(avgLat, avgLng);
+            map.setCenter(averageLocation);
+            // Loop through the array to create markers for each house
+            for (var i = 0; i < houses.length; i++) {
+                var house = houses[i];
+                addMarker(house);
+            }
+        }
+
+        function addMarker(house) {
+            var marker = new google.maps.Marker({
+                position: {lat: house.lat, lng: house.lng},
+                map: map,
+                title: house.address
+            });
+
+            // Create content string for info window
+            var contentString = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h3 id="firstHeading" class="firstHeading">' + house.address + '</h3>' +
+                '<div id="bodyContent">' +
+                '<p><b>Price:</b> ' + house.price + '</p>' +
+                '<p><b>Bedrooms:</b> ' + house.bedrooms + '</p>' +
+                '<p><b>Schools:</b> ' + house.schools + '</p>' +
+                '<p><b>Commute Time:</b> ' + house.minutes + ' minutes</p>' +
+                '<p><a href="' + house.link + '">More Info</a></p>' +
+                '</div>' +
+                '</div>';
+
+            // Create info window for the house marker
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            // Add event listener to open info window when marker is clicked
+            marker.addListener('click', function() {
+                infowindow.open(map, marker);
+            });
+        }
+    </script>
+    <style>
+        html, body, #map {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body onload="initMap()">
+    <div id="map"></div>
+</body>
+</html>
