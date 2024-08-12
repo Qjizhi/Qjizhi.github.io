@@ -266,7 +266,7 @@ I’m a PhD student in the [Computer Science & Engineering Department](https://c
     </ul>
 </div>
 
-## Activities
+## Services
 
 <div class="activities">
     <ul>
