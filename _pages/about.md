@@ -26,7 +26,7 @@ I’m a PhD student in the [Computer Science & Engineering Department](https://c
         height: 0;
         border-top: 6px solid transparent;
         border-bottom: 6px solid transparent;
-        border-left: 10px solid black; /* Pointing to the right */
+        border-left: 10px solid #494e52; /* Pointing to the right */
         margin-right: 8px;
         transition: transform 0.3s;
     }
