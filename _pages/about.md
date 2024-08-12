@@ -17,7 +17,7 @@ I’m a PhD student in the [Computer Science & Engineering Department](https://c
         display: flex;
         align-items: center;
         font-size: 22px; /* Larger font size */
-        color: #007bff; /* Blue color */
+        color: #494e52; /* color */
         font-weight: bold; /* Bold text */
     }
 
