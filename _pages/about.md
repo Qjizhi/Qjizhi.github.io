@@ -281,4 +281,3 @@ I’m a PhD student in the [Computer Science & Engineering Department](https://c
     </ul>
 </div>
 
-<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=I4K7gWFNrdDIDmSZTw8QHh_-JwYR7BFe6cwCLm24rw4'></script>
