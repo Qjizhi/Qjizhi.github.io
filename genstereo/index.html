@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Given an arbitrary image, GenStereo can generate the cooresponding right view image.">
+  <meta property="og:title" content="Towards Open-World Generation of Stereo Images and Unsupervised Matching" />
+  <meta property="og:description"
+    content="Given an arbitrary image, GenStereo can generate the cooresponding right view image." />
+  <meta property="og:url" content="https://qjizhi.github.io/" />
+  <meta property="og:image" content="static/image/genstereo_on_other_datasets_project.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="Towards Open-World Generation of Stereo Images and Unsupervised Matching">
+  <meta name="twitter:description"
+    content="Given an arbitrary image, GenStereo can generate the cooresponding right view image.">
+  <meta name="twitter:image" content="static/images/genstereo_on_other_datasets_project.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="Diffusion models, Stereo image generation, Stereo matching, Unsupervised learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Towards Open-World Generation of Stereo Images and Unsupervised Matching</title>
+  <link rel="icon" type="image/x-icon" href="static/images/virtual-reality.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              Towards Open-World Generation of Stereo Images and Unsupervised Matching
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://qjizhi.github.io/" target="_blank">Feng Qiao</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://steven-xiong.github.io/" target="_blank">Zhexiao Xiong</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://ericx003.github.io/" target="_blank">Eric Xing</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://jacobsn.github.io/" target="_blank">Nathan Jacobs</a>
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Washington University in St. Louis</span>
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-alt"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Code link -->
+                <span class="link-block">
+                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-code"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Hugging Face Demo link -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/spaces/FQiao/GenStereo" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa-huggingface"></i>
+                    </span>
+                    <span>Hugging Face Demo</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Subject Driven Video Generation carousel -->
+  <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+    <img src="static/images/teaser_coco.jpg" alt="Teaser" style="max-width: 51%; height: auto;" />
+    <p style="margin-top: 0.5em; font-size: 0.9em;">A comprison of GenStereo with other diffusion-based methods for
+      stereo image generation.</p>
+  </div>
+
+  <!-- demo -->
+  <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/5.20.1/gradio.js"></script>
+  
+  <h2 style="text-align: center; margin-top: 1em;">Demo</h2>
+  
+  <div style="display: flex; justify-content: center;">
+    <gradio-app src="https://fqiao-genstereo.hf.space" style="width: 80%;"></gradio-app>
+  </div>
+
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Stereo images are fundamental to numerous applications, including extended reality (XR) devices,
+              autonomous driving, and robotics. Unfortunately, acquiring high-quality stereo images remains challenging
+              due to the precise calibration requirements of dual-camera setups and the complexity of obtaining
+              accurate, dense disparity maps. Existing stereo image generation methods typically focus on either visual
+              quality for viewing or geometric accuracy for matching, but not both. We introduce GenStereo, a
+              diffusion-based approach, to bridge this gap. The method includes two primary innovations (1) conditioning
+              the diffusion process on a disparity-aware coordinate embedding and a warped input image, allowing for
+              more precise stereo alignment than previous methods, and (2) an adaptive fusion mechanism that
+              intelligently combines the diffusion-generated image with a warped image, improving both realism and
+              disparity consistency. Through extensive training on 11 diverse stereo datasets, GenStereo demonstrates
+              strong generalization ability. GenStereo achieves state-of-the-art performance in both stereo image
+              generation and unsupervised stereo matching tasks. Our framework eliminates the need for complex hardware
+              setups while enabling high-quality stereo image generation, making it valuable for both real-world
+              applications and unsupervised learning scenarios. The code will be made publicly available upon
+              acceptance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Image carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">ADE20K Dataset</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-image1">
+            <img src="static/images/ade20k/ade20k_ADE_frame_00000100_combined.png" alt="ade_image1"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image2">
+            <img src="static/images/ade20k/ade20k_ADE_frame_00000104_combined.png" alt="ade_image2"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image3">
+            <img src="static/images/ade20k/ade20k_ADE_train_00002654_combined.png" alt="ade_image3"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image4">
+            <img src="static/images/ade20k/ade20k_ADE_train_00003927_combined.png" alt="ade_image4"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image5">
+            <img src="static/images/ade20k/ade20k_ADE_train_00006340_combined.png" alt="ade_image5"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image6">
+            <img src="static/images/ade20k/ade20k_ADE_train_00006995_combined.png" alt="ade_image6"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image7">
+            <img src="static/images/ade20k/ade20k_ADE_train_00007470_combined.png" alt="ade_image7"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image8">
+            <img src="static/images/ade20k/ade20k_ADE_train_00007598_combined.png" alt="ade_image8"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image9">
+            <img src="static/images/ade20k/ade20k_ADE_train_00008045_combined.png" alt="ade_image9"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image10">
+            <img src="static/images/ade20k/ade20k_ADE_train_00008610_combined.png" alt="ade_image10"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image11">
+            <img src="static/images/ade20k/ade20k_ADE_train_00009427_combined.png" alt="ade_image11"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image12">
+            <img src="static/images/ade20k/ade20k_ADE_train_00010639_combined.png" alt="ade_image12"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image13">
+            <img src="static/images/ade20k/ade20k_ADE_train_00012835_combined.png" alt="ade_image13"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image14">
+            <img src="static/images/ade20k/ade20k_ADE_train_00020359_combined.png" alt="ade_image14"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image15">
+            <img src="static/images/ade20k/ade20k_ADE_train_00022924_combined.png" alt="ade_image15"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image16">
+            <img src="static/images/ade20k/ade20k_ADE_train_00023766_combined.png" alt="ade_image16"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image17">
+            <img src="static/images/ade20k/ade20k_ADE_train_00024487_combined.png" alt="ade_image17"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End vid2vid carousel -->
+
+  <!-- COCO Images Carousel -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">COCO Dataset</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-image1">
+            <img src="static/images/coco/coco_000000000127_combined.png" alt="coco_image1"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image2">
+            <img src="static/images/coco/coco_000000000326_combined.png" alt="coco_image2"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image3">
+            <img src="static/images/coco/coco_000000000394_combined.png" alt="coco_image3"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image4">
+            <img src="static/images/coco/coco_000000000502_combined.png" alt="coco_image4"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image5">
+            <img src="static/images/coco/coco_000000000656_combined.png" alt="coco_image5"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image6">
+            <img src="static/images/coco/coco_000000000772_combined.png" alt="coco_image6"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image7">
+            <img src="static/images/coco/coco_000000003862_combined.png" alt="coco_image7"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image8">
+            <img src="static/images/coco/coco_000000006426_combined.png" alt="coco_image8"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image9">
+            <img src="static/images/coco/coco_000000007539_combined.png" alt="coco_image9"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image10">
+            <img src="static/images/coco/coco_000000007944_combined.png" alt="coco_image10"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image11">
+            <img src="static/images/coco/coco_000000009176_combined.png" alt="coco_image11"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image12">
+            <img src="static/images/coco/coco_000000015746_combined.png" alt="coco_image12"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIW images carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">DIW Dataset</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-image1">
+            <img src="static/images/DIW/DIW_4e8103d066fd97afa831a738d63b10f78fee7682_combined.png" alt="diw_image1"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image2">
+            <img src="static/images/DIW/DIW_5b47f822a125759b9ca8ca72d5535ab514b2d46f_combined.png" alt="diw_image2"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image3">
+            <img src="static/images/DIW/DIW_0016dac5cbe98387b6f24e0cbabbf7f80b47e1a4_combined.png" alt="diw_image3"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image4">
+            <img src="static/images/DIW/DIW_5505eb82450e2cae2e9930dd507182195acd8614_combined.png" alt="diw_image4"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image5">
+            <img src="static/images/DIW/DIW_d8338478cce1f77842ea0b655dae4a94cea3be01_combined.png" alt="diw_image5"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image6">
+            <img src="static/images/DIW/DIW_db8b95a1083d56a9f6816385cd8a6ba80ae03ba9_combined.png" alt="diw_image6"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End DIW images carousel -->
+
+  <!-- DIODE images carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">DIODE Dataset</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-image1">
+            <img src="static/images/DIODE/DIODE_00000_00001_indoors_060_040_combined.png" alt="diode_image1"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image2">
+            <img src="static/images/DIODE/DIODE_00000_00004_indoors_130_000_combined.png" alt="diode_image2"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image3">
+            <img src="static/images/DIODE/DIODE_00001_00013_indoors_190_020_combined.png" alt="diode_image3"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image4">
+            <img src="static/images/DIODE/DIODE_00001_00014_indoors_340_020_combined.png" alt="diode_image4"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image5">
+            <img src="static/images/DIODE/DIODE_00006_00049_indoors_270_050_combined.png" alt="diode_image5"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image6">
+            <img src="static/images/DIODE/DIODE_00006_00072_indoors_090_050_combined.png" alt="diode_image6"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image7">
+            <img src="static/images/DIODE/DIODE_00006_00074_indoors_120_000_combined.png" alt="diode_image7"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End DIODE images carousel -->
+
+  <!-- Mapillary images carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Mapillary Dataset</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-image1">
+            <img src="static/images/mapillary/mapillary_iSdfVO7y5Gh2ZDNmJAOsyg_combined.png" alt="mapillary_image1"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image2">
+            <img src="static/images/mapillary/mapillary_MXeo-wGMOMPS5Jb4CTRhWw_combined.png" alt="mapillary_image2"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image3">
+            <img src="static/images/mapillary/mapillary_q579tTOV4ayFuYbDOaDEWg_combined.png" alt="mapillary_image3"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image4">
+            <img src="static/images/mapillary/mapillary_qNKlLHSLJrMsF_UWE6bSiw_combined.png" alt="mapillary_image4"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image5">
+            <img src="static/images/mapillary/mapillary_w98VETBp4UIRxpiNOgFduw_combined.png" alt="mapillary_image5"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-image6">
+            <img src="static/images/mapillary/mapillary_YAbCLbl0jepebpeazWmxtw_combined.png" alt="mapillary_image6"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Mapillary images carousel -->
+
+  <section class="section hero is-small is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <div class="content">
+            <h2 class="title is-3">Method Overview:</h2>
+            <center>
+              <img src="static/images/framework.jpg" alt="Mixed Video-Image Finetuning"
+                class="center-image blend-img-background" />
+            </center>
+            <div class="level-set has-text-justified">
+              <p>
+                Given an arbitrary reference image, GenStereo generates the corresponding right-view image by enforcing
+                constraints at
+                three levels: input (disparity-aware coordinate and warped-image embeddings), feature (cross-view
+                attention), and output (pixel-level loss with adaptive fusion). These constraints yield geometrically
+                consistent and visually compelling stereo images.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--BibTex citation -->
+
+  <!-- End BibTex citation -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a>.
+              You are free to borrow the of this website, we just ask that you link back to this page in the footer.
+              <br> This website is licensed under a <a rel="license"
+                href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- Default Statcounter code for Dreamix
+https://dreamix-video-editing.github.io -->
+  <script type="text/javascript">
+    var sc_project = 12843789;
+    var sc_invisible = 1;
+    var sc_security = "e9c3bf5f"; 
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript>
+    <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+          class="statcounter" src="https://c.statcounter.com/12843789/0/e9c3bf5f/1/" alt="Web Analytics"
+          referrerPolicy="no-referrer-when-downgrade"></a></div>
+  </noscript>
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
