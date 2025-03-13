@@ -9,7 +9,7 @@ redirect_from:
   - /cv.html
 ---
 
-I’m a PhD student in the [Computer Science & Engineering Department](https://cse.wustl.edu/index.html) at [Washington University in St. Louis](https://wustl.edu/). I have over 5 years of industry experience focusing on designing perception algorithms for autonomous driving and drone systems. I obtained my M.S. from [RWTH Aachen University](https://www.rwth-aachen.de/cms/~a/root/?lidx=1) and B.S. from [Beijing Institute of Technology](https://english.bit.edu.cn/). My research areas mainly include Computer Vision, Deep Learning, and Robotics.
+I am a PhD student in [Computer Science](https://cse.washu.edu/) at [WashU](https://washu.edu/). I am part of the [Multimodal Vision Research Laboratory (MVRL)](https://mvrl.cse.wustl.edu/) under the supervision of [Prof. Nathan Jacobs](https://jacobsn.github.io/). I have over five years of industry experience focusing on perception algorithms for autonomous driving and robotics. My research interests include computer vision, deep learning, and robotics.
 
 <style>
     .toggle-container {
