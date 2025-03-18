@@ -88,12 +88,27 @@ I am a PhD student in [Computer Science](https://cse.washu.edu/) at [WashU](http
 <tbody>
 
 <tr>
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/genstereo_on_other_datasets_project_resized.png"></td>
+<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
+    **GenStereo:  Towards Open-World Generation of Stereo Images and Unsupervised Matching**<br>
+    [**Feng Qiao**](https://qjizhi.github.io/), [Zhexiao Xiong](https://steven-xiong.github.io/), [Eric Xing](https://ericx003.github.io/), [Nathan Jacobs](https://jacobsn.github.io/).<br>
+    [![Project Site](https://img.shields.io/badge/Project-Web-green)](https://qjizhi.github.io/genstereo) &nbsp;
+    [![Spaces](https://img.shields.io/badge/Spaces-Demo-yellow?logo=huggingface)](https://huggingface.co/spaces/FQiao/GenStereo) &nbsp;
+    [![Github](https://img.shields.io/badge/Github-Repo-orange?logo=github)](https://github.com/Qjizhi/GenStereo) &nbsp;
+    [![Models](https://img.shields.io/badge/Models-checkpoints-blue?logo=huggingface)](https://huggingface.co/FQiao/GenStereo/tree/main) &nbsp;
+    [![arXiv](https://img.shields.io/badge/arXiv-2503.12720-red?logo=arxiv)](https://arxiv.org/abs/2503.12720) <br>
+    <details>
+    <span style="font-size: 14px">Stereo images are fundamental to numerous applications, including extended reality (XR) devices, autonomous driving, and robotics. Unfortunately, acquiring high-quality stereo images remains challenging due to the precise calibration requirements of dual-camera setups and the complexity of obtaining accurate, dense disparity maps. Existing stereo image generation methods typically focus on either visual quality for viewing or geometric accuracy for matching, but not both. We introduce GenStereo, a diffusion-based approach, to bridge this gap. The method includes two primary innovations (1) conditioning the diffusion process on a disparity-aware coordinate embedding and a warped input image, allowing for more precise stereo alignment than previous methods, and (2) an adaptive fusion mechanism that intelligently combines the diffusion-generated image with a warped image, improving both realism and disparity consistency. Through extensive training on 11 diverse stereo datasets, GenStereo demonstrates strong generalization ability. GenStereo achieves state-of-the-art performance in both stereo image generation and unsupervised stereo matching tasks. Our framework eliminates the need for complex hardware setups while enabling high-quality stereo image generation, making it valuable for both real-world applications and unsupervised learning scenarios.</span>
+    </details>
+    </td>
+</tr>
+
+<tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2024_ECCV_MCPDepth_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **MCPDepth: Panorama Depth Estimation from Multi Cylindrical Panorama by Stereo Matching**<br>
     **Feng Qiao**, Zhexiao Xiong, Nathan Jacobs, Xinge Zhu, Yuexin Ma, Qiumeng He.<br>
-    <!-- European Conference on Computer Vision (ECCV), 2024 in submission<br> -->
-    [[preprint](https://arxiv.org/abs/2408.01653)]<br>
+    [![arXiv](https://img.shields.io/badge/arXiv-2408.01653-red?logo=arxiv)](https://arxiv.org/abs/2408.01653)<br>
     <details>
     <span style="font-size: 14px">We introduce Multi-Cylindrical Panoramic Depth Estimation (MCPDepth), a two-stage framework for omnidirectional depth estimation via stereo matching between multiple panoramas. MCPDepth uses cylindrical panoramas for initial stereo matching and then fuses the resulting depth maps across views. A circular attention module is used to overcome the distortion along the vertical axis. MCPDepth uses only standard network components, making deployment to embedded devices significantly simpler than prior approaches that require custom kernels. We theoretically and experimentally compare spherical and cylindrical projections for stereo matching, highlighting the advantages of the cylindrical projection. MCPDepth achieves state-of-the-art performance with an 18.8% reduction in mean absolute error (MAE) for depth on the outdoor, synthetic dataset Deep360 and a 19.9% reduction on the indoor, real-scene dataset 3D60. The code is attached and will be available after acceptance.</span>
     </details>
@@ -106,7 +121,7 @@ I am a PhD student in [Computer Science](https://cse.washu.edu/) at [WashU](http
     **SAM-guided Unsupervised Domain Adaptation for 3D Segmentation**<br>
     Xidong Peng, Runnan Chen, **Feng Qiao**, Lingdong Kong, Youquan Liu, Tai Wang, Xinge Zhu, Yuexin Ma.<br>
     European Conference on Computer Vision (ECCV), 2024<br>
-    [[paper](https://arxiv.org/abs/2310.08820v2)]<br>
+    [![arXiv](https://img.shields.io/badge/arXiv-2310.08820-red?logo=arxiv)](https://arxiv.org/abs/2310.08820v4)<br>
     <details>
     <span style="font-size: 14px">Inspired by the remarkable generalization capabilities exhibited by the vision foundation model, SAM, in the realm of image segmentation, our approach leverages the wealth of general knowledge embedded within SAM to unify feature representations across diverse 3D domains and further solves the 3D domain adaptation problem. Specifically, we harness the corresponding images associated with point clouds to facilitate knowledge transfer and propose an innovative hybrid feature augmentation methodology, which significantly enhances the alignment between the 3D feature space and SAM's feature space, operating at both the scene and instance levels. Our method is evaluated on many widely-recognized datasets and achieves state-of-the-art performance.</span>
     </details>
@@ -119,7 +134,7 @@ I am a PhD student in [Computer Science](https://cse.washu.edu/) at [WashU](http
     **StereoFlowGAN: Co-training for Stereo and Flow with Unsupervised Domain Adaptation**<br>
     Zhexiao Xiong, **Feng Qiao**, Yu Zhang, Nathan Jacobs.<br>
     The British Machine Vision Conference (BMVC), 2023<br>
-    [[paper](https://arxiv.org/abs/2309.01842)]<br>
+    [![arXiv](https://img.shields.io/badge/arXiv-2309.01842-red?logo=arxiv)](https://arxiv.org/abs/2309.01842)<br>
     <details>
     <span style="font-size: 14px">We introduce a novel training strategy for stereo matching and optical flow estimation that utilizes image-to-image translation between synthetic and real image domains. Our approach enables the training of models that excel in real image scenarios while relying solely on ground-truth information from synthetic images. To facilitate task-agnostic domain adaptation and the training of task-specific components, we introduce a bidirectional feature warping module that handles both left-right and forward-backward directions. Experimental results show competitive performance over previous domain translation-based methods, which substantiate the efficacy of our proposed framework, effectively leveraging the benefits of unsupervised domain adaptation, stereo matching, and optical flow estimation.</span>
     </details>
@@ -132,7 +147,7 @@ I am a PhD student in [Computer Science](https://cse.washu.edu/) at [WashU](http
     **DUFormer: Solving Power Line Detection Task in Aerial Images using Semantic Segmentation**<br>
     Deyu An, Qiang Zhang, Jianshu Chao, Ting Li, **Feng Qiao**, Yong Deng, Zhenpeng Bian.<br>
     Chinese Conference on Pattern Recognition and Computer Vision (PRCV), 2023<br>
-    [[paper](https://arxiv.org/abs/2304.05821)]<br>
+    [![arXiv](https://img.shields.io/badge/arXiv-2304.05821-red?logo=arxiv)](https://arxiv.org/abs/2304.05821)<br>
     <details>
     <span style="font-size: 14px">We proposed DUFormer, a CNN-Transformer hybrid algorithm, is specifically designed to detect power lines in aerial images.</span>
     </details>
@@ -145,7 +160,7 @@ I am a PhD student in [Computer Science](https://cse.washu.edu/) at [WashU](http
         **QuadFormer: Quadruple Transformer for Unsupervised Domain Adaptation in Power Line Segmentation of Aerial Images**<br>
         Pratyaksh Prabhav Rao<sup>*</sup>, **Feng Qiao**<sup>*</sup>, Weide Zhang, Yiliang Xu, Yong Deng, Guangbin Wu, Qiang Zhang. <br>
         International Conference on Ubiquitous Robots (UR), 2024<br>
-        [[paper](https://arxiv.org/abs/2211.16988)]<br>
+        [![IEEE Xplore](https://img.shields.io/badge/IEEE%20Xplore-10597474-blue?logo=ieee)](https://ieeexplore.ieee.org/document/10597474)<br>
     <details>
     <span style="font-size: 14px">we propose QuadFormer, a novel framework designed for domain adaptive semantic segmentation. The hierarchical quadruple transformer combines cross-attention and self-attention mechanisms to adapt transferable context. Based on cross-attentive and self-attentive feature representations, we introduce a pseudo label correction scheme to online denoise the pseudo labels and reduce the domain gap. Additionally, we present two datasets - ARPLSyn and ARPLReal to further advance research in unsupervised domain adaptive powerline segmentations.</span>
     </details>
@@ -158,7 +173,8 @@ I am a PhD student in [Computer Science](https://cse.washu.edu/) at [WashU](http
     **STCrowd: A Multimodal Dataset for Pedestrian Perception in Crowded Scenes.**<br>
     Peishan Cong, Xinge Zhu, **Feng Qiao**, Yiming Ren, Xidong Peng, Yuenan Hou, Lan Xu, Ruigang Yang, Dinesh Manocha, Yuexin Ma.<br>
     Conference on Computer Vision and Pattern Recognition (CVPR), 2022<br>
-    [[paper](https://arxiv.org/abs/2204.01026)] [[code](https://github.com/4dvlab/stcrowd)]<br>
+    [![arXiv](https://img.shields.io/badge/arXiv-2204.01026-red?logo=arxiv)](https://arxiv.org/abs/2204.01026) &nbsp;
+    [![Github](https://img.shields.io/badge/Github-Repo-orange?logo=github)](https://github.com/4dvlab/stcrowd)<br>
     <details>
     <span style="font-size: 14px">We introduce a large-scale multimodal dataset,STCrowd. Specifically, in STCrowd, there are a total of 219 K pedestrian instances and 20 persons per frame on average, with various levels of occlusion. We provide synchronized LiDAR point clouds and camera images as well as their corresponding 3D labels and joint IDs. STCrowd can be used for various tasks, including LiDAR-only, image-only, and sensor-fusion based pedestrian detection and tracking. We provide baselines for most of the tasks. In addition, considering the property of sparse global distribution and density-varying local distribution of pedestrians, we further propose a novel method, Density-aware Hierarchical heatmap Aggregation (DHA), to enhance pedestrian perception in crowded scenes. Extensive experiments show that our new method achieves state-of-the-art performance for pedestrian detection on various datasets.</span>
     </details>
@@ -171,7 +187,8 @@ I am a PhD student in [Computer Science](https://cse.washu.edu/) at [WashU](http
     **MetaSAug: Meta Semantic Augmentation for Long-Tailed Visual Recognition**<br>
     Li, Shuang, Kaixiong Gong, Chi Harold Liu, Yulin Wang, **Feng Qiao**, and Xinjing Cheng.<br>
     Conference on Computer Vision and Pattern Recognition (CVPR), 2021<br>
-    [[paper](https://arxiv.org/abs/2103.12579)] [[code](https://github.com/BIT-DA/MetaSAug)]<br>
+    [![arXiv](https://img.shields.io/badge/arXiv-2103.12579-red?logo=arxiv)](https://arxiv.org/abs/2103.12579) &nbsp;
+    [![Github](https://img.shields.io/badge/Github-Repo-orange?logo=github)](https://github.com/BIT-DA/MetaSAug)<br>
     <details>
     <span style="font-size: 14px">We propose a novel approach to learn transformed semantic directions with meta-learning automatically. In specific, the augmentation strategy during training is dynamically optimized, aiming to minimize the loss on a small balanced validation set, which is approximated via a meta update step. Extensive empirical results on CIFAR-LT-10/100, ImageNet-LT, and iNaturalist 2017/2018 validate the effectiveness of our method.</span>
     </details>
