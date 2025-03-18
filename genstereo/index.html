@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="description"
     content="Given an arbitrary image, GenStereo can generate the cooresponding right view image.">
-  <meta property="og:title" content="Towards Open-World Generation of Stereo Images and Unsupervised Matching" />
+  <meta property="og:title"
+    content="GenStereo: Towards Open-World Generation of Stereo Images and Unsupervised Matching" />
   <meta property="og:description"
     content="Given an arbitrary image, GenStereo can generate the cooresponding right view image." />
   <meta property="og:url" content="https://qjizhi.github.io/" />
@@ -14,7 +15,8 @@
   <meta property="og:image:height" content="630" />
 
 
-  <meta name="twitter:title" content="Towards Open-World Generation of Stereo Images and Unsupervised Matching">
+  <meta name="twitter:title"
+    content="GenStereo: Towards Open-World Generation of Stereo Images and Unsupervised Matching">
   <meta name="twitter:description"
     content="Given an arbitrary image, GenStereo can generate the cooresponding right view image.">
   <meta name="twitter:image" content="static/images/genstereo_on_other_datasets_project.jpg">
@@ -23,7 +25,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Towards Open-World Generation of Stereo Images and Unsupervised Matching</title>
+  <title>GenStereo: Towards Open-World Generation of Stereo Images and Unsupervised Matching</title>
   <link rel="icon" type="image/x-icon" href="static/images/virtual-reality.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -50,7 +52,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">
-              Towards Open-World Generation of Stereo Images and Unsupervised Matching
+              GenStereo: Towards Open-World Generation of Stereo Images and Unsupervised Matching
             </h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
@@ -73,7 +75,7 @@
               <div class="publication-links">
                 <!-- Arxiv PDF link -->
                 <span class="link-block">
-                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/pdf/2503.12720" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
@@ -82,7 +84,7 @@
                 </span>
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/abs/2503.12720" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-alt"></i>
                     </span>
@@ -91,7 +93,7 @@
                 </span>
                 <!-- Code link -->
                 <span class="link-block">
-                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://github.com/Qjizhi/GenStereo" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-code"></i>
                     </span>
@@ -125,13 +127,13 @@
   </div>
 
   <!-- demo -->
-  <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/5.20.1/gradio.js"></script>
+  <!-- <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/5.20.1/gradio.js"></script>
   
   <h2 style="text-align: center; margin-top: 1em;">Demo</h2>
   
-  <div style="display: flex; justify-content: center;">
+  <div style="display: flex; justify-content: center  ;">
     <gradio-app src="https://fqiao-genstereo.hf.space" style="width: 80%;"></gradio-app>
-  </div>
+  </div> -->
 
 
   <!-- Paper abstract -->
@@ -155,8 +157,7 @@
               strong generalization ability. GenStereo achieves state-of-the-art performance in both stereo image
               generation and unsupervised stereo matching tasks. Our framework eliminates the need for complex hardware
               setups while enabling high-quality stereo image generation, making it valuable for both real-world
-              applications and unsupervised learning scenarios. The code will be made publicly available upon
-              acceptance.
+              applications and unsupervised learning scenarios.
             </p>
           </div>
         </div>
@@ -341,7 +342,7 @@
   <!-- End DIW images carousel -->
 
   <!-- DIODE images carousel -->
-  <section class="hero is-small">
+  <section class="hero is-small is-light">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <h2 class="title is-3">DIODE Dataset</h2>
@@ -416,7 +417,49 @@
   </section>
   <!-- End Mapillary images carousel -->
 
-  <section class="section hero is-small is-light">
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">KITTI 2015 Dataset - Scale Factors: <span class="has-text-weight-bold">5, 10, 15, 20, 25</span></h2>
+        <div id="kitti-carousel" class="carousel kitti-carousel">
+          <div class="item item-gif1">
+            <img src="static/images/kitti_gif/kitti15_000006_10.gif" alt="kitti_gif1"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-gif2">
+            <img src="static/images/kitti_gif/kitti15_000009_10.gif" alt="kitti_gif2"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-gif3">
+            <img src="static/images/kitti_gif/kitti15_000013_10.gif" alt="kitti_gif3"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-gif4">
+            <img src="static/images/kitti_gif/kitti15_000035_10.gif" alt="kitti_gif4"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-gif5">
+            <img src="static/images/kitti_gif/kitti15_000072_10.gif" alt="kitti_gif5"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-gif6">
+            <img src="static/images/kitti_gif/kitti15_000104_10.gif" alt="kitti_gif6"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-gif7">
+            <img src="static/images/kitti_gif/kitti15_000120_10.gif" alt="kitti_gif7"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+          <div class="item item-gif8">
+            <img src="static/images/kitti_gif/kitti15_000196_10.gif" alt="kitti_gif8"
+              style="max-width: 90%; height: auto; display: block; margin: 0 auto;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-small">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-full">
@@ -432,7 +475,8 @@
                 constraints at
                 three levels: input (disparity-aware coordinate and warped-image embeddings), feature (cross-view
                 attention), and output (pixel-level loss with adaptive fusion). These constraints yield geometrically
-                consistent and visually compelling stereo images.
+                consistent and visually compelling stereo images. Our methods demonstrate state-of-the-art performance
+                in both stereo image generation and unsupervised stereo matching.
               </p>
             </div>
           </div>
@@ -442,6 +486,21 @@
   </section>
 
   <!--BibTex citation -->
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        @article{qiao2025genstereo,
+          title={GenStereo: Towards Open-World Generation of Stereo Images and Unsupervised Matching},
+          author={Qiao, Feng and Xiong, Zhexiao and Xing, Eric and Jacobs, Nathan},
+          journal={arXiv preprint arXiv:2503.12720},
+          year={2025}
+        }
+      </code></pre>
+      <p>Please cite our work if you find it useful.</p>
+    </div>
+  </section>
 
   <!-- End BibTex citation -->
 
@@ -468,8 +527,6 @@
 
   <!-- Statcounter tracking code -->
 
-  <!-- Default Statcounter code for Dreamix
-https://dreamix-video-editing.github.io -->
   <script type="text/javascript">
     var sc_project = 12843789;
     var sc_invisible = 1;
