@@ -9,7 +9,7 @@ redirect_from:
   - /cv.html
 ---
 
-I am a PhD student in [Computer Science](https://cse.washu.edu/) at [WashU](https://washu.edu/). I am part of the [Multimodal Vision Research Laboratory (MVRL)](https://mvrl.cse.wustl.edu/) under the supervision of [Prof. Nathan Jacobs](https://jacobsn.github.io/). I have over five years of industry experience focusing on perception algorithms for autonomous driving and robotics. My research interests include computer vision, deep learning, and robotics.
+I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Research Laboratory (MVRL)](https://mvrl.cse.wustl.edu/), advised by [Prof. Nathan Jacobs](https://jacobsn.github.io/). I have over five years of industry experience focusing on perception algorithms for autonomous driving and robotics. My research interests include computer vision, deep learning, and robotics.
 
 <style>
     .toggle-container {
@@ -55,6 +55,7 @@ I am a PhD student in [Computer Science](https://cse.washu.edu/) at [WashU](http
 
 <div id="news" class="news-content">
     <!-- Your news content goes here -->
+    <li>Jun 2025, our work <a href="https://qjizhi.github.io/genstereo">GenStereo</a> was accepted by ICCV 2025.</li>
     <li>Jul 2024, one paper was accepted by ECCV 2024.</li>
     <!-- <ul> -->
     <li>Apr 2024, I will join WashU CSE as a PhD student.</li>
@@ -92,6 +93,7 @@ I am a PhD student in [Computer Science](https://cse.washu.edu/) at [WashU](http
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **GenStereo:  Towards Open-World Generation of Stereo Images and Unsupervised Matching**<br>
     [**Feng Qiao**](https://qjizhi.github.io/), [Zhexiao Xiong](https://steven-xiong.github.io/), [Eric Xing](https://ericx003.github.io/), [Nathan Jacobs](https://jacobsn.github.io/).<br>
+    International Conference on Computer Vision (ICCV), 2025<br>
     [![Project Site](https://img.shields.io/badge/Project-Web-green)](https://qjizhi.github.io/genstereo) &nbsp;
     [![Spaces](https://img.shields.io/badge/Spaces-Demo-yellow?logo=huggingface)](https://huggingface.co/spaces/FQiao/GenStereo) &nbsp;
     [![Github](https://img.shields.io/badge/Github-Repo-orange?logo=github)](https://github.com/Qjizhi/GenStereo) &nbsp;
@@ -276,25 +278,21 @@ I am a PhD student in [Computer Science](https://cse.washu.edu/) at [WashU](http
 
 <div class="honors-awards">
     <ul>
-        <li>Outstanding Graduates at Beijing Institute of Technology (2016).</li>
-        <li>Outstanding scholarship at Beijing Institute of Technology (2013-2015, 5 times).</li>
-        <li>Outstanding student leaders at Beijing Institute of Technology (2013).</li>
-        <li>National Scholarship (<strong>top 1%</strong>, highest scholarship in China) at Beijing Institute of Technology (2013).</li>
+        <li>Outstanding Graduates.</li>
+        <li>Outstanding scholarship.</li>
+        <li>Outstanding student leaders.</li>
+        <li>National Scholarship (<strong>top 1%</strong>, highest scholarship in China).</li>
     </ul>
 </div>
 
 ## Services
 
-<div class="activities">
-    <ul>
-        <li>Reviewer for CVPR, 2023,2024</li>
-        <li>Reviewer for ECCV, 2024</li>
-        <li>Reviewer for ITSC, 2024</li>
-        <li>Reviewer for IEEE Transactions on Intelligent Transportation Systems (T-ITS), 2023-present</li>
-        <li>Reviewer for IEEE Transactions on Intelligent Vehicles (T-IV), 2024-present</li>
-        <li>Reviewer for Journal of Automobile Engineering (JAUTO), 2023-present</li>
-        <li>Reviewer for International Journal of Vehicle Design (IJVD), 2023-present</li>
-        <li>Volunteer for China Foundation for Poverty Alleviation, 2013-2015</li>
-    </ul>
+<div class="services">
+    <h3>Conference Reviewer</h3>
+    <p>ICCV (2025), CVPR (2025, 2024, 2023), ECCV (2024), AAAI (2025), ITSC (2025, 2024)</p>
+    
+    <h3>Journal Reviewer</h3>
+    <p>IEEE Transactions on Intelligent Transportation Systems (T-ITS) (2023-present), IEEE Transactions on Intelligent Vehicles (T-IV) (2024-present), Journal of Automobile Engineering (JAUTO) (2023-present), International Journal of Vehicle Design (IJVD) (2023-present)</p>
+    
 </div>
 
