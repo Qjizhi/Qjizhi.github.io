@@ -91,7 +91,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 <tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/genstereo_on_other_datasets_project_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **GenStereo:  Towards Open-World Generation of Stereo Images and Unsupervised Matching**<br>
+    **Towards Open-World Generation of Stereo Images and Unsupervised Matching**<br>
     [**Feng Qiao**](https://qjizhi.github.io/), [Zhexiao Xiong](https://steven-xiong.github.io/), [Eric Xing](https://ericx003.github.io/), [Nathan Jacobs](https://jacobsn.github.io/).<br>
     International Conference on Computer Vision (ICCV), 2025<br>
     [![Project Site](https://img.shields.io/badge/Project-Web-green)](https://qjizhi.github.io/genstereo) &nbsp;
