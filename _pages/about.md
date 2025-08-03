@@ -78,7 +78,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
     }
 </script>
 
-## Research & Publications
+## Publications
 <table frame=hsides style="border-left-style: none;border-right-style: none;">
 <colgroup>
 <col width="30%" />
@@ -89,7 +89,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 <tbody>
 
 <tr>
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/genstereo_on_other_datasets_project_resized.png"></td>
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2025_ICCV_GenStereo_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **Towards Open-World Generation of Stereo Images and Unsupervised Matching**<br>
     [**Feng Qiao**](https://qjizhi.github.io/), [Zhexiao Xiong](https://steven-xiong.github.io/), [Eric Xing](https://ericx003.github.io/), [Nathan Jacobs](https://jacobsn.github.io/).<br>
@@ -157,7 +157,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 </tr>
 
 <tr>
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/uda_pls.png"></td>
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2024_UR_Quadformer_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
         **QuadFormer: Quadruple Transformer for Unsupervised Domain Adaptation in Power Line Segmentation of Aerial Images**<br>
         Pratyaksh Prabhav Rao<sup>*</sup>, **Feng Qiao**<sup>*</sup>, Weide Zhang, Yiliang Xu, Yong Deng, Guangbin Wu, Qiang Zhang. <br>
@@ -172,7 +172,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 <tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2022_CVPR_STCrowd_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **STCrowd: A Multimodal Dataset for Pedestrian Perception in Crowded Scenes.**<br>
+    **STCrowd: A Multimodal Dataset for Pedestrian Perception in Crowded Scenes**<br>
     Peishan Cong, Xinge Zhu, **Feng Qiao**, Yiming Ren, Xidong Peng, Yuenan Hou, Lan Xu, Ruigang Yang, Dinesh Manocha, Yuexin Ma.<br>
     Conference on Computer Vision and Pattern Recognition (CVPR), 2022<br>
     [![arXiv](https://img.shields.io/badge/arXiv-2204.01026-red?logo=arxiv)](https://arxiv.org/abs/2204.01026) &nbsp;
@@ -211,7 +211,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 <tbody>
 
 <tr>
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/TalkingFaceGeneration.gif"></td>
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/TalkingFaceGeneration_resized.gif"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **Talking face generation**<br>
     <details>
@@ -221,7 +221,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 </tr>
 
 <tr>
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/Nerf_3D_Reconstruction.gif"></td>
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/Nerf_3D_Reconstruction_resized.gif"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **3D reconstruction of electric tower**<br>
     <details>
@@ -231,7 +231,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 </tr>
 
 <tr>
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/3d_recon_fisheye_stereo.gif"></td>
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/3d_recon_fisheye_stereo_resized.gif"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **3D reconstruction with stereo fisheye cameras**<br>
     <details>
@@ -261,7 +261,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 </tr>
 
 <tr>
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/mono_camera_3d_detection.jpg"></td>
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/mono_camera_3d_detection_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **3D object detection and tracking using monocular camera**<br>
     [[code](https://github.com/Qjizhi/TensorRT-CenterNet-3D)]<br>
@@ -278,6 +278,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 
 <div class="honors-awards">
     <ul>
+        <li>ITSC 2024 Best Paper Award</li>
         <li>Outstanding Graduates.</li>
         <li>Outstanding scholarship.</li>
         <li>Outstanding student leaders.</li>
@@ -289,7 +290,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 
 <div class="services">
     <h3>Conference Reviewer</h3>
-    <p>ICCV (2025), CVPR (2025, 2024, 2023), ECCV (2024), AAAI (2025), ITSC (2025, 2024)</p>
+    <p>CVPR (2025, 2024, 2023), ICCV (2025), ECCV (2024), AAAI (2025), ITSC (2025, 2024)</p>
     
     <h3>Journal Reviewer</h3>
     <p>IEEE Transactions on Intelligent Transportation Systems (T-ITS) (2023-present), IEEE Transactions on Intelligent Vehicles (T-IV) (2024-present), Journal of Automobile Engineering (JAUTO) (2023-present), International Journal of Vehicle Design (IJVD) (2023-present)</p>
