@@ -56,8 +56,6 @@ alexa_site_verification  :
 yandex_site_verification :
 
 # Social Sharing
-twitter:
-  username               : &twitter
 facebook:
   username               :
   app_id                 :
@@ -109,13 +107,13 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : #"replacethistwitterhandle"
   vine             :
   weibo            :
   xing             :
   youtube          :
   wikipedia        :
-  zhihu            : #"https://www.zhihu.com/people/qfji-zhi"
+  zhihu            : #"https://www.zhihu.com/people/xxx"
+  X                : "fengqiao_ai"
 
 
 # Reading Files
