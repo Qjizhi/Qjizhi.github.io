@@ -9,7 +9,7 @@ redirect_from:
   - /cv.html
 ---
 
-I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Research Laboratory (MVRL)](https://mvrl.cse.wustl.edu/), advised by [Prof. Nathan Jacobs](https://jacobsn.github.io/). I have over five years of industry experience focusing on perception algorithms for autonomous driving and robotics. My research interests include computer vision, deep learning, and robotics.
+I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Research Laboratory (MVRL)](https://mvrl.cse.wustl.edu/), advised by [Prof. Nathan Jacobs](https://jacobsn.github.io/). I have over five years of industry experience focusing on perception algorithms for autonomous driving and robotics. My research interests include computer vision, deep learning, and robotics. My current research is focusing on Content Generation and 3DV.
 
 <style>
     .toggle-container {
@@ -39,7 +39,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
         display: block;
         margin-top: 10px;
         overflow: hidden;
-        max-height: 24px; /* Limit the max height to show only 2 items initially */
+        max-height: 48px; /* Limit the max height to show 2 items initially */
         transition: max-height 0.3s ease-out;
     }
 
@@ -55,9 +55,10 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 
 <div id="news" class="news-content">
     <!-- Your news content goes here -->
+    <li>Sep 2025, our work <a href="https://github.com/Qjizhi/MCPDepth">MCPDepth</a> was accepted by WACV 2026 (Round 1, ~6% acceptance rate).</li>
     <li>Jun 2025, our work <a href="https://qjizhi.github.io/genstereo">GenStereo</a> was accepted by ICCV 2025.</li>
-    <li>Jul 2024, one paper was accepted by ECCV 2024.</li>
     <!-- <ul> -->
+    <li>Jul 2024, one paper was accepted by ECCV 2024.</li>
     <li>Apr 2024, I will join WashU CSE as a PhD student.</li>
     <li>Apr 2024, our work <a href="https://arxiv.org/abs/2211.16988">QuadFormer</a> was accepted by UR 2024.</li>
     <li>Nov 2023, our work <a href="https://arxiv.org/abs/2309.01842">StereoFlowGAN</a> was accepted by BMVC 2023.</li>
@@ -89,6 +90,20 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 <tbody>
 
 <tr>
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2026_WACV_MCPDepth2_resized.png"></td>
+<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
+    **MCPDepth: Panorama Depth Estimation from Multi Cylindrical Panorama by Stereo Matching**<br>
+    [**Feng Qiao**](https://qjizhi.github.io/), [Zhexiao Xiong](https://steven-xiong.github.io/), [Nathan Jacobs](https://jacobsn.github.io/), [Xinge Zhu](https://xingezhu.me/), [Yuexin Ma](https://yuexinma.me/), Qiumeng He.<br>
+    Winter Conference on Applications of Computer Vision (WACV), 2026<br>
+    [![arXiv](https://img.shields.io/badge/arXiv-2408.01653-red?logo=arxiv)](https://arxiv.org/abs/2408.01653) &nbsp;
+    [![Github](https://img.shields.io/badge/Github-Repo-orange?logo=github)](https://github.com/Qjizhi/MCPDepth)<br>
+    <details>
+    <span style="font-size: 14px">We introduce Multi-Cylindrical Panoramic Depth Estimation (MCPDepth), a two-stage framework for omnidirectional depth estimation via stereo matching between multiple panoramas. MCPDepth uses cylindrical panoramas for initial stereo matching and then fuses the resulting depth maps across views. A circular attention module is used to overcome the distortion along the vertical axis. MCPDepth uses only standard network components, making deployment to embedded devices significantly simpler than prior approaches that require custom kernels. We theoretically and experimentally compare spherical and cylindrical projections for stereo matching, highlighting the advantages of the cylindrical projection. MCPDepth achieves state-of-the-art performance with an 18.8% reduction in mean absolute error (MAE) for depth on the outdoor, synthetic dataset Deep360 and a 19.9% reduction on the indoor, real-scene dataset 3D60. The code is attached and will be available after acceptance.</span>
+    </details>
+    </td>
+</tr>
+
+<tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2025_ICCV_GenStereo_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **Towards Open-World Generation of Stereo Images and Unsupervised Matching**<br>
@@ -105,23 +120,12 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
     </td>
 </tr>
 
-<tr>
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2024_ECCV_MCPDepth_resized.png"></td>
-<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **MCPDepth: Panorama Depth Estimation from Multi Cylindrical Panorama by Stereo Matching**<br>
-    **Feng Qiao**, Zhexiao Xiong, Nathan Jacobs, Xinge Zhu, Yuexin Ma, Qiumeng He.<br>
-    [![arXiv](https://img.shields.io/badge/arXiv-2408.01653-red?logo=arxiv)](https://arxiv.org/abs/2408.01653)<br>
-    <details>
-    <span style="font-size: 14px">We introduce Multi-Cylindrical Panoramic Depth Estimation (MCPDepth), a two-stage framework for omnidirectional depth estimation via stereo matching between multiple panoramas. MCPDepth uses cylindrical panoramas for initial stereo matching and then fuses the resulting depth maps across views. A circular attention module is used to overcome the distortion along the vertical axis. MCPDepth uses only standard network components, making deployment to embedded devices significantly simpler than prior approaches that require custom kernels. We theoretically and experimentally compare spherical and cylindrical projections for stereo matching, highlighting the advantages of the cylindrical projection. MCPDepth achieves state-of-the-art performance with an 18.8% reduction in mean absolute error (MAE) for depth on the outdoor, synthetic dataset Deep360 and a 19.9% reduction on the indoor, real-scene dataset 3D60. The code is attached and will be available after acceptance.</span>
-    </details>
-    </td>
-</tr>
 
 <tr>
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2024_CVPR_SAM3DSEG_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **SAM-guided Unsupervised Domain Adaptation for 3D Segmentation**<br>
-    Xidong Peng, Runnan Chen, **Feng Qiao**, Lingdong Kong, Youquan Liu, Tai Wang, Xinge Zhu, Yuexin Ma.<br>
+    Xidong Peng, Runnan Chen, **Feng Qiao**, Lingdong Kong, Youquan Liu, Tai Wang, [Xinge Zhu](https://xingezhu.me/), [Yuexin Ma](https://yuexinma.me/).<br>
     European Conference on Computer Vision (ECCV), 2024<br>
     [![arXiv](https://img.shields.io/badge/arXiv-2310.08820-red?logo=arxiv)](https://arxiv.org/abs/2310.08820v4)<br>
     <details>
@@ -173,7 +177,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2022_CVPR_STCrowd_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **STCrowd: A Multimodal Dataset for Pedestrian Perception in Crowded Scenes**<br>
-    Peishan Cong, Xinge Zhu, **Feng Qiao**, Yiming Ren, Xidong Peng, Yuenan Hou, Lan Xu, Ruigang Yang, Dinesh Manocha, Yuexin Ma.<br>
+    Peishan Cong, [Xinge Zhu](https://xingezhu.me/), **Feng Qiao**, Yiming Ren, Xidong Peng, Yuenan Hou, Lan Xu, Ruigang Yang, Dinesh Manocha, [Yuexin Ma](https://yuexinma.me/).<br>
     Conference on Computer Vision and Pattern Recognition (CVPR), 2022<br>
     [![arXiv](https://img.shields.io/badge/arXiv-2204.01026-red?logo=arxiv)](https://arxiv.org/abs/2204.01026) &nbsp;
     [![Github](https://img.shields.io/badge/Github-Repo-orange?logo=github)](https://github.com/4dvlab/stcrowd)<br>
