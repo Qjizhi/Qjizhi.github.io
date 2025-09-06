@@ -80,6 +80,99 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 </script>
 
 ## Publications
+
+<div class="filter-container">
+    <h4>Filter by Keywords:</h4>
+    <div class="filter-buttons">
+        <button class="filter-btn active" onclick="filterItems('all')">All</button>
+        <button class="filter-btn" onclick="filterItems('generation')">Content Generation</button>
+        <button class="filter-btn" onclick="filterItems('multimodal')">Multi Modal</button>
+        <button class="filter-btn" onclick="filterItems('domain')">Domain Adaptation</button>
+        <button class="filter-btn" onclick="filterItems('stereo')">Stereo Vision</button>
+        <button class="filter-btn" onclick="filterItems('depth')">Depth Estimation</button>
+        <button class="filter-btn" onclick="filterItems('3d')">3D Vision</button>
+        <button class="filter-btn" onclick="filterItems('detection')">Object Detection</button>
+        <button class="filter-btn" onclick="filterItems('segmentation')">Segmentation</button>
+        <button class="filter-btn" onclick="filterItems('panorama')">Panorama</button>
+        <button class="filter-btn" onclick="filterItems('perdestrian')">Perdestrian</button>
+        <button class="filter-btn" onclick="filterItems('powerline')">Power Line</button>
+
+    </div>
+</div>
+
+<style>
+.filter-container {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.filter-btn {
+    padding: 6px 12px;
+    border: 1px solid #007bff;
+    background-color: white;
+    color: #007bff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #e3f2fd;
+}
+
+.filter-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.publication-item, .project-item {
+    transition: opacity 0.3s ease;
+}
+
+.publication-item.hidden, .project-item.hidden {
+    opacity: 0.3;
+    pointer-events: none;
+}
+</style>
+
+<script>
+function filterItems(keyword) {
+    // Update button states
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    event.target.classList.add('active');
+    
+    // Filter publications
+    document.querySelectorAll('.publication-item').forEach(item => {
+        if (keyword === 'all' || item.dataset.keywords.includes(keyword)) {
+            item.classList.remove('hidden');
+        } else {
+            item.classList.add('hidden');
+        }
+    });
+    
+    // Filter projects
+    document.querySelectorAll('.project-item').forEach(item => {
+        if (keyword === 'all' || item.dataset.keywords.includes(keyword)) {
+            item.classList.remove('hidden');
+        } else {
+            item.classList.add('hidden');
+        }
+    });
+}
+</script>
 <table frame=hsides style="border-left-style: none;border-right-style: none;">
 <colgroup>
 <col width="30%" />
@@ -89,7 +182,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 </thead>
 <tbody>
 
-<tr>
+<tr class="publication-item" data-keywords="stereo depth panorama 3d">
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2026_WACV_MCPDepth2_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **MCPDepth: Panorama Depth Estimation from Multi Cylindrical Panorama by Stereo Matching**<br>
@@ -103,7 +196,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
     </td>
 </tr>
 
-<tr>
+<tr class="publication-item" data-keywords="stereo depth generation 3d">
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2025_ICCV_GenStereo_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **Towards Open-World Generation of Stereo Images and Unsupervised Matching**<br>
@@ -121,7 +214,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 </tr>
 
 
-<tr>
+<tr class="publication-item" data-keywords="segmentation domain 3d multimodal">
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2024_CVPR_SAM3DSEG_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **SAM-guided Unsupervised Domain Adaptation for 3D Segmentation**<br>
@@ -134,7 +227,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
     </td>
 </tr>
 
-<tr>
+<tr class="publication-item" data-keywords="stereo domain generation">
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2023_BMVC_StereoFlowGAN_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **StereoFlowGAN: Co-training for Stereo and Flow with Unsupervised Domain Adaptation**<br>
@@ -147,7 +240,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
     </td>
 </tr>
 
-<tr>
+<tr class="publication-item" data-keywords="segmentation detection powerline">
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2023_PRCV_DUFormer_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **DUFormer: Solving Power Line Detection Task in Aerial Images using Semantic Segmentation**<br>
@@ -160,7 +253,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
     </td>
 </tr>
 
-<tr>
+<tr class="publication-item" data-keywords="segmentation domain powerline">
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2024_UR_Quadformer_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
         **QuadFormer: Quadruple Transformer for Unsupervised Domain Adaptation in Power Line Segmentation of Aerial Images**<br>
@@ -173,7 +266,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
     </td>
 </tr>
 
-<tr>
+<tr class="publication-item" data-keywords="detection perdestrian 3d">
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2022_CVPR_STCrowd_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **STCrowd: A Multimodal Dataset for Pedestrian Perception in Crowded Scenes**<br>
@@ -187,7 +280,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
     </td>
 </tr>
 
-<tr>
+<tr class="publication-item" data-keywords="generation domain">
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2021_CVPR_MetaSAug_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **MetaSAug: Meta Semantic Augmentation for Long-Tailed Visual Recognition**<br>
@@ -205,6 +298,22 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 </table>
 
 ## Projects
+
+<div class="filter-container">
+    <h4>Filter by Keywords:</h4>
+    <div class="filter-buttons">
+        <button class="filter-btn active" onclick="filterItems('all')">All</button>
+        <button class="filter-btn" onclick="filterItems('generation')">Content Generation</button>
+        <button class="filter-btn" onclick="filterItems('stereo')">Stereo Vision</button>
+        <button class="filter-btn" onclick="filterItems('depth')">Depth Estimation</button>
+        <button class="filter-btn" onclick="filterItems('3d')">3D Vision</button>
+        <button class="filter-btn" onclick="filterItems('detection')">Object Detection</button>
+        <button class="filter-btn" onclick="filterItems('reconstruction')">3D Reconstruction</button>
+        <button class="filter-btn" onclick="filterItems('tracking')">Tracking</button>
+        <button class="filter-btn" onclick="filterItems('lidar')">LiDAR</button>
+        <button class="filter-btn" onclick="filterItems('camera')">Camera</button>
+    </div>
+</div>
 <table frame=hsides style="border-left-style: none;border-right-style: none;">
 <colgroup>
 <col width="30%" />
@@ -214,7 +323,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 </thead>
 <tbody>
 
-<tr>
+<tr class="project-item" data-keywords="generation">
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/TalkingFaceGeneration_resized.gif"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **Talking face generation**<br>
@@ -224,7 +333,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
     </td>
 </tr>
 
-<tr>
+<tr class="project-item" data-keywords="reconstruction 3d">
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/Nerf_3D_Reconstruction_resized.gif"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **3D reconstruction of electric tower**<br>
@@ -234,7 +343,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
     </td>
 </tr>
 
-<tr>
+<tr class="project-item" data-keywords="stereo depth reconstruction 3d">
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/3d_recon_fisheye_stereo_resized.gif"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **3D reconstruction with stereo fisheye cameras**<br>
@@ -244,7 +353,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
     </td>
 </tr>
 
-<tr>
+<tr class="project-item" data-keywords="stereo depth">
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/StereoMatching_Powerline_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **Self-supervised depth estimation using stereo cameras**<br>
@@ -254,7 +363,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
     </td>
 </tr>
 
-<tr>
+<tr class="project-item" data-keywords="detection tracking lidar 3d">
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/Lidar_Perception_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **3D object detection and tracking using multi-lidars**<br>
@@ -264,7 +373,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
     </td>
 </tr>
 
-<tr>
+<tr class="project-item" data-keywords="detection tracking camera 3d">
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/mono_camera_3d_detection_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **3D object detection and tracking using monocular camera**<br>
