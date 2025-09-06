@@ -82,7 +82,6 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 ## Publications
 
 <div class="filter-container">
-    <h4>Filter by Keywords:</h4>
     <div class="filter-buttons">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="generation">Content Generation</button>
@@ -103,37 +102,35 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 <style>
 .filter-container {
     margin: 20px 0;
-    padding: 15px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    border: 1px solid #e9ecef;
+    padding: 10px 0;
 }
 
 .filter-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 10px;
+    gap: 6px;
 }
 
 .filter-btn {
-    padding: 6px 12px;
-    border: 1px solid #007bff;
+    padding: 4px 8px;
+    border: 1px solid #ddd;
     background-color: white;
-    color: #007bff;
-    border-radius: 20px;
+    color: #666;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 14px;
-    transition: all 0.3s ease;
+    font-size: 12px;
+    transition: all 0.2s ease;
 }
 
 .filter-btn:hover {
-    background-color: #e3f2fd;
+    background-color: #f5f5f5;
+    border-color: #999;
 }
 
 .filter-btn.active {
     background-color: #007bff;
     color: white;
+    border-color: #007bff;
 }
 
 .publication-item, .project-item {
@@ -276,7 +273,6 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 ## Projects
 
 <div class="filter-container">
-    <h4>Filter by Keywords:</h4>
     <div class="filter-buttons">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="generation">Content Generation</button>
@@ -290,78 +286,197 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
         <button class="filter-btn" data-filter="camera">Camera</button>
     </div>
 </div>
-<table frame=hsides style="border-left-style: none;border-right-style: none;">
-<colgroup>
-<col width="30%" />
-<col width="70%" />
-</colgroup>
-<thead>
-</thead>
-<tbody>
 
-<tr class="project-item" data-keywords="generation">
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/TalkingFaceGeneration_resized.gif"></td>
-<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **Talking face generation**<br>
-    <details>
-    <span style="font-size: 14px">Multi stage talking face generation.</span>
-    </details>
-    </td>
-</tr>
+<style>
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+}
 
-<tr class="project-item" data-keywords="reconstruction 3d">
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/Nerf_3D_Reconstruction_resized.gif"></td>
-<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **3D reconstruction of electric tower**<br>
-    <details>
-    <span style="font-size: 14px">3D reconstruction of electric tower using aerial images.</span>
-    </details>
-    </td>
-</tr>
+.project-card {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
-<tr class="project-item" data-keywords="stereo depth reconstruction 3d">
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/3d_recon_fisheye_stereo_resized.gif"></td>
-<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **3D reconstruction with stereo fisheye cameras**<br>
-    <details>
-    <span style="font-size: 14px">Unsupervised depth estimation with stereo fisheye cameras.</span>
-    </details>
-    </td>
-</tr>
+.project-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
 
-<tr class="project-item" data-keywords="stereo depth">
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/StereoMatching_Powerline_resized.png"></td>
-<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **Self-supervised depth estimation using stereo cameras**<br>
-    <details>
-    <span style="font-size: 14px">Depth estimation using stereo cameras. Synthetic data is utilized to generate ground truth, and domain adaptation/generalization is employed to ensure excellent performance on real data as well.</span>
-    </details>
-    </td>
-</tr>
+.project-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
 
-<tr class="project-item" data-keywords="detection tracking lidar 3d">
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/Lidar_Perception_resized.png"></td>
-<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **3D object detection and tracking using multi-lidars**<br>
-    <details>
-    <span style="font-size: 14px">3D object detection and tracking using multi-lidars. Inputs are sequential point clouds from multi-lidars and the model can get the 3d information of objects including position, size, orientation, class, free space (also as known as drivable area), and lanes. The model is deployed on GPU with TensorRT and SoC chip, which meets the needs of real-time detection.</span>
-    </details>
-    </td>
-</tr>
+.project-card h4 {
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
 
-<tr class="project-item" data-keywords="detection tracking camera 3d">
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/mono_camera_3d_detection_resized.png"></td>
-<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **3D object detection and tracking using monocular camera**<br>
-    [[code](https://github.com/Qjizhi/TensorRT-CenterNet-3D)]<br>
-    <details>
-    <span style="font-size: 14px">3D object detection and tracking using a monocular camera. The model takes sequential images as inputs and is capable of extracting 3D information about objects, including their position, size, orientation, and class. Deployment on a GPU with TensorRT enables the model to achieve an impressive inference speed of 50 Hz.</span>
-    </details>
-    </td>
-</tr>
+.project-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+}
 
-</tbody>
-</table>
+.project-card a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+.project-card details {
+    margin-top: 10px;
+}
+
+.project-card summary {
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 14px;
+    color: #007bff;
+    padding: 5px 0;
+    border-bottom: 1px solid #e9ecef;
+    margin-bottom: 10px;
+}
+
+.project-card summary:hover {
+    color: #0056b3;
+}
+
+.project-card details p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.project-card .btn {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.project-card img[src*="shields.io"] {
+    height: 20px;
+    width: auto;
+    max-width: 100%;
+}
+
+.project-card h4 img[src*="shields.io"] {
+    height: 18px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+/* Ensure all links are consistently blue */
+.page__content a,
+.page__content p a,
+.page__content li a,
+.page__content td a,
+.publication-item a {
+    color: #007bff !important;
+    text-decoration: underline;
+}
+
+.page__content a:hover,
+.page__content p a:hover,
+.page__content li a:hover,
+.page__content td a:hover,
+.publication-item a:hover {
+    color: #0056b3 !important;
+}
+
+/* Make badges smaller */
+img[src*="shields.io"] {
+    height: 14px !important;
+    width: auto !important;
+    max-width: 100% !important;
+}
+
+/* Adjust publication title font size */
+.publication-item strong {
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+</style>
+<div class="projects-grid">
+    <div class="project-item project-card" data-keywords="generation">
+        <img src="{{ site.baseurl }}/images/TalkingFaceGeneration_resized.gif" alt="Talking Face Generation">
+        <h4>Talking Face Generation</h4>
+        <details>
+            <summary>Click for details</summary>
+            <p>Multi stage talking face generation.</p>
+        </details>
+    </div>
+
+    <div class="project-item project-card" data-keywords="reconstruction 3d">
+        <img src="{{ site.baseurl }}/images/Nerf_3D_Reconstruction_resized.gif" alt="3D Reconstruction">
+        <h4>3D Reconstruction of Electric Tower</h4>
+        <details>
+            <summary>Click for details</summary>
+            <p>3D reconstruction of electric tower using aerial images.</p>
+        </details>
+    </div>
+
+    <div class="project-item project-card" data-keywords="stereo depth reconstruction 3d">
+        <img src="{{ site.baseurl }}/images/3d_recon_fisheye_stereo_resized.gif" alt="3D Reconstruction with Stereo">
+        <h4>3D Reconstruction with Stereo Fisheye Cameras</h4>
+        <details>
+            <summary>Click for details</summary>
+            <p>Unsupervised depth estimation with stereo fisheye cameras.</p>
+        </details>
+    </div>
+
+    <div class="project-item project-card" data-keywords="stereo depth">
+        <img src="{{ site.baseurl }}/images/StereoMatching_Powerline_resized.png" alt="Stereo Depth Estimation">
+        <h4>Self-supervised Depth Estimation using Stereo Cameras</h4>
+        <details>
+            <summary>Click for details</summary>
+            <p>Depth estimation using stereo cameras. Synthetic data is utilized to generate ground truth, and domain adaptation/generalization is employed to ensure excellent performance on real data as well.</p>
+        </details>
+    </div>
+
+    <div class="project-item project-card" data-keywords="detection tracking lidar 3d">
+        <img src="{{ site.baseurl }}/images/Lidar_Perception_resized.png" alt="LiDAR Detection">
+        <h4>3D Object Detection and Tracking using Multi-LiDARs</h4>
+        <details>
+            <summary>Click for details</summary>
+            <p>3D object detection and tracking using multi-lidars. Inputs are sequential point clouds from multi-lidars and the model can get the 3D information of objects including position, size, orientation, class, free space (also as known as drivable area), and lanes. The model is deployed on GPU with TensorRT and SoC chip, which meets the needs of real-time detection.</p>
+        </details>
+    </div>
+
+    <div class="project-item project-card" data-keywords="detection tracking camera 3d">
+        <img src="{{ site.baseurl }}/images/mono_camera_3d_detection_resized.png" alt="Monocular 3D Detection">
+        <h4>3D Object Detection and Tracking using Monocular Camera <a href="https://github.com/Qjizhi/TensorRT-CenterNet-3D" target="_blank"><img src="https://img.shields.io/badge/Github-Repo-orange?logo=github" alt="Github Repo"></a></h4>
+        <details>
+            <summary>Click for details</summary>
+            <p>3D object detection and tracking using a monocular camera. The model takes sequential images as inputs and is capable of extracting 3D information about objects, including their position, size, orientation, and class. Deployment on a GPU with TensorRT enables the model to achieve an impressive inference speed of 50 Hz.</p>
+        </details>
+    </div>
+</div>
 
 ## Honors and Awards
 

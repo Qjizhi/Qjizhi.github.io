@@ -52,7 +52,7 @@
                     var keywords = item.getAttribute('data-keywords') || '';
                     
                     if (keyword === 'all' || keywords.indexOf(keyword) !== -1) {
-                        item.style.display = 'table-row';
+                        item.style.display = 'block';
                         item.classList.remove('hidden');
                     } else {
                         item.style.display = 'none';
@@ -63,10 +63,16 @@
         }
         
         // Make sure all items are visible initially
-        var allItems = document.querySelectorAll('.publication-item, .project-item');
-        for (var i = 0; i < allItems.length; i++) {
-            allItems[i].style.display = 'table-row';
-            allItems[i].classList.remove('hidden');
+        var pubItems = document.querySelectorAll('.publication-item');
+        for (var i = 0; i < pubItems.length; i++) {
+            pubItems[i].style.display = 'table-row';
+            pubItems[i].classList.remove('hidden');
+        }
+        
+        var projItems = document.querySelectorAll('.project-item');
+        for (var i = 0; i < projItems.length; i++) {
+            projItems[i].style.display = 'block';
+            projItems[i].classList.remove('hidden');
         }
         
         console.log('Filter system initialized successfully');
