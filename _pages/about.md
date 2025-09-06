@@ -39,7 +39,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
         display: block;
         margin-top: 10px;
         overflow: hidden;
-        max-height: 48px; /* Limit the max height to show 2 items initially */
+        max-height: 49px; /* Limit the max height to show 2 items initially */
         transition: max-height 0.3s ease-out;
     }
 
@@ -294,7 +294,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 
 <div class="services">
     <h3>Conference Reviewer</h3>
-    <p>CVPR (2025, 2024, 2023), ICCV (2025), ECCV (2024), AAAI (2025), ITSC (2025, 2024)</p>
+    <p>CVPR (2025, 2024, 2023), ICCV (2025), ECCV (2024), AAAI (2026, 2025), WACV (2026), ITSC (2025, 2024)</p>
     
     <h3>Journal Reviewer</h3>
     <p>IEEE Transactions on Intelligent Transportation Systems (T-ITS) (2023-present), IEEE Transactions on Intelligent Vehicles (T-IV) (2024-present), Journal of Automobile Engineering (JAUTO) (2023-present), International Journal of Vehicle Design (IJVD) (2023-present)</p>
