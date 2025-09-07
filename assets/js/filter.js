@@ -2,90 +2,106 @@
 (function() {
     'use strict';
     
+    function findScopeForContainer(container) {
+        // Look ahead in DOM to determine whether this button group controls publications or projects
+        var probe = container.nextElementSibling;
+        while (probe) {
+            if (probe.classList && probe.classList.contains('filter-container')) {
+                break; // reached next group; stop
+            }
+            if (probe.querySelector && probe.querySelector('.publication-item')) {
+                return 'publication';
+            }
+            if (probe.querySelector && probe.querySelector('.project-item')) {
+                return 'project';
+            }
+            probe = probe.nextElementSibling;
+        }
+        return null;
+    }
+    
+    function applyFilterToItems(keyword, scope) {
+        if (scope === 'publication') {
+            var pubItems = document.querySelectorAll('.publication-item');
+            for (var i = 0; i < pubItems.length; i++) {
+                var item = pubItems[i];
+                var keywords = item.getAttribute('data-keywords') || '';
+                if (keyword === 'all' || keywords.indexOf(keyword) !== -1) {
+                    item.style.display = 'table-row';
+                    item.classList.remove('hidden');
+                } else {
+                    item.style.display = 'none';
+                    item.classList.add('hidden');
+                }
+            }
+        } else if (scope === 'project') {
+            var projItems = document.querySelectorAll('.project-item');
+            for (var j = 0; j < projItems.length; j++) {
+                var pItem = projItems[j];
+                var pKeywords = pItem.getAttribute('data-keywords') || '';
+                if (keyword === 'all' || pKeywords.indexOf(keyword) !== -1) {
+                    pItem.style.display = 'block';
+                    pItem.classList.remove('hidden');
+                } else {
+                    pItem.style.display = 'none';
+                    pItem.classList.add('hidden');
+                }
+            }
+        }
+    }
+    
     function initFilterSystem() {
-        console.log('Initializing filter system...');
+        var containers = document.querySelectorAll('.filter-container');
         
-        // Get all filter buttons
-        var filterButtons = document.querySelectorAll('.filter-btn');
-        console.log('Found', filterButtons.length, 'filter buttons');
-        
-        if (filterButtons.length === 0) {
-            console.log('No filter buttons found, retrying in 1 second...');
+        if (containers.length === 0) {
             setTimeout(initFilterSystem, 1000);
             return;
         }
         
-        // Add click handlers to all filter buttons
-        for (var i = 0; i < filterButtons.length; i++) {
-            filterButtons[i].addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
+        for (var c = 0; c < containers.length; c++) {
+            (function(container) {
+                var scope = findScopeForContainer(container);
+                var buttons = container.querySelectorAll('.filter-btn');
                 
-                var keyword = this.getAttribute('data-filter');
-                console.log('Filtering by:', keyword);
-                
-                // Update button states
-                for (var j = 0; j < filterButtons.length; j++) {
-                    filterButtons[j].classList.remove('active');
+                for (var b = 0; b < buttons.length; b++) {
+                    buttons[b].addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        var keyword = this.getAttribute('data-filter');
+                        
+                        // Update active state only within this button group
+                        for (var bb = 0; bb < buttons.length; bb++) {
+                            buttons[bb].classList.remove('active');
+                        }
+                        this.classList.add('active');
+                        
+                        // Apply filtering only to the scoped section
+                        applyFilterToItems(keyword, scope);
+                    });
                 }
-                this.classList.add('active');
-                
-                // Filter publications
-                var pubItems = document.querySelectorAll('.publication-item');
-                for (var k = 0; k < pubItems.length; k++) {
-                    var item = pubItems[k];
-                    var keywords = item.getAttribute('data-keywords') || '';
-                    
-                    if (keyword === 'all' || keywords.indexOf(keyword) !== -1) {
-                        item.style.display = 'table-row';
-                        item.classList.remove('hidden');
-                    } else {
-                        item.style.display = 'none';
-                        item.classList.add('hidden');
-                    }
-                }
-                
-                // Filter projects
-                var projItems = document.querySelectorAll('.project-item');
-                for (var k = 0; k < projItems.length; k++) {
-                    var item = projItems[k];
-                    var keywords = item.getAttribute('data-keywords') || '';
-                    
-                    if (keyword === 'all' || keywords.indexOf(keyword) !== -1) {
-                        item.style.display = 'block';
-                        item.classList.remove('hidden');
-                    } else {
-                        item.style.display = 'none';
-                        item.classList.add('hidden');
-                    }
-                }
-            });
+            })(containers[c]);
         }
         
-        // Make sure all items are visible initially
+        // Ensure all items start visible
         var pubItems = document.querySelectorAll('.publication-item');
         for (var i = 0; i < pubItems.length; i++) {
             pubItems[i].style.display = 'table-row';
             pubItems[i].classList.remove('hidden');
         }
-        
         var projItems = document.querySelectorAll('.project-item');
-        for (var i = 0; i < projItems.length; i++) {
-            projItems[i].style.display = 'block';
-            projItems[i].classList.remove('hidden');
+        for (var j = 0; j < projItems.length; j++) {
+            projItems[j].style.display = 'block';
+            projItems[j].classList.remove('hidden');
         }
-        
-        console.log('Filter system initialized successfully');
     }
     
-    // Initialize when DOM is ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initFilterSystem);
     } else {
         initFilterSystem();
     }
     
-    // Fallback initialization
     window.addEventListener('load', function() {
         setTimeout(initFilterSystem, 100);
     });

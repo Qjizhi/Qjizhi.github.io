@@ -90,6 +90,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
         <button class="filter-btn" data-filter="stereo">Stereo Vision</button>
         <button class="filter-btn" data-filter="depth">Depth Estimation</button>
         <button class="filter-btn" data-filter="3d">3D Vision</button>
+        <button class="filter-btn" data-filter="lidar">LiDAR</button>
         <button class="filter-btn" data-filter="detection">Object Detection</button>
         <button class="filter-btn" data-filter="segmentation">Segmentation</button>
         <button class="filter-btn" data-filter="panorama">Panorama</button>
@@ -187,7 +188,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 </tr>
 
 
-<tr class="publication-item" data-keywords="segmentation domain 3d multimodal">
+<tr class="publication-item" data-keywords="segmentation domain 3d multimodal lidar">
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2024_CVPR_SAM3DSEG_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **SAM-guided Unsupervised Domain Adaptation for 3D Segmentation**<br>
@@ -239,7 +240,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
     </td>
 </tr>
 
-<tr class="publication-item" data-keywords="detection perdestrian 3d">
+<tr class="publication-item" data-keywords="detection perdestrian 3d lidar multimodal">
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2022_CVPR_STCrowd_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **STCrowd: A Multimodal Dataset for Pedestrian Perception in Crowded Scenes**<br>
@@ -283,7 +284,6 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
         <button class="filter-btn" data-filter="reconstruction">3D Reconstruction</button>
         <button class="filter-btn" data-filter="tracking">Tracking</button>
         <button class="filter-btn" data-filter="lidar">LiDAR</button>
-        <button class="filter-btn" data-filter="camera">Camera</button>
     </div>
 </div>
 
@@ -468,7 +468,7 @@ img[src*="shields.io"] {
         </details>
     </div>
 
-    <div class="project-item project-card" data-keywords="detection tracking camera 3d">
+    <div class="project-item project-card" data-keywords="detection tracking 3d">
         <img src="{{ site.baseurl }}/images/mono_camera_3d_detection_resized.png" alt="Monocular 3D Detection">
         <h4>3D Object Detection and Tracking using Monocular Camera <a href="https://github.com/Qjizhi/TensorRT-CenterNet-3D" target="_blank"><img src="https://img.shields.io/badge/Github-Repo-orange?logo=github" alt="Github Repo"></a></h4>
         <details>
