@@ -11,6 +11,9 @@ redirect_from:
 
 I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Research Laboratory (MVRL)](https://mvrl.cse.wustl.edu/), advised by [Prof. Nathan Jacobs](https://jacobsn.github.io/). I have over five years of industry experience focusing on perception algorithms for autonomous driving and robotics. My research interests include computer vision, deep learning, and robotics. My current research is focusing on Content Generation and 3DV.
 
+<span style="color: red; font-weight: bold;">I am in the intern market for 2026, so feel free to reach out if you think I am a good fit for your team!</span>
+
+
 <style>
     .toggle-container {
         cursor: pointer;
