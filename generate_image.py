@@ -64,7 +64,7 @@ def main():
     os.makedirs('./images', exist_ok=True)
 
     if ext == 'gif':
-        out_name = name_base + '_resized.gif'
+        out_name = name_base + f'_resized_{args.height}x{args.width}.gif'
         out_path = os.path.join('./images', out_name)
         process_gif(args.image, dim, ratio, color, out_path)
     else:
@@ -77,7 +77,7 @@ def main():
         else:
             color = [255, 255, 255]
         resized_dst = process_frame(image, dim, ratio, color)
-        out_name = name_base + '_resized.png'
+        out_name = name_base + f'_resized_{args.height}x{args.width}.png'
         out_path = os.path.join('./images', out_name)
         cv2.imwrite(out_path, resized_dst)
 
