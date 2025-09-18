@@ -15,72 +15,82 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 
 
 <style>
-    .toggle-container {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        font-size: 22px; /* Larger font size */
-        color: #494e52; /* color */
-        font-weight: bold; /* Bold text */
+    .news-window {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 15px;
+        margin: 20px 0;
+        max-height: 200px;
+        overflow-y: auto;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
-    .triangle {
-        width: 0;
-        height: 0;
-        border-top: 6px solid transparent;
-        border-bottom: 6px solid transparent;
-        border-left: 10px solid #494e52; /* Pointing to the right */
-        margin-right: 8px;
-        transition: transform 0.3s;
+    .news-window h3 {
+        margin: 0 0 15px 0;
+        color: #495057;
+        font-size: 18px;
+        font-weight: bold;
     }
 
-    .triangle.open {
-        transform: rotate(90deg);
+    .news-window ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
     }
 
-    .news-content {
-        display: block;
-        margin-top: 10px;
-        overflow: hidden;
-        max-height: 49px; /* Limit the max height to show 2 items initially */
-        transition: max-height 0.3s ease-out;
+    .news-window li {
+        margin-bottom: 12px;
+        padding: 8px 0;
+        border-bottom: 1px solid #e9ecef;
+        line-height: 1.4;
     }
 
-    .news-content.open {
-        max-height: none; /* Expand to show all items when open */
+    .news-window li:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .news-window a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .news-window a:hover {
+        text-decoration: underline;
+    }
+
+    /* Custom scrollbar for webkit browsers */
+    .news-window::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .news-window::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 4px;
+    }
+
+    .news-window::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 4px;
+    }
+
+    .news-window::-webkit-scrollbar-thumb:hover {
+        background: #a8a8a8;
     }
 </style>
 
-<div class="toggle-container" onclick="toggleNews()">
-    <div class="triangle" id="triangle"></div>
-    <span>News!</span>
+<div class="news-window">
+    <h3>News</h3>
+    <ul>
+        <li>Sep 2025, our work <a href="https://github.com/Qjizhi/MCPDepth">MCPDepth</a> was accepted by WACV 2026 (Round 1, ~6% acceptance rate).</li>
+        <li>Jun 2025, our work <a href="https://qjizhi.github.io/genstereo">GenStereo</a> was accepted by ICCV 2025.</li>
+        <li>Jul 2024, one paper was accepted by ECCV 2024.</li>
+        <li>Apr 2024, I will join WashU CSE as a PhD student.</li>
+        <li>Apr 2024, our work <a href="https://arxiv.org/abs/2211.16988">QuadFormer</a> was accepted by UR 2024.</li>
+        <li>Nov 2023, our work <a href="https://arxiv.org/abs/2309.01842">StereoFlowGAN</a> was accepted by BMVC 2023.</li>
+    </ul>
 </div>
-
-<div id="news" class="news-content">
-    <!-- Your news content goes here -->
-    <li>Sep 2025, our work <a href="https://github.com/Qjizhi/MCPDepth">MCPDepth</a> was accepted by WACV 2026 (Round 1, ~6% acceptance rate).</li>
-    <li>Jun 2025, our work <a href="https://qjizhi.github.io/genstereo">GenStereo</a> was accepted by ICCV 2025.</li>
-    <!-- <ul> -->
-    <li>Jul 2024, one paper was accepted by ECCV 2024.</li>
-    <li>Apr 2024, I will join WashU CSE as a PhD student.</li>
-    <li>Apr 2024, our work <a href="https://arxiv.org/abs/2211.16988">QuadFormer</a> was accepted by UR 2024.</li>
-    <li>Nov 2023, our work <a href="https://arxiv.org/abs/2309.01842">StereoFlowGAN</a> was accepted by BMVC 2023.</li>
-    <!-- </ul> -->
-</div>
-
-<script>
-    function toggleNews() {
-        var newsDiv = document.getElementById("news");
-        var triangle = document.getElementById("triangle");
-        if (newsDiv.classList.contains("open")) {
-            newsDiv.classList.remove("open");
-            triangle.classList.remove("open");
-        } else {
-            newsDiv.classList.add("open");
-            triangle.classList.add("open");
-        }
-    }
-</script>
 
 ## Publications
 
