@@ -173,7 +173,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2026_WACV_MCPDepth2_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **MCPDepth: Panorama Depth Estimation from Multi Cylindrical Panorama by Stereo Matching**<br>
-    [**Feng Qiao**](https://qjizhi.github.io/), [Zhexiao Xiong](https://steven-xiong.github.io/), [Nathan Jacobs](https://jacobsn.github.io/), [Xinge Zhu](https://xingezhu.me/), [Yuexin Ma](https://yuexinma.me/), Qiumeng He.<br>
+    [**Feng Qiao**](https://qjizhi.github.io/), [Zhexiao Xiong](https://steven-xiong.github.io/), [Xinge Zhu](https://xingezhu.me/), [Yuexin Ma](https://yuexinma.me/), Qiumeng He, [Nathan Jacobs](https://jacobsn.github.io/).<br>
     Winter Conference on Applications of Computer Vision (WACV), 2026<br>
     [![arXiv](https://img.shields.io/badge/arXiv-2408.01653-red?logo=arxiv)](https://arxiv.org/abs/2408.01653) &nbsp;
     [![Github](https://img.shields.io/badge/Github-Repo-orange?logo=github)](https://github.com/Qjizhi/MCPDepth)<br>
@@ -218,7 +218,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2023_BMVC_StereoFlowGAN_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **StereoFlowGAN: Co-training for Stereo and Flow with Unsupervised Domain Adaptation**<br>
-    Zhexiao Xiong, **Feng Qiao**, Yu Zhang, Nathan Jacobs.<br>
+    Zhexiao Xiong, **Feng Qiao**, Yu Zhang, [Nathan Jacobs](https://jacobsn.github.io/).<br>
     The British Machine Vision Conference (BMVC), 2023<br>
     [![arXiv](https://img.shields.io/badge/arXiv-2309.01842-red?logo=arxiv)](https://arxiv.org/abs/2309.01842)<br>
     <details>
