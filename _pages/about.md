@@ -9,10 +9,7 @@ redirect_from:
   - /cv.html
 ---
 
-I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Research Laboratory (MVRL)](https://mvrl.cse.wustl.edu/), advised by [Prof. Nathan Jacobs](https://jacobsn.github.io/). I have over five years of industry experience focusing on perception algorithms for autonomous driving and robotics. My research interests include computer vision, deep learning, and robotics. My current research is focusing on Content Generation and 3DV.
-
-<span style="color: red; font-weight: bold;">I am in the intern market for 2026, so feel free to reach out if you think I am a good fit for your team!</span>
-
+I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Research Laboratory (MVRL)](https://mvrl.cse.wustl.edu/), advised by [Prof. Nathan Jacobs](https://jacobsn.github.io/). I have over five years of industry experience focusing on perception algorithms for autonomous driving and robotics. My research interests include computer vision, deep learning, and robotics. My current research is focusing on Image/Video Generation and 3DV.
 
 <style>
     .news-window {
@@ -83,7 +80,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 <div class="news-window">
     <h3>News</h3>
     <ul>
-        <!-- <li>Sep 2025, our work <a href="https://github.com/Qjizhi/MCPDepth">MCPDepth</a> was accepted by WACV 2026 (Round 1, ~6% acceptance rate).</li> -->
+        <li>Mar 2026, our work <a href="https://github.com/Qjizhi/MCPDepth">MCPDepth</a> was accepted by <a href="https://sites.google.com/view/omnicv2026/home">CVPR 2026 Omnidirectional Computer Vision 6th Workshop</a>.</li>
         <li>Jun 2025, our work <a href="https://qjizhi.github.io/genstereo">GenStereo</a> was accepted by ICCV 2025.</li>
         <li>Jul 2024, one paper was accepted by ECCV 2024.</li>
         <li>Apr 2024, I will join WashU CSE as a PhD student.</li>
@@ -97,7 +94,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 <div class="filter-container">
     <div class="filter-buttons">
         <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="generation">Content Generation</button>
+        <button class="filter-btn" data-filter="generation">Image/Video Generation</button>
         <button class="filter-btn" data-filter="multimodal">Multi Modal</button>
         <button class="filter-btn" data-filter="domain">Domain Adaptation</button>
         <button class="filter-btn" data-filter="stereo">Stereo Vision</button>
@@ -107,9 +104,8 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
         <button class="filter-btn" data-filter="detection">Object Detection</button>
         <button class="filter-btn" data-filter="segmentation">Segmentation</button>
         <button class="filter-btn" data-filter="panorama">Panorama</button>
-        <button class="filter-btn" data-filter="perdestrian">Perdestrian</button>
+        <button class="filter-btn" data-filter="pedestrian">Pedestrian</button>
         <button class="filter-btn" data-filter="powerline">Power Line</button>
-
     </div>
 </div>
 
@@ -157,10 +153,30 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
     pointer-events: none;
     display: none !important;
 }
+
+/* --- Styles for Highlighted Papers --- */
+.highlight-paper td {
+    background-color: #f4f9ff; /* Light blue subtle highlight */
+    border-top: 2px solid #cce5ff;
+    border-bottom: 2px solid #cce5ff;
+}
+
+.highlight-badge {
+    display: inline-block;
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 6px;
+    border: 1px solid #ffeeba;
+    vertical-align: middle;
+}
 </style>
 
 <script src="{{ site.baseurl }}/assets/js/filter.js"></script>
-<table frame=hsides style="border-left-style: none;border-right-style: none;">
+<table frame=hsides style="border-left-style: none;border-right-style: none; border-collapse: collapse;">
 <colgroup>
 <col width="30%" />
 <col width="70%" />
@@ -169,12 +185,54 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 </thead>
 <tbody>
 
-<tr class="publication-item" data-keywords="stereo depth panorama 3d">
+<tr class="publication-item" data-keywords="generation">
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2026_arxiv_genopticalflow_resized_512x1024.png"></td>
+<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
+    **GenOpticalFlow: A Generative Approach to Unsupervised Optical Flow Learning**<br>
+    [Yixuan Luo](https://www.computerscience.uchicago.edu/people/yixuan-luo/)<sup>*</sup>, **Feng Qiao**<sup>*</sup>, [Zhexiao Xiong](https://steven-xiong.github.io/), [Yanjing Li](https://people.cs.uchicago.edu/~yanjingl/index.html), [Nathan Jacobs](https://jacobsn.github.io/)<br>
+    arXiv, 2026<br>
+    [![arXiv](https://img.shields.io/badge/arXiv-2603.22270-red?logo=arxiv)](https://arxiv.org/abs/2603.22270)<br>
+    <details>
+    <span style="font-size: 14px">Optical flow estimation is a fundamental problem in computer vision, yet the reliance on expensive ground-truth annotations limits the scalability of supervised approaches. Although unsupervised and semi-supervised methods alleviate this issue, they often suffer from unreliable supervision signals based on brightness constancy and smoothness assumptions, leading to inaccurate motion estimation in complex real-world scenarios. To overcome these limitations, we introduce \textbf{\modelname}, a novel framework that synthesizes large-scale, perfectly aligned frame--flow data pairs for supervised optical flow training without human annotations. Specifically, our method leverages a pre-trained depth estimation network to generate pseudo optical flows, which serve as conditioning inputs for a next-frame generation model trained to produce high-fidelity, pixel-aligned subsequent frames. This process enables the creation of abundant, high-quality synthetic data with precise motion correspondence. Furthermore, we propose an \textit{inconsistent pixel filtering} strategy that identifies and removes unreliable pixels in generated frames, effectively enhancing fine-tuning performance on real-world datasets. Extensive experiments on KITTI2012, KITTI2015, and Sintel demonstrate that \textbf{\modelname} achieves competitive or superior results compared to existing unsupervised and semi-supervised approaches, highlighting its potential as a scalable and annotation-free solution for optical flow learning. We will release our code upon acceptance.</span>
+    </details>
+    </td>
+</tr>
+
+<tr class="publication-item" data-keywords="generation 3d">
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2026_arxiv_physical_resized_512x1024.png"></td>
+<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
+    **PhysAlign: Physics-Coherent Image-to-Video Generation through Feature and 3D Representation Alignment**<br>
+    [Zhexiao Xiong](https://steven-xiong.github.io/), [Yizhi Song](https://song630.github.io/yizhisong.github.io/), [Liu He](https://arking1995.github.io/), [Wei Xiong](https://wxiong.me/), [Yu Yuan](https://yuanyuspace.cn/about/), **Feng Qiao**, [Nathan Jacobs](https://jacobsn.github.io/)<br>
+    arXiv, 2026<br>
+    [![arXiv](https://img.shields.io/badge/arXiv-2603.13770-red?logo=arxiv)](https://arxiv.org/abs/2603.13770)&nbsp;
+    [![Project Site](https://img.shields.io/badge/Project-Web-green)](https://physalign.github.io/PhysAlign/)<br>
+
+    <details>
+    <span style="font-size: 14px">Video Diffusion Models (VDMs) offer a promising approach for simulating dynamic scenes and environments, with broad applications in robotics and media generation. However, existing models often generate temporally incoherent content that violates basic physical intuition, significantly limiting their practical applicability. We propose PhysAlign, an efficient framework for physics-coherent image-to-video (I2V) generation that explicitly addresses this limitation. To overcome the critical scarcity of physics-annotated videos, we first construct a fully controllable synthetic data generation pipeline based on rigid-body simulation, yielding a highly-curated dataset with accurate, fine-grained physics and 3D annotations. Leveraging this data, PhysAlign constructs a unified physical latent space by coupling explicit 3D geometry constraints with a Gram-based spatio-temporal relational alignment that extracts kinematic priors from video foundation models. Extensive experiments demonstrate that PhysAlign significantly outperforms existing VDMs on tasks requiring complex physical reasoning and temporal stability, without compromising zero-shot visual quality. PhysAlign shows the potential to bridge the gap between raw visual synthesis and rigid-body kinematics, establishing a practical paradigm for genuinely physics-grounded video generation.
+</span>
+    </details>
+    </td>
+</tr>
+
+<tr class="publication-item" data-keywords="multimodal 3d generation">
+<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2026_MIR_VideoUnderstanding_resized_512x1024.png"></td>
+<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
+    **Video Understanding: From Geometry and Semantics to Unified Models**<br>
+    [Zhaochong An](https://zhaochongan.github.io/), Zirui Li, Mingqiao Ye, **Feng Qiao**, Jiaang Li, Zongwei Wu, Vishal Thengane, Chengzu Li, Lei Li, Luc Van Gool, Guolei Sun, Serge Belongie<br>
+    Machine Intelligence Research (MIR), 2026<br>
+    [![arXiv](https://img.shields.io/badge/arXiv-2603.17840-red?logo=arxiv)](https://arxiv.org/abs/2603.17840v1)<br>
+    <details>
+    <span style="font-size: 14px">Video understanding aims to enable models to perceive, reason about, and interact with the dynamic visual world. In contrast to image understanding, video understanding inherently requires modeling temporal dynamics and evolving visual context, placing stronger demands on spatiotemporal reasoning and making it a foundational problem in computer vision. In this survey, we present a structured overview of video understanding by organizing the literature into three complementary perspectives: low-level video geometry understanding, high-level semantic understanding, and unified video understanding models. We further highlight a broader shift from isolated, task-specific pipelines toward unified modeling paradigms that can be adapted to diverse downstream objectives, enabling a more systematic view of recent progress. By consolidating these perspectives, this survey provides a coherent map of the evolving video understanding landscape, summarizes key modeling trends and design principles, and outlines open challenges toward building robust, scalable, and unified video foundation models.</span>
+    </details>
+    </td>
+</tr>
+
+<tr class="publication-item highlight-paper" data-keywords="stereo depth panorama 3d">
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2026_WACV_MCPDepth2_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **MCPDepth: Panorama Depth Estimation from Multi Cylindrical Panorama by Stereo Matching**<br>
-    [**Feng Qiao**](https://qjizhi.github.io/), [Zhexiao Xiong](https://steven-xiong.github.io/), [Nathan Jacobs](https://jacobsn.github.io/), [Xinge Zhu](https://xingezhu.me/), [Yuexin Ma](https://yuexinma.me/), Qiumeng He.<br>
-    <!-- Winter Conference on Applications of Computer Vision (WACV), 2026<br> -->
+    **MCPDepth: Panorama Depth Estimation from Multi Cylindrical Panorama by Stereo Matching** <span class="highlight-badge">🌟 Representative Work</span><br>
+    **Feng Qiao**, [Zhexiao Xiong](https://steven-xiong.github.io/), [Xinge Zhu](https://xingezhu.me/), [Yuexin Ma](https://yuexinma.me/), Qiumeng He, [Nathan Jacobs](https://jacobsn.github.io/).<br>
+    CVPR Omnidirectional Computer Vision 6th Workshop, 2026<br>
     [![arXiv](https://img.shields.io/badge/arXiv-2408.01653-red?logo=arxiv)](https://arxiv.org/abs/2408.01653) &nbsp;
     [![Github](https://img.shields.io/badge/Github-Repo-orange?logo=github)](https://github.com/Qjizhi/MCPDepth)<br>
     <details>
@@ -183,11 +241,11 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
     </td>
 </tr>
 
-<tr class="publication-item" data-keywords="stereo depth generation 3d">
+<tr class="publication-item highlight-paper" data-keywords="stereo depth generation 3d">
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2025_ICCV_GenStereo_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **Towards Open-World Generation of Stereo Images and Unsupervised Matching**<br>
-    [**Feng Qiao**](https://qjizhi.github.io/), [Zhexiao Xiong](https://steven-xiong.github.io/), [Eric Xing](https://ericx003.github.io/), [Nathan Jacobs](https://jacobsn.github.io/).<br>
+    **Towards Open-World Generation of Stereo Images and Unsupervised Matching** <span class="highlight-badge">🌟 Representative Work</span><br>
+    **Feng Qiao**, [Zhexiao Xiong](https://steven-xiong.github.io/), [Eric Xing](https://ericx003.github.io/), [Nathan Jacobs](https://jacobsn.github.io/).<br>
     International Conference on Computer Vision (ICCV), 2025<br>
     [![Project Site](https://img.shields.io/badge/Project-Web-green)](https://qjizhi.github.io/genstereo) &nbsp;
     [![Spaces](https://img.shields.io/badge/Spaces-Demo-yellow?logo=huggingface)](https://huggingface.co/spaces/FQiao/GenStereo) &nbsp;
@@ -253,7 +311,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
     </td>
 </tr>
 
-<tr class="publication-item" data-keywords="detection perdestrian 3d lidar multimodal">
+<tr class="publication-item" data-keywords="detection pedestrian 3d lidar multimodal">
 <td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2022_CVPR_STCrowd_resized.png"></td>
 <td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
     **STCrowd: A Multimodal Dataset for Pedestrian Perception in Crowded Scenes**<br>
@@ -289,7 +347,7 @@ I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Re
 <div class="filter-container">
     <div class="filter-buttons">
         <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="generation">Content Generation</button>
+        <button class="filter-btn" data-filter="generation">Image/Video Generation</button>
         <button class="filter-btn" data-filter="stereo">Stereo Vision</button>
         <button class="filter-btn" data-filter="depth">Depth Estimation</button>
         <button class="filter-btn" data-filter="3d">3D Vision</button>
@@ -495,7 +553,7 @@ img[src*="shields.io"] {
 
 <div class="honors-awards">
     <ul>
-        <li>ITSC 2024 Best Paper Award</li>
+        <li>ITSC 2024 Best Paper Award.</li>
         <li>Outstanding Graduates.</li>
         <li>Outstanding scholarship.</li>
         <li>Outstanding student leaders.</li>
@@ -507,10 +565,9 @@ img[src*="shields.io"] {
 
 <div class="services">
     <h3>Conference Reviewer</h3>
-    <p>CVPR (2025, 2024, 2023), ICCV (2025), ECCV (2024), AAAI (2026, 2025), WACV (2026), ITSC (2025, 2024)</p>
+    <p>CVPR (2026-2023), ICCV (2025), ECCV (2026, 2024), AAAI (2026, 2025), WACV (2026), BMVC 2026, ITSC (2025, 2024)</p>
     
     <h3>Journal Reviewer</h3>
     <p>IEEE Transactions on Intelligent Transportation Systems (T-ITS) (2023-present), IEEE Transactions on Intelligent Vehicles (T-IV) (2024-present), Journal of Automobile Engineering (JAUTO) (2023-present), International Journal of Vehicle Design (IJVD) (2023-present)</p>
     
 </div>
-
