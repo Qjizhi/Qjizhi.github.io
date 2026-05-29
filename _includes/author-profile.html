@@ -106,6 +106,12 @@
       {% if author.googlescholar %}
         <li><a href="{{ author.googlescholar }}"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a></li>
       {% endif %}
+      {% if author.cv %}
+        <li><a href="{{ author.cv | relative_url }}"><i class="fas fa-fw fa-file-pdf"></i> CV</a></li>
+      {% endif %}
+      {% if author.huggingface %}
+        <li><a href="{{ author.huggingface }}"><span style="display:inline-block;width:1.25em;text-align:center;">🤗</span> Hugging Face</a></li>
+      {% endif %}
       {% if author.zhihu %}
       <li><a href="{{ author.zhihu }}"><i class="fab fa-fw fa-zhihu"></i> Zhihu</a></li>
       {% endif %}

@@ -9,7 +9,15 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 
-gem "github-pages", group: :jekyll_plugins
+# Upgraded to Jekyll 4 for compatibility with modern Ruby (3.2+).
+# github-pages gem locks to Jekyll 3.9.0 which fails on Ruby 3.2+ (String#tainted? removed).
+gem "jekyll", "~> 4.3"
+
+# Required for Ruby 3.4+ which removed these from stdlib
+gem "csv"
+gem "base64"
+gem "logger"
+gem "bigdecimal"
 
 # If you want to use Jekyll native, uncomment the line below.
 # To upgrade, run `bundle update`.
@@ -22,6 +30,10 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 group :jekyll_plugins do
   # gem "jekyll-archives"
   gem "jekyll-feed"
-  gem 'jekyll-sitemap'
-  gem 'hawkins'
+  gem "jekyll-sitemap"
+  gem "jekyll-paginate"
+  gem "jekyll-gist"
+  gem "jekyll-redirect-from"
+  gem "jemoji"
+  # hawkins removed — Jekyll 4 has native --livereload
 end

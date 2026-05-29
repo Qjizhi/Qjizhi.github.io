@@ -9,7 +9,7 @@
 locale                   : "en-US"
 title                    : "Feng Qiao"
 title_separator          : "-"
-name                     : &name "Feng Qiao(乔烽)"
+name                     : &name "Feng Qiao (乔烽)"
 description              : &description "personal description"
 url                      : https://qjizhi.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -78,13 +78,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "Feng Qiao(乔烽)"
+  name             : "Feng Qiao (乔烽)"
   avatar           : "avatar_square.jpg"
   bio              : ""
   location         : "St. Louis, MO"
   employer         :
   pubmed           :  #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=Gayn4OIAAAAJ&hl=en&oi=ao"
+  cv               : "/cv/"
+  huggingface      : "https://huggingface.co/FQiao"
   email            : "f.qiao@wustl.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :

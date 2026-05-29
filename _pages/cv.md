@@ -7,6 +7,8 @@ redirect_from:
   - /resume
 ---
 
-<iframe src="/files/pdf/FengQiao_CV_Dec10_2023.pdf" width="100%" height="800" frameborder="no" border="0" marginwidth="0" marginheight="0"></iframe>
+<iframe src="{{ '/files/FengQiao_CV_May_2026.pdf' | relative_url }}" width="100%" height="1000" frameborder="no" border="0" marginwidth="0" marginheight="0"></iframe>
 
-<!-- You can download a PDF copy of my CV [here](/files/pdf/FengQiao_CV_Dec10_2023.pdf). -->
+<p style="margin-top:10px;font-size:14px;color:#666;">
+Browser not showing the PDF? <a href="{{ '/files/FengQiao_CV_May_2026.pdf' | relative_url }}" target="_blank">Open it directly</a>.
+</p>

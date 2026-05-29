@@ -3,549 +3,264 @@ permalink: /
 title: "About me"
 excerpt: "About me"
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
-  - /cv.html
 ---
 
-I'm a CS PhD student at [WashU](https://washu.edu/) in the [Multimodal Vision Research Laboratory (MVRL)](https://mvrl.cse.wustl.edu/), advised by [Prof. Nathan Jacobs](https://jacobsn.github.io/). I have over five years of industry experience focusing on perception algorithms for autonomous driving and robotics. My research interests include computer vision, deep learning, and robotics. My current research is focusing on Image/Video Generation and 3DV.
+I'm a CS PhD candidate at [WashU](https://washu.edu/) in the [Multimodal Vision Research Laboratory (MVRL)](https://mvrl.cse.wustl.edu/), advised by [Prof. Nathan Jacobs](https://jacobsn.github.io/). I have over five years of industry experience focusing on perception algorithms for autonomous driving and robotics. My research interests include computer vision, deep learning, and robotics. My current research focuses on Image/Video Generation, 3D Vision (3DV), and Vision-Language-Action (VLA).
 
-<style>
-    .news-window {
-        background-color: #f8f9fa;
-        border: 1px solid #dee2e6;
-        border-radius: 8px;
-        padding: 15px;
-        margin: 20px 0;
-        max-height: 200px;
-        overflow-y: auto;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+## News
 
-    .news-window h3 {
-        margin: 0 0 15px 0;
-        color: #495057;
-        font-size: 18px;
-        font-weight: bold;
-    }
+<ul class="news-list" id="news-list">
+    <li>Mar 2026, our work <a href="https://github.com/Qjizhi/MCPDepth">MCPDepth</a> was accepted by <a href="https://sites.google.com/view/omnicv2026/home">CVPR 2026 Omnidirectional Computer Vision 6th Workshop</a>.</li>
+    <li>Jun 2025, our work <a href="https://qjizhi.github.io/genstereo">GenStereo</a> was accepted by ICCV 2025.</li>
+    <li>Jul 2024, one paper was accepted by ECCV 2024.</li>
+    <li>Apr 2024, I will join WashU CSE as a PhD student.</li>
+    <li class="news-extra">Apr 2024, our work <a href="https://arxiv.org/abs/2211.16988">QuadFormer</a> was accepted by UR 2024.</li>
+    <li class="news-extra">Nov 2023, our work <a href="https://arxiv.org/abs/2309.01842">StereoFlowGAN</a> was accepted by BMVC 2023.</li>
+</ul>
+<button class="news-toggle" id="news-toggle" type="button">Show more</button>
 
-    .news-window ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-
-    .news-window li {
-        margin-bottom: 12px;
-        padding: 8px 0;
-        border-bottom: 1px solid #e9ecef;
-        line-height: 1.4;
-    }
-
-    .news-window li:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
-    }
-
-    .news-window a {
-        color: #007bff;
-        text-decoration: none;
-    }
-
-    .news-window a:hover {
-        text-decoration: underline;
-    }
-
-    /* Custom scrollbar for webkit browsers */
-    .news-window::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    .news-window::-webkit-scrollbar-track {
-        background: #f1f1f1;
-        border-radius: 4px;
-    }
-
-    .news-window::-webkit-scrollbar-thumb {
-        background: #c1c1c1;
-        border-radius: 4px;
-    }
-
-    .news-window::-webkit-scrollbar-thumb:hover {
-        background: #a8a8a8;
-    }
-</style>
-
-<div class="news-window">
-    <h3>News</h3>
-    <ul>
-        <li>Mar 2026, our work <a href="https://github.com/Qjizhi/MCPDepth">MCPDepth</a> was accepted by <a href="https://sites.google.com/view/omnicv2026/home">CVPR 2026 Omnidirectional Computer Vision 6th Workshop</a>.</li>
-        <li>Jun 2025, our work <a href="https://qjizhi.github.io/genstereo">GenStereo</a> was accepted by ICCV 2025.</li>
-        <li>Jul 2024, one paper was accepted by ECCV 2024.</li>
-        <li>Apr 2024, I will join WashU CSE as a PhD student.</li>
-        <li>Apr 2024, our work <a href="https://arxiv.org/abs/2211.16988">QuadFormer</a> was accepted by UR 2024.</li>
-        <li>Nov 2023, our work <a href="https://arxiv.org/abs/2309.01842">StereoFlowGAN</a> was accepted by BMVC 2023.</li>
-    </ul>
-</div>
+<script>
+(function () {
+    var list = document.getElementById('news-list');
+    var btn = document.getElementById('news-toggle');
+    if (!list || !btn) return;
+    if (list.querySelectorAll('li.news-extra').length === 0) { btn.style.display = 'none'; return; }
+    btn.addEventListener('click', function () {
+        var expanded = list.classList.toggle('news-expanded');
+        btn.textContent = expanded ? 'Show less' : 'Show more';
+    });
+})();
+</script>
 
 ## Publications
 
 <div class="filter-container">
     <div class="filter-buttons">
         <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="generation">Image/Video Generation</button>
-        <button class="filter-btn" data-filter="multimodal">Multi Modal</button>
-        <button class="filter-btn" data-filter="domain">Domain Adaptation</button>
-        <button class="filter-btn" data-filter="stereo">Stereo Vision</button>
-        <button class="filter-btn" data-filter="depth">Depth Estimation</button>
+        <button class="filter-btn" data-filter="representative">🌟 Representative</button>
+        <button class="filter-btn" data-filter="generation">Generation</button>
         <button class="filter-btn" data-filter="3d">3D Vision</button>
-        <button class="filter-btn" data-filter="lidar">LiDAR</button>
-        <button class="filter-btn" data-filter="detection">Object Detection</button>
-        <button class="filter-btn" data-filter="segmentation">Segmentation</button>
-        <button class="filter-btn" data-filter="panorama">Panorama</button>
-        <button class="filter-btn" data-filter="pedestrian">Pedestrian</button>
-        <button class="filter-btn" data-filter="powerline">Power Line</button>
+        <button class="filter-btn" data-filter="perception">Perception</button>
+        <button class="filter-btn" data-filter="domain">Domain Adaptation</button>
     </div>
 </div>
 
-<style>
-.filter-container {
-    margin: 20px 0;
-    padding: 10px 0;
-}
-
-.filter-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-}
-
-.filter-btn {
-    padding: 4px 8px;
-    border: 1px solid #ddd;
-    background-color: white;
-    color: #666;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 12px;
-    transition: all 0.2s ease;
-}
-
-.filter-btn:hover {
-    background-color: #f5f5f5;
-    border-color: #999;
-}
-
-.filter-btn.active {
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
-}
-
-.publication-item, .project-item {
-    transition: opacity 0.3s ease;
-    display: table-row;
-}
-
-.publication-item.hidden, .project-item.hidden {
-    opacity: 0.3;
-    pointer-events: none;
-    display: none !important;
-}
-
-/* --- Styles for Highlighted Papers --- */
-.highlight-paper td {
-    background-color: #f4f9ff; /* Light blue subtle highlight */
-    border-top: 2px solid #cce5ff;
-    border-bottom: 2px solid #cce5ff;
-}
-
-.highlight-badge {
-    display: inline-block;
-    background-color: #fff3cd;
-    color: #856404;
-    padding: 2px 8px;
-    border-radius: 12px;
-    font-size: 11px;
-    font-weight: bold;
-    margin-left: 6px;
-    border: 1px solid #ffeeba;
-    vertical-align: middle;
-}
-</style>
-
 <script src="{{ site.baseurl }}/assets/js/filter.js"></script>
-<table frame=hsides style="border-left-style: none;border-right-style: none; border-collapse: collapse;">
+
+<table class="pub-table">
 <colgroup>
-<col width="30%" />
-<col width="70%" />
+<col class="pub-thumb" />
+<col class="pub-body" />
 </colgroup>
-<thead>
-</thead>
 <tbody>
 
+<tr class="publication-item" data-keywords="generation 3d">
+<td markdown="span"><img src="{{ site.baseurl }}/images/stereogenbench_resized_512x1024.png"></td>
+<td markdown="span">
+**StereoGenBench: A Synthetic Multi-Camera Benchmark for Stereo Generation under Controlled Baseline Regimes**<br>
+Yangzhi Cui<sup>*</sup>, **Feng Qiao**<sup>*</sup>, [Nathan Jacobs](https://jacobsn.github.io/)<br>
+arXiv, 2026
+<br><a class="paper-link" href="https://arxiv.org/abs/2605.23237">arXiv</a>
+<a class="paper-link" href="https://huggingface.co/datasets/stereo-dataset/stereo-dataset">Dataset</a>
+<br><span class="paper-tag">#Stereo</span><span class="paper-tag">#Generation</span><span class="paper-tag">#Benchmark</span>
+<span class="abstract">An Unreal-Engine synthetic benchmark with controlled binocular baselines: scene-paired multi-baseline view pairs released with intrinsics, dense metric depth, and per-frame poses for stereo generation evaluation.</span>
+</td>
+</tr>
+
 <tr class="publication-item" data-keywords="generation">
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2026_arxiv_genopticalflow_resized_512x1024.png"></td>
-<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **GenOpticalFlow: A Generative Approach to Unsupervised Optical Flow Learning**<br>
-    [Yixuan Luo](https://www.computerscience.uchicago.edu/people/yixuan-luo/)<sup>*</sup>, **Feng Qiao**<sup>*</sup>, [Zhexiao Xiong](https://steven-xiong.github.io/), [Yanjing Li](https://people.cs.uchicago.edu/~yanjingl/index.html), [Nathan Jacobs](https://jacobsn.github.io/)<br>
-    arXiv, 2026<br>
-    [![arXiv](https://img.shields.io/badge/arXiv-2603.22270-red?logo=arxiv)](https://arxiv.org/abs/2603.22270)<br>
-    <details>
-    <span style="font-size: 14px">Optical flow estimation is a fundamental problem in computer vision, yet the reliance on expensive ground-truth annotations limits the scalability of supervised approaches. Although unsupervised and semi-supervised methods alleviate this issue, they often suffer from unreliable supervision signals based on brightness constancy and smoothness assumptions, leading to inaccurate motion estimation in complex real-world scenarios. To overcome these limitations, we introduce \textbf{\modelname}, a novel framework that synthesizes large-scale, perfectly aligned frame--flow data pairs for supervised optical flow training without human annotations. Specifically, our method leverages a pre-trained depth estimation network to generate pseudo optical flows, which serve as conditioning inputs for a next-frame generation model trained to produce high-fidelity, pixel-aligned subsequent frames. This process enables the creation of abundant, high-quality synthetic data with precise motion correspondence. Furthermore, we propose an \textit{inconsistent pixel filtering} strategy that identifies and removes unreliable pixels in generated frames, effectively enhancing fine-tuning performance on real-world datasets. Extensive experiments on KITTI2012, KITTI2015, and Sintel demonstrate that \textbf{\modelname} achieves competitive or superior results compared to existing unsupervised and semi-supervised approaches, highlighting its potential as a scalable and annotation-free solution for optical flow learning. We will release our code upon acceptance.</span>
-    </details>
-    </td>
+<td markdown="span"><img src="{{ site.baseurl }}/images/2026_arxiv_genopticalflow_resized_512x1024.png"></td>
+<td markdown="span">
+**GenOpticalFlow: A Generative Approach to Unsupervised Optical Flow Learning**<br>
+[Yixuan Luo](https://www.computerscience.uchicago.edu/people/yixuan-luo/)<sup>*</sup>, **Feng Qiao**<sup>*</sup>, [Zhexiao Xiong](https://steven-xiong.github.io/), [Yanjing Li](https://people.cs.uchicago.edu/~yanjingl/index.html), [Nathan Jacobs](https://jacobsn.github.io/)<br>
+arXiv, 2026
+<br><a class="paper-link" href="https://arxiv.org/abs/2603.22270">arXiv</a>
+<br><span class="paper-tag">#Generation</span><span class="paper-tag">#OpticalFlow</span>
+<span class="abstract">Synthesizes large-scale frame–flow pairs by feeding depth-derived pseudo flows into a conditional next-frame generator, enabling supervised optical flow training without human annotations; an inconsistent-pixel filter further improves fine-tuning on real data.</span>
+</td>
 </tr>
 
 <tr class="publication-item" data-keywords="generation 3d">
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2026_arxiv_physical_resized_512x1024.png"></td>
-<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **PhysAlign: Physics-Coherent Image-to-Video Generation through Feature and 3D Representation Alignment**<br>
-    [Zhexiao Xiong](https://steven-xiong.github.io/), [Yizhi Song](https://song630.github.io/yizhisong.github.io/), [Liu He](https://arking1995.github.io/), [Wei Xiong](https://wxiong.me/), [Yu Yuan](https://yuanyuspace.cn/about/), **Feng Qiao**, [Nathan Jacobs](https://jacobsn.github.io/)<br>
-    arXiv, 2026<br>
-    [![arXiv](https://img.shields.io/badge/arXiv-2603.13770-red?logo=arxiv)](https://arxiv.org/abs/2603.13770)&nbsp;
-    [![Project Site](https://img.shields.io/badge/Project-Web-green)](https://physalign.github.io/PhysAlign/)<br>
-
-    <details>
-    <span style="font-size: 14px">Video Diffusion Models (VDMs) offer a promising approach for simulating dynamic scenes and environments, with broad applications in robotics and media generation. However, existing models often generate temporally incoherent content that violates basic physical intuition, significantly limiting their practical applicability. We propose PhysAlign, an efficient framework for physics-coherent image-to-video (I2V) generation that explicitly addresses this limitation. To overcome the critical scarcity of physics-annotated videos, we first construct a fully controllable synthetic data generation pipeline based on rigid-body simulation, yielding a highly-curated dataset with accurate, fine-grained physics and 3D annotations. Leveraging this data, PhysAlign constructs a unified physical latent space by coupling explicit 3D geometry constraints with a Gram-based spatio-temporal relational alignment that extracts kinematic priors from video foundation models. Extensive experiments demonstrate that PhysAlign significantly outperforms existing VDMs on tasks requiring complex physical reasoning and temporal stability, without compromising zero-shot visual quality. PhysAlign shows the potential to bridge the gap between raw visual synthesis and rigid-body kinematics, establishing a practical paradigm for genuinely physics-grounded video generation.
-</span>
-    </details>
-    </td>
+<td markdown="span"><img src="{{ site.baseurl }}/images/2026_arxiv_physical_resized_512x1024.png"></td>
+<td markdown="span">
+**PhysAlign: Physics-Coherent Image-to-Video Generation through Feature and 3D Representation Alignment**<br>
+[Zhexiao Xiong](https://steven-xiong.github.io/), [Yizhi Song](https://song630.github.io/yizhisong.github.io/), [Liu He](https://arking1995.github.io/), [Wei Xiong](https://wxiong.me/), [Yu Yuan](https://yuanyuspace.cn/about/), **Feng Qiao**, [Nathan Jacobs](https://jacobsn.github.io/)<br>
+arXiv, 2026
+<br><a class="paper-link" href="https://arxiv.org/abs/2603.13770">arXiv</a>
+<a class="paper-link" href="https://physalign.github.io/PhysAlign/">Project</a>
+<br><span class="paper-tag">#Generation</span><span class="paper-tag">#Video</span><span class="paper-tag">#3D</span>
+<span class="abstract">Physics-coherent I2V generation that couples explicit 3D geometry constraints with a Gram-based spatio-temporal relational alignment, trained on a controllable rigid-body simulation dataset with fine-grained physics/3D annotations.</span>
+</td>
 </tr>
 
-<tr class="publication-item" data-keywords="multimodal 3d generation">
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2026_MIR_VideoUnderstanding_resized_512x1024.png"></td>
-<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **Video Understanding: From Geometry and Semantics to Unified Models**<br>
-    [Zhaochong An](https://zhaochongan.github.io/), Zirui Li, Mingqiao Ye, **Feng Qiao**, Jiaang Li, Zongwei Wu, Vishal Thengane, Chengzu Li, Lei Li, Luc Van Gool, Guolei Sun, Serge Belongie<br>
-    Machine Intelligence Research (MIR), 2026<br>
-    [![arXiv](https://img.shields.io/badge/arXiv-2603.17840-red?logo=arxiv)](https://arxiv.org/abs/2603.17840v1)<br>
-    <details>
-    <span style="font-size: 14px">Video understanding aims to enable models to perceive, reason about, and interact with the dynamic visual world. In contrast to image understanding, video understanding inherently requires modeling temporal dynamics and evolving visual context, placing stronger demands on spatiotemporal reasoning and making it a foundational problem in computer vision. In this survey, we present a structured overview of video understanding by organizing the literature into three complementary perspectives: low-level video geometry understanding, high-level semantic understanding, and unified video understanding models. We further highlight a broader shift from isolated, task-specific pipelines toward unified modeling paradigms that can be adapted to diverse downstream objectives, enabling a more systematic view of recent progress. By consolidating these perspectives, this survey provides a coherent map of the evolving video understanding landscape, summarizes key modeling trends and design principles, and outlines open challenges toward building robust, scalable, and unified video foundation models.</span>
-    </details>
-    </td>
+<tr class="publication-item" data-keywords="generation 3d">
+<td markdown="span"><img src="{{ site.baseurl }}/images/2026_MIR_VideoUnderstanding_resized_512x1024.png"></td>
+<td markdown="span">
+**Video Understanding: From Geometry and Semantics to Unified Models**<br>
+[Zhaochong An](https://zhaochongan.github.io/), Zirui Li, Mingqiao Ye, **Feng Qiao**, Jiaang Li, Zongwei Wu, Vishal Thengane, Chengzu Li, Lei Li, Luc Van Gool, Guolei Sun, Serge Belongie<br>
+Machine Intelligence Research (MIR), 2026
+<br><a class="paper-link" href="https://arxiv.org/abs/2603.17840v1">arXiv</a>
+<br><span class="paper-tag">#Survey</span><span class="paper-tag">#Video</span>
+<span class="abstract">A survey organizing video understanding around three perspectives — low-level geometry, high-level semantics, and unified models — and mapping the shift from task-specific pipelines to unified video foundation models.</span>
+</td>
 </tr>
 
-<tr class="publication-item highlight-paper" data-keywords="stereo depth panorama 3d">
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2026_WACV_MCPDepth2_resized.png"></td>
-<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **MCPDepth: Panorama Depth Estimation from Multi Cylindrical Panorama by Stereo Matching** <span class="highlight-badge">🌟 Representative Work</span><br>
-    **Feng Qiao**, [Zhexiao Xiong](https://steven-xiong.github.io/), [Xinge Zhu](https://xingezhu.me/), [Yuexin Ma](https://yuexinma.me/), Qiumeng He, [Nathan Jacobs](https://jacobsn.github.io/).<br>
-    CVPR Omnidirectional Computer Vision 6th Workshop, 2026<br>
-    [![arXiv](https://img.shields.io/badge/arXiv-2408.01653-red?logo=arxiv)](https://arxiv.org/abs/2408.01653) &nbsp;
-    [![Github](https://img.shields.io/badge/Github-Repo-orange?logo=github)](https://github.com/Qjizhi/MCPDepth)<br>
-    <details>
-    <span style="font-size: 14px">We introduce Multi-Cylindrical Panoramic Depth Estimation (MCPDepth), a two-stage framework for omnidirectional depth estimation via stereo matching between multiple panoramas. MCPDepth uses cylindrical panoramas for initial stereo matching and then fuses the resulting depth maps across views. A circular attention module is used to overcome the distortion along the vertical axis. MCPDepth uses only standard network components, making deployment to embedded devices significantly simpler than prior approaches that require custom kernels. We theoretically and experimentally compare spherical and cylindrical projections for stereo matching, highlighting the advantages of the cylindrical projection. MCPDepth achieves state-of-the-art performance with an 18.8% reduction in mean absolute error (MAE) for depth on the outdoor, synthetic dataset Deep360 and a 19.9% reduction on the indoor, real-scene dataset 3D60. The code is attached and will be available after acceptance.</span>
-    </details>
-    </td>
+<tr class="publication-item" data-keywords="3d representative">
+<td markdown="span"><img src="{{ site.baseurl }}/images/2026_WACV_MCPDepth2_resized.png"></td>
+<td markdown="span">
+**MCPDepth: Panorama Depth Estimation from Multi Cylindrical Panorama by Stereo Matching** 🌟<br>
+**Feng Qiao**, [Zhexiao Xiong](https://steven-xiong.github.io/), [Xinge Zhu](https://xingezhu.me/), [Yuexin Ma](https://yuexinma.me/), Qiumeng He, [Nathan Jacobs](https://jacobsn.github.io/)<br>
+CVPR Omnidirectional Computer Vision Workshop, 2026
+<br><a class="paper-link" href="https://arxiv.org/abs/2408.01653">arXiv</a>
+<a class="paper-link" href="https://github.com/Qjizhi/MCPDepth">Code</a>
+<br><span class="paper-tag">#Stereo</span><span class="paper-tag">#Depth</span><span class="paper-tag">#Panorama</span>
+<span class="abstract">Two-stage panoramic depth via stereo matching across multiple cylindrical panoramas; a circular attention module handles vertical distortion. SOTA on Deep360 (−18.8% MAE) and 3D60 (−19.9% MAE) using only standard, deploy-friendly components.</span>
+</td>
 </tr>
 
-<tr class="publication-item highlight-paper" data-keywords="stereo depth generation 3d">
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2025_ICCV_GenStereo_resized.png"></td>
-<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **Towards Open-World Generation of Stereo Images and Unsupervised Matching** <span class="highlight-badge">🌟 Representative Work</span><br>
-    **Feng Qiao**, [Zhexiao Xiong](https://steven-xiong.github.io/), [Eric Xing](https://ericx003.github.io/), [Nathan Jacobs](https://jacobsn.github.io/).<br>
-    International Conference on Computer Vision (ICCV), 2025<br>
-    [![Project Site](https://img.shields.io/badge/Project-Web-green)](https://qjizhi.github.io/genstereo) &nbsp;
-    [![Spaces](https://img.shields.io/badge/Spaces-Demo-yellow?logo=huggingface)](https://huggingface.co/spaces/FQiao/GenStereo) &nbsp;
-    [![Github](https://img.shields.io/badge/Github-Repo-orange?logo=github)](https://github.com/Qjizhi/GenStereo) &nbsp;
-    [![Models](https://img.shields.io/badge/Models-checkpoints-blue?logo=huggingface)](https://huggingface.co/FQiao/GenStereo/tree/main) &nbsp;
-    [![arXiv](https://img.shields.io/badge/arXiv-2503.12720-red?logo=arxiv)](https://arxiv.org/abs/2503.12720) <br>
-    <details>
-    <span style="font-size: 14px">Stereo images are fundamental to numerous applications, including extended reality (XR) devices, autonomous driving, and robotics. Unfortunately, acquiring high-quality stereo images remains challenging due to the precise calibration requirements of dual-camera setups and the complexity of obtaining accurate, dense disparity maps. Existing stereo image generation methods typically focus on either visual quality for viewing or geometric accuracy for matching, but not both. We introduce GenStereo, a diffusion-based approach, to bridge this gap. The method includes two primary innovations (1) conditioning the diffusion process on a disparity-aware coordinate embedding and a warped input image, allowing for more precise stereo alignment than previous methods, and (2) an adaptive fusion mechanism that intelligently combines the diffusion-generated image with a warped image, improving both realism and disparity consistency. Through extensive training on 11 diverse stereo datasets, GenStereo demonstrates strong generalization ability. GenStereo achieves state-of-the-art performance in both stereo image generation and unsupervised stereo matching tasks. Our framework eliminates the need for complex hardware setups while enabling high-quality stereo image generation, making it valuable for both real-world applications and unsupervised learning scenarios.</span>
-    </details>
-    </td>
+<tr class="publication-item" data-keywords="generation 3d representative">
+<td markdown="span"><img src="{{ site.baseurl }}/images/2025_ICCV_GenStereo_resized.png"></td>
+<td markdown="span">
+**Towards Open-World Generation of Stereo Images and Unsupervised Matching** 🌟<br>
+**Feng Qiao**, [Zhexiao Xiong](https://steven-xiong.github.io/), [Eric Xing](https://ericx003.github.io/), [Nathan Jacobs](https://jacobsn.github.io/)<br>
+ICCV, 2025
+<br><a class="paper-link" href="https://arxiv.org/abs/2503.12720">arXiv</a>
+<a class="paper-link" href="https://github.com/Qjizhi/GenStereo">Code</a>
+<a class="paper-link" href="https://qjizhi.github.io/genstereo">Project</a>
+<a class="paper-link" href="https://huggingface.co/spaces/FQiao/GenStereo">Demo</a>
+<a class="paper-link" href="https://huggingface.co/FQiao/GenStereo/tree/main">Models</a>
+<br><span class="paper-tag">#Stereo</span><span class="paper-tag">#Generation</span><span class="paper-tag">#Diffusion</span>
+<span class="abstract">Diffusion-based stereo image generation conditioned on a disparity-aware coordinate embedding and a warped reference, plus an adaptive fusion that combines diffusion output with the warped image. SOTA on both stereo generation and unsupervised stereo matching.</span>
+</td>
 </tr>
 
-
-<tr class="publication-item" data-keywords="segmentation domain 3d multimodal lidar">
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2024_CVPR_SAM3DSEG_resized.png"></td>
-<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **SAM-guided Unsupervised Domain Adaptation for 3D Segmentation**<br>
-    Xidong Peng, Runnan Chen, **Feng Qiao**, Lingdong Kong, Youquan Liu, Tai Wang, [Xinge Zhu](https://xingezhu.me/), [Yuexin Ma](https://yuexinma.me/).<br>
-    European Conference on Computer Vision (ECCV), 2024<br>
-    [![arXiv](https://img.shields.io/badge/arXiv-2310.08820-red?logo=arxiv)](https://arxiv.org/abs/2310.08820v4)<br>
-    <details>
-    <span style="font-size: 14px">Inspired by the remarkable generalization capabilities exhibited by the vision foundation model, SAM, in the realm of image segmentation, our approach leverages the wealth of general knowledge embedded within SAM to unify feature representations across diverse 3D domains and further solves the 3D domain adaptation problem. Specifically, we harness the corresponding images associated with point clouds to facilitate knowledge transfer and propose an innovative hybrid feature augmentation methodology, which significantly enhances the alignment between the 3D feature space and SAM's feature space, operating at both the scene and instance levels. Our method is evaluated on many widely-recognized datasets and achieves state-of-the-art performance.</span>
-    </details>
-    </td>
-</tr>
-
-<tr class="publication-item" data-keywords="stereo domain generation">
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2023_BMVC_StereoFlowGAN_resized.png"></td>
-<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **StereoFlowGAN: Co-training for Stereo and Flow with Unsupervised Domain Adaptation**<br>
-    Zhexiao Xiong, **Feng Qiao**, Yu Zhang, Nathan Jacobs.<br>
-    The British Machine Vision Conference (BMVC), 2023<br>
-    [![arXiv](https://img.shields.io/badge/arXiv-2309.01842-red?logo=arxiv)](https://arxiv.org/abs/2309.01842)<br>
-    <details>
-    <span style="font-size: 14px">We introduce a novel training strategy for stereo matching and optical flow estimation that utilizes image-to-image translation between synthetic and real image domains. Our approach enables the training of models that excel in real image scenarios while relying solely on ground-truth information from synthetic images. To facilitate task-agnostic domain adaptation and the training of task-specific components, we introduce a bidirectional feature warping module that handles both left-right and forward-backward directions. Experimental results show competitive performance over previous domain translation-based methods, which substantiate the efficacy of our proposed framework, effectively leveraging the benefits of unsupervised domain adaptation, stereo matching, and optical flow estimation.</span>
-    </details>
-    </td>
-</tr>
-
-<tr class="publication-item" data-keywords="segmentation detection powerline">
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2023_PRCV_DUFormer_resized.png"></td>
-<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **DUFormer: Solving Power Line Detection Task in Aerial Images using Semantic Segmentation**<br>
-    Deyu An, Qiang Zhang, Jianshu Chao, Ting Li, **Feng Qiao**, Yong Deng, Zhenpeng Bian.<br>
-    Chinese Conference on Pattern Recognition and Computer Vision (PRCV), 2023<br>
-    [![arXiv](https://img.shields.io/badge/arXiv-2304.05821-red?logo=arxiv)](https://arxiv.org/abs/2304.05821)<br>
-    <details>
-    <span style="font-size: 14px">We proposed DUFormer, a CNN-Transformer hybrid algorithm, is specifically designed to detect power lines in aerial images.</span>
-    </details>
-    </td>
-</tr>
-
-<tr class="publication-item" data-keywords="segmentation domain powerline">
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2024_UR_Quadformer_resized.png"></td>
-<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-        **QuadFormer: Quadruple Transformer for Unsupervised Domain Adaptation in Power Line Segmentation of Aerial Images**<br>
-        Pratyaksh Prabhav Rao<sup>*</sup>, **Feng Qiao**<sup>*</sup>, Weide Zhang, Yiliang Xu, Yong Deng, Guangbin Wu, Qiang Zhang. <br>
-        International Conference on Ubiquitous Robots (UR), 2024<br>
-        [![IEEE Xplore](https://img.shields.io/badge/IEEE%20Xplore-10597474-blue?logo=ieee)](https://ieeexplore.ieee.org/document/10597474)<br>
-    <details>
-    <span style="font-size: 14px">we propose QuadFormer, a novel framework designed for domain adaptive semantic segmentation. The hierarchical quadruple transformer combines cross-attention and self-attention mechanisms to adapt transferable context. Based on cross-attentive and self-attentive feature representations, we introduce a pseudo label correction scheme to online denoise the pseudo labels and reduce the domain gap. Additionally, we present two datasets - ARPLSyn and ARPLReal to further advance research in unsupervised domain adaptive powerline segmentations.</span>
-    </details>
-    </td>
-</tr>
-
-<tr class="publication-item" data-keywords="detection pedestrian 3d lidar multimodal">
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2022_CVPR_STCrowd_resized.png"></td>
-<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **STCrowd: A Multimodal Dataset for Pedestrian Perception in Crowded Scenes**<br>
-    Peishan Cong, [Xinge Zhu](https://xingezhu.me/), **Feng Qiao**, Yiming Ren, Xidong Peng, Yuenan Hou, Lan Xu, Ruigang Yang, Dinesh Manocha, [Yuexin Ma](https://yuexinma.me/).<br>
-    Conference on Computer Vision and Pattern Recognition (CVPR), 2022<br>
-    [![arXiv](https://img.shields.io/badge/arXiv-2204.01026-red?logo=arxiv)](https://arxiv.org/abs/2204.01026) &nbsp;
-    [![Github](https://img.shields.io/badge/Github-Repo-orange?logo=github)](https://github.com/4dvlab/stcrowd)<br>
-    <details>
-    <span style="font-size: 14px">We introduce a large-scale multimodal dataset,STCrowd. Specifically, in STCrowd, there are a total of 219 K pedestrian instances and 20 persons per frame on average, with various levels of occlusion. We provide synchronized LiDAR point clouds and camera images as well as their corresponding 3D labels and joint IDs. STCrowd can be used for various tasks, including LiDAR-only, image-only, and sensor-fusion based pedestrian detection and tracking. We provide baselines for most of the tasks. In addition, considering the property of sparse global distribution and density-varying local distribution of pedestrians, we further propose a novel method, Density-aware Hierarchical heatmap Aggregation (DHA), to enhance pedestrian perception in crowded scenes. Extensive experiments show that our new method achieves state-of-the-art performance for pedestrian detection on various datasets.</span>
-    </details>
-    </td>
+<tr class="publication-item" data-keywords="perception domain 3d">
+<td markdown="span"><img src="{{ site.baseurl }}/images/2024_CVPR_SAM3DSEG_resized.png"></td>
+<td markdown="span">
+**SAM-guided Unsupervised Domain Adaptation for 3D Segmentation**<br>
+Xidong Peng, Runnan Chen, **Feng Qiao**, Lingdong Kong, Youquan Liu, Tai Wang, [Xinge Zhu](https://xingezhu.me/), [Yuexin Ma](https://yuexinma.me/)<br>
+ECCV, 2024
+<br><a class="paper-link" href="https://arxiv.org/abs/2310.08820v4">arXiv</a>
+<br><span class="paper-tag">#3DSeg</span><span class="paper-tag">#DomainAdapt</span><span class="paper-tag">#SAM</span>
+<span class="abstract">Leverages SAM's image-domain knowledge to align 3D point-cloud features across domains, via hybrid feature augmentation at both scene and instance levels — SOTA on standard UDA-3D-Seg benchmarks.</span>
+</td>
 </tr>
 
 <tr class="publication-item" data-keywords="generation domain">
-<td markdown="span" style="text-align: center;vertical-align: middle;border-left-style: none;border-right-style: none;"><img src="{{ site.baseurl }}/images/2021_CVPR_MetaSAug_resized.png"></td>
-<td markdown="span" style="vertical-align: middle;border-left-style: none;border-right-style: none;">
-    **MetaSAug: Meta Semantic Augmentation for Long-Tailed Visual Recognition**<br>
-    Li, Shuang, Kaixiong Gong, Chi Harold Liu, Yulin Wang, **Feng Qiao**, and Xinjing Cheng.<br>
-    Conference on Computer Vision and Pattern Recognition (CVPR), 2021<br>
-    [![arXiv](https://img.shields.io/badge/arXiv-2103.12579-red?logo=arxiv)](https://arxiv.org/abs/2103.12579) &nbsp;
-    [![Github](https://img.shields.io/badge/Github-Repo-orange?logo=github)](https://github.com/BIT-DA/MetaSAug)<br>
-    <details>
-    <span style="font-size: 14px">We propose a novel approach to learn transformed semantic directions with meta-learning automatically. In specific, the augmentation strategy during training is dynamically optimized, aiming to minimize the loss on a small balanced validation set, which is approximated via a meta update step. Extensive empirical results on CIFAR-LT-10/100, ImageNet-LT, and iNaturalist 2017/2018 validate the effectiveness of our method.</span>
-    </details>
-    </td>
+<td markdown="span"><img src="{{ site.baseurl }}/images/2023_BMVC_StereoFlowGAN_resized.png"></td>
+<td markdown="span">
+**StereoFlowGAN: Co-training for Stereo and Flow with Unsupervised Domain Adaptation**<br>
+Zhexiao Xiong, **Feng Qiao**, Yu Zhang, Nathan Jacobs<br>
+BMVC, 2023
+<br><a class="paper-link" href="https://arxiv.org/abs/2309.01842">arXiv</a>
+<br><span class="paper-tag">#Stereo</span><span class="paper-tag">#OpticalFlow</span><span class="paper-tag">#DomainAdapt</span>
+<span class="abstract">Co-trains stereo + flow with synthetic-to-real image translation and a bidirectional feature warping module — train on synthetic ground truth, transfer cleanly to real.</span>
+</td>
+</tr>
+
+<tr class="publication-item" data-keywords="perception">
+<td markdown="span"><img src="{{ site.baseurl }}/images/2023_PRCV_DUFormer_resized.png"></td>
+<td markdown="span">
+**DUFormer: Solving Power Line Detection Task in Aerial Images using Semantic Segmentation**<br>
+Deyu An, Qiang Zhang, Jianshu Chao, Ting Li, **Feng Qiao**, Yong Deng, Zhenpeng Bian<br>
+PRCV, 2023
+<br><a class="paper-link" href="https://arxiv.org/abs/2304.05821">arXiv</a>
+<br><span class="paper-tag">#Segmentation</span><span class="paper-tag">#PowerLine</span>
+<span class="abstract">A CNN–Transformer hybrid for power-line detection in aerial images via semantic segmentation.</span>
+</td>
+</tr>
+
+<tr class="publication-item" data-keywords="perception domain">
+<td markdown="span"><img src="{{ site.baseurl }}/images/2024_UR_Quadformer_resized.png"></td>
+<td markdown="span">
+**QuadFormer: Quadruple Transformer for Unsupervised Domain Adaptation in Power Line Segmentation of Aerial Images**<br>
+Pratyaksh Prabhav Rao<sup>*</sup>, **Feng Qiao**<sup>*</sup>, Weide Zhang, Yiliang Xu, Yong Deng, Guangbin Wu, Qiang Zhang<br>
+UR, 2024
+<br><a class="paper-link" href="https://ieeexplore.ieee.org/document/10597474">IEEE</a>
+<br><span class="paper-tag">#Segmentation</span><span class="paper-tag">#DomainAdapt</span><span class="paper-tag">#PowerLine</span>
+<span class="abstract">Hierarchical quadruple transformer combining cross/self attention for UDA semantic segmentation, plus an online pseudo-label correction scheme; introduces the ARPLSyn/ARPLReal datasets.</span>
+</td>
+</tr>
+
+<tr class="publication-item" data-keywords="perception 3d">
+<td markdown="span"><img src="{{ site.baseurl }}/images/2022_CVPR_STCrowd_resized.png"></td>
+<td markdown="span">
+**STCrowd: A Multimodal Dataset for Pedestrian Perception in Crowded Scenes**<br>
+Peishan Cong, [Xinge Zhu](https://xingezhu.me/), **Feng Qiao**, Yiming Ren, Xidong Peng, Yuenan Hou, Lan Xu, Ruigang Yang, Dinesh Manocha, [Yuexin Ma](https://yuexinma.me/)<br>
+CVPR, 2022
+<br><a class="paper-link" href="https://arxiv.org/abs/2204.01026">arXiv</a>
+<a class="paper-link" href="https://github.com/4dvlab/stcrowd">Code</a>
+<br><span class="paper-tag">#Pedestrian</span><span class="paper-tag">#LiDAR</span><span class="paper-tag">#Dataset</span>
+<span class="abstract">A 219K-instance multimodal pedestrian dataset (LiDAR + image + 3D labels) for crowded scenes, plus a Density-aware Hierarchical Aggregation method tailored for crowded pedestrian detection.</span>
+</td>
+</tr>
+
+<tr class="publication-item" data-keywords="generation domain">
+<td markdown="span"><img src="{{ site.baseurl }}/images/2021_CVPR_MetaSAug_resized.png"></td>
+<td markdown="span">
+**MetaSAug: Meta Semantic Augmentation for Long-Tailed Visual Recognition**<br>
+Shuang Li, Kaixiong Gong, Chi Harold Liu, Yulin Wang, **Feng Qiao**, Xinjing Cheng<br>
+CVPR, 2021
+<br><a class="paper-link" href="https://arxiv.org/abs/2103.12579">arXiv</a>
+<a class="paper-link" href="https://github.com/BIT-DA/MetaSAug">Code</a>
+<br><span class="paper-tag">#LongTail</span><span class="paper-tag">#MetaLearning</span>
+<span class="abstract">Meta-learned semantic augmentation for long-tailed recognition: the per-class augmentation strategy is dynamically optimized via a meta-update to minimize loss on a small balanced validation set.</span>
+</td>
 </tr>
 
 </tbody>
 </table>
+
+<p class="pub-footnote">🌟 Representative work &nbsp;·&nbsp; <sup>*</sup>Equal contribution</p>
 
 ## Projects
 
 <div class="filter-container">
     <div class="filter-buttons">
         <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="generation">Image/Video Generation</button>
-        <button class="filter-btn" data-filter="stereo">Stereo Vision</button>
-        <button class="filter-btn" data-filter="depth">Depth Estimation</button>
+        <button class="filter-btn" data-filter="generation">Generation</button>
         <button class="filter-btn" data-filter="3d">3D Vision</button>
-        <button class="filter-btn" data-filter="detection">Object Detection</button>
-        <button class="filter-btn" data-filter="reconstruction">3D Reconstruction</button>
-        <button class="filter-btn" data-filter="tracking">Tracking</button>
-        <button class="filter-btn" data-filter="lidar">LiDAR</button>
+        <button class="filter-btn" data-filter="detection">Detection</button>
     </div>
 </div>
 
-<style>
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
-    margin: 20px 0;
-}
-
-.project-card {
-    background: #fff;
-    border: 1px solid #e9ecef;
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.project-card:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    transform: translateY(-2px);
-}
-
-.project-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-.project-card h4 {
-    margin: 10px 0;
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-}
-
-.project-card p {
-    font-size: 14px;
-    color: #666;
-    margin: 0;
-    line-height: 1.4;
-}
-
-.project-card a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.project-card a:hover {
-    text-decoration: underline;
-}
-
-.project-card details {
-    margin-top: 10px;
-}
-
-.project-card summary {
-    cursor: pointer;
-    font-weight: normal;
-    font-size: 14px;
-    color: #007bff;
-    padding: 5px 0;
-    border-bottom: 1px solid #e9ecef;
-    margin-bottom: 10px;
-}
-
-.project-card summary:hover {
-    color: #0056b3;
-}
-
-.project-card details p {
-    margin: 10px 0;
-    font-size: 14px;
-    color: #666;
-    line-height: 1.4;
-}
-
-.project-card .btn {
-    display: inline-block;
-    margin-top: 10px;
-}
-
-.project-card img[src*="shields.io"] {
-    height: 20px;
-    width: auto;
-    max-width: 100%;
-}
-
-.project-card h4 img[src*="shields.io"] {
-    height: 18px;
-    margin-left: 8px;
-    vertical-align: middle;
-}
-
-@media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-}
-
-/* Ensure all links are consistently blue */
-.page__content a,
-.page__content p a,
-.page__content li a,
-.page__content td a,
-.publication-item a {
-    color: #007bff !important;
-    text-decoration: underline;
-}
-
-.page__content a:hover,
-.page__content p a:hover,
-.page__content li a:hover,
-.page__content td a:hover,
-.publication-item a:hover {
-    color: #0056b3 !important;
-}
-
-/* Make badges smaller */
-img[src*="shields.io"] {
-    height: 14px !important;
-    width: auto !important;
-    max-width: 100% !important;
-}
-
-/* Adjust publication title font size */
-.publication-item strong {
-    font-size: 14px !important;
-    font-weight: bold !important;
-}
-</style>
 <div class="projects-grid">
     <div class="project-item project-card" data-keywords="generation">
         <img src="{{ site.baseurl }}/images/TalkingFaceGeneration_resized.gif" alt="Talking Face Generation">
         <h4>Talking Face Generation</h4>
-        <details>
-            <summary>Click for details</summary>
-            <p>Multi stage talking face generation.</p>
-        </details>
+        <details><summary>Details</summary><p>Multi stage talking face generation.</p></details>
     </div>
 
-    <div class="project-item project-card" data-keywords="reconstruction 3d">
+    <div class="project-item project-card" data-keywords="3d">
         <img src="{{ site.baseurl }}/images/Nerf_3D_Reconstruction_resized.gif" alt="3D Reconstruction">
         <h4>3D Reconstruction of Electric Tower</h4>
-        <details>
-            <summary>Click for details</summary>
-            <p>3D reconstruction of electric tower using aerial images.</p>
-        </details>
+        <details><summary>Details</summary><p>3D reconstruction of electric tower using aerial images.</p></details>
     </div>
 
-    <div class="project-item project-card" data-keywords="stereo depth reconstruction 3d">
+    <div class="project-item project-card" data-keywords="3d">
         <img src="{{ site.baseurl }}/images/3d_recon_fisheye_stereo_resized.gif" alt="3D Reconstruction with Stereo">
         <h4>3D Reconstruction with Stereo Fisheye Cameras</h4>
-        <details>
-            <summary>Click for details</summary>
-            <p>Unsupervised depth estimation with stereo fisheye cameras.</p>
-        </details>
+        <details><summary>Details</summary><p>Unsupervised depth estimation with stereo fisheye cameras.</p></details>
     </div>
 
-    <div class="project-item project-card" data-keywords="stereo depth">
+    <div class="project-item project-card" data-keywords="3d">
         <img src="{{ site.baseurl }}/images/StereoMatching_Powerline_resized.png" alt="Stereo Depth Estimation">
         <h4>Self-supervised Depth Estimation using Stereo Cameras</h4>
-        <details>
-            <summary>Click for details</summary>
-            <p>Depth estimation using stereo cameras. Synthetic data is utilized to generate ground truth, and domain adaptation/generalization is employed to ensure excellent performance on real data as well.</p>
-        </details>
+        <details><summary>Details</summary><p>Depth estimation using stereo cameras. Synthetic data is utilized to generate ground truth, and domain adaptation/generalization is employed to ensure excellent performance on real data as well.</p></details>
     </div>
 
-    <div class="project-item project-card" data-keywords="detection tracking lidar 3d">
+    <div class="project-item project-card" data-keywords="detection 3d">
         <img src="{{ site.baseurl }}/images/Lidar_Perception_resized.png" alt="LiDAR Detection">
         <h4>3D Object Detection and Tracking using Multi-LiDARs</h4>
-        <details>
-            <summary>Click for details</summary>
-            <p>3D object detection and tracking using multi-lidars. Inputs are sequential point clouds from multi-lidars and the model can get the 3D information of objects including position, size, orientation, class, free space (also as known as drivable area), and lanes. The model is deployed on GPU with TensorRT and SoC chip, which meets the needs of real-time detection.</p>
-        </details>
+        <details><summary>Details</summary><p>3D object detection and tracking using multi-lidars. Inputs are sequential point clouds from multi-lidars and the model can get the 3D information of objects including position, size, orientation, class, free space (also as known as drivable area), and lanes. The model is deployed on GPU with TensorRT and SoC chip, which meets the needs of real-time detection.</p></details>
     </div>
 
-    <div class="project-item project-card" data-keywords="detection tracking 3d">
+    <div class="project-item project-card" data-keywords="detection 3d">
         <img src="{{ site.baseurl }}/images/mono_camera_3d_detection_resized.png" alt="Monocular 3D Detection">
-        <h4>3D Object Detection and Tracking using Monocular Camera <a href="https://github.com/Qjizhi/TensorRT-CenterNet-3D" target="_blank"><img src="https://img.shields.io/badge/Github-Repo-orange?logo=github" alt="Github Repo"></a></h4>
-        <details>
-            <summary>Click for details</summary>
-            <p>3D object detection and tracking using a monocular camera. The model takes sequential images as inputs and is capable of extracting 3D information about objects, including their position, size, orientation, and class. Deployment on a GPU with TensorRT enables the model to achieve an impressive inference speed of 50 Hz.</p>
-        </details>
+        <h4>3D Object Detection and Tracking using Monocular Camera <a href="https://github.com/Qjizhi/TensorRT-CenterNet-3D" target="_blank" class="paper-link">Code</a></h4>
+        <details><summary>Details</summary><p>3D object detection and tracking using a monocular camera. The model takes sequential images as inputs and is capable of extracting 3D information about objects, including their position, size, orientation, and class. Deployment on a GPU with TensorRT enables the model to achieve an impressive inference speed of 50 Hz.</p></details>
     </div>
 </div>
 
@@ -553,11 +268,11 @@ img[src*="shields.io"] {
 
 <div class="honors-awards">
     <ul>
-        <li>ITSC 2024 Best Paper Award.</li>
-        <li>Outstanding Graduates.</li>
-        <li>Outstanding scholarship.</li>
-        <li>Outstanding student leaders.</li>
-        <li>National Scholarship (<strong>top 1%</strong>, highest scholarship in China).</li>
+        <li>ITSC 2024 Best Paper Award</li>
+        <li>Outstanding Graduates</li>
+        <li>Outstanding scholarship</li>
+        <li>Outstanding student leaders</li>
+        <li>National Scholarship (<strong>top 1%</strong>, highest scholarship in China)</li>
     </ul>
 </div>
 
@@ -565,9 +280,8 @@ img[src*="shields.io"] {
 
 <div class="services">
     <h3>Conference Reviewer</h3>
-    <p>CVPR (2026-2023), ICCV (2025), ECCV (2026, 2024), AAAI (2026, 2025), WACV (2026), BMVC 2026, ITSC (2025, 2024)</p>
-    
+    <p>CVPR (2023–2026), ICCV (2025), ECCV (2024, 2026), NeurIPS (2026), AAAI (2025, 2026), WACV (2026), BMVC (2026), ITSC (2024, 2025)</p>
+
     <h3>Journal Reviewer</h3>
-    <p>IEEE Transactions on Intelligent Transportation Systems (T-ITS) (2023-present), IEEE Transactions on Intelligent Vehicles (T-IV) (2024-present), Journal of Automobile Engineering (JAUTO) (2023-present), International Journal of Vehicle Design (IJVD) (2023-present)</p>
-    
+    <p>TPAMI, T-ITS, T-IV, JAUTO, IJVD</p>
 </div>
