@@ -68,6 +68,7 @@
 /* ----- Publications table ----- */
 .pub-table {
   width: 100%;
+  table-layout: fixed;        /* enforce column widths so a wide <video>/img can't blow them up */
   border-collapse: collapse;
   margin: 8px 0;
   border: none;
@@ -81,7 +82,9 @@
   col.pub-thumb { width: 22%; }
   col.pub-body  { width: 78%; }
 
-  img, video { max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 4px; }
+  td:first-child { width: 22%; }   /* backup for browsers that ignore <col> widths */
+
+  img, video { max-width: 100%; width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 4px; }
 }
 
 .publication-item,
