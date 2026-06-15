@@ -4,12 +4,15 @@
 <path d="M9,21 C24,13 40,25 55,14" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" opacity="0.9"/>
 <path d="M9,33 C24,25 40,37 55,26" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" opacity="0.9"/>
 <path d="M9,45 C24,37 40,49 55,38" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" opacity="0.9"/>
-<circle cx="15.81" cy="18.60" r="4.4" fill="#d01919"/>
-<circle cx="32.00" cy="18.62" r="4.4" fill="#e52e2e"/>
-<circle cx="48.19" cy="17.54" r="4.4" fill="#e95252"/>
-<circle cx="15.81" cy="30.60" r="4.4" fill="#dda011"/>
-<circle cx="32.00" cy="30.62" r="4.4" fill="#edb32a"/>
-<circle cx="48.19" cy="29.54" r="4.4" fill="#f0c050"/>
-<circle cx="22.72" cy="42.04" r="4.4" fill="#2ebb75"/>
-<circle cx="41.28" cy="42.85" r="4.4" fill="#4bd28e"/>
+<circle cx="14.44" cy="18.91" r="3.95" fill="#d01919"/>
+<circle cx="26.42" cy="18.18" r="3.95" fill="#e42525"/>
+<circle cx="37.58" cy="18.94" r="3.95" fill="#e74040"/>
+<circle cx="49.56" cy="17.04" r="3.95" fill="#ea5b5b"/>
+<circle cx="15.81" cy="30.60" r="3.95" fill="#dda011"/>
+<circle cx="32.00" cy="30.62" r="3.95" fill="#edb32a"/>
+<circle cx="48.19" cy="29.54" r="3.95" fill="#f0c050"/>
+<circle cx="14.44" cy="42.91" r="3.95" fill="#2ebb75"/>
+<circle cx="26.42" cy="42.18" r="3.95" fill="#3bce84"/>
+<circle cx="37.58" cy="42.94" r="3.95" fill="#53d493"/>
+<circle cx="49.56" cy="41.04" r="3.95" fill="#6cdaa3"/>
 </svg>
