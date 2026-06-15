@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Track2View: 4D-Consistent Camera-Controlled Video Generation via Paired 3D Point Tracks">
+  <title>Track2View</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="static/images/favicon-tracks.svg?v=7">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32.png?v=7">
+  <link rel="apple-touch-icon" href="static/images/favicon-180.png?v=7">
+
+  <!-- Open Graph / Twitter social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://qjizhi.github.io/track2view/">
+  <meta property="og:title" content="Track2View: 4D-Consistent Camera-Controlled Video Generation via Paired 3D Point Tracks">
+  <meta property="og:description" content="Re-rendering a source video under arbitrary target camera trajectories using paired 3D point tracks.">
+  <meta property="og:image" content="https://qjizhi.github.io/track2view/static/images/og_image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Track2View: 4D-Consistent Camera-Controlled Video Generation via Paired 3D Point Tracks">
+  <meta name="twitter:description" content="Re-rendering a source video under arbitrary target camera trajectories using paired 3D point tracks.">
+  <meta name="twitter:image" content="https://qjizhi.github.io/track2view/static/images/og_image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/track2view.css?v=10">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════════ -->
+<header class="t2v-hero" id="top">
+  <video class="hero-bg-video" autoplay muted loop playsinline preload="auto">
+    <source src="static/videos/hero_bg.mp4?v=2" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <h1 class="t2v-title">
+      <span class="method-name">Track2View</span>: 4D-Consistent<br>
+      Camera-Controlled Video Generation<br>via Paired 3D Point Tracks
+    </h1>
+
+    <div class="authors">
+      <span class="author-block"><a href="https://qjizhi.github.io/" target="_blank">Feng Qiao</a><sup>1</sup>,</span>
+      <span class="author-block"><a href="https://zhaochongan.github.io/" target="_blank">Zhaochong An</a><sup>2</sup>,</span>
+      <span class="author-block"><a href="https://steven-xiong.github.io/" target="_blank">Zhexiao Xiong</a><sup>1</sup>,</span>
+      <span class="author-block"><a href="https://belongielab.org/" target="_blank">Serge Belongie</a><sup>2</sup>,</span>
+      <span class="author-block"><a href="https://jacobsn.github.io/" target="_blank">Nathan Jacobs</a><sup>1</sup></span>
+    </div>
+    <div class="affiliation">
+      <sup>1</sup>Washington University in St. Louis &nbsp;&nbsp; <sup>2</sup>University of Copenhagen
+    </div>
+
+    <div class="action-buttons">
+      <a class="btn btn-primary" href="#" target="_blank">
+        <i class="fas fa-file-pdf"></i> Paper
+      </a>
+      <a class="btn btn-outline" href="#" target="_blank">
+        <i class="fas fa-file-alt"></i> arXiv
+      </a>
+      <span class="btn btn-coming-soon">
+        <i class="fab fa-github"></i> Code (Coming Soon)
+      </span>
+      <span class="btn btn-coming-soon">
+        <img class="hf-logo" src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="🤗"> Weights (Coming Soon)
+      </span>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════════════
+     STICKY NAV
+══════════════════════════════════════════════════════ -->
+<nav class="t2v-nav">
+  <div class="t2v-nav-inner">
+    <a class="t2v-nav-brand" href="#top">Track2View</a>
+    <div class="t2v-nav-links">
+      <a href="#abstract">Abstract</a>
+      <a href="#gallery">Results</a>
+      <a href="#comparison">Comparison</a>
+      <a href="#method">Method</a>
+      <a href="#bibtex">BibTeX</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════
+     TEASER
+══════════════════════════════════════════════════════ -->
+<section class="t2v-section teaser-section" id="teaser">
+  <div class="section-inner">
+    <div class="teaser-video-wrap">
+      <video class="teaser-video" autoplay muted loop playsinline preload="auto"
+             poster="static/images/teaser_poster.jpg">
+        <source src="static/videos/teaser.mp4?v=5" type="video/mp4">
+      </video>
+    </div>
+    <p class="teaser-caption">
+      Track2View re-renders a source video along an arbitrary target camera trajectory, using
+      <strong>paired 3D point tracks</strong> as an explicit, temporally continuous link between the
+      source and the novel view.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     ABSTRACT
+══════════════════════════════════════════════════════ -->
+<section class="t2v-section" id="abstract">
+  <div class="section-inner">
+    <h2 class="section-title">Abstract</h2>
+    <div class="section-subtitle">TL;DR — Sparse 3D point tracks give video diffusion models an explicit, temporally continuous geometric link between source and target views.</div>
+    <p class="abstract-text">
+      Re-rendering an existing video from a novel camera viewpoint requires the output to follow the
+      prescribed camera trajectory while preserving the appearance and dynamics of the original scene
+      across every frame. Existing methods rely on per-frame pose embeddings, noisy point-cloud
+      renderings, or implicit learned correspondences, none of which provides an explicit, temporally
+      continuous link between source and target pixels. We propose <strong>Track2View</strong>, which
+      conditions a video diffusion transformer on paired 3D point tracks: sparse trajectories of scene
+      points projected into both the source and target camera views. These tracks provide explicit
+      spatiotemporal correspondences that are temporally continuous by construction, encoding what
+      content should appear where and when. At the core of Track2View is a <em>dual-view track
+      conditioner</em> that transfers visual context from source to target view through parameter-free
+      geometric operations and learned temporal aggregation, ensuring generalization to arbitrary camera
+      trajectories without memorizing specific motions. We further introduce a data curation pipeline
+      that extracts one-to-one track correspondences by running a 3D point tracker on temporally
+      concatenated multi-camera view pairs. On a 400-video benchmark spanning static and dynamic
+      scenes, Track2View achieves state-of-the-art results across visual quality, view synchronization,
+      and camera accuracy, reducing rotation error by <strong>30–65%</strong> and translation error by
+      <strong>61–72%</strong> relative to leading baselines.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     CAMERA-CONTROLLED VIDEO GENERATION
+══════════════════════════════════════════════════════ -->
+<section class="t2v-section alt-bg" id="gallery">
+  <div class="section-inner">
+    <h2 class="section-title">Camera-Controlled Novel View Generation</h2>
+    <p class="section-subtitle">
+      Select a target camera trajectory to see Track2View's re-rendered output.
+      The pose diagram shows the 3D camera path; the video shows the generated result.
+    </p>
+
+    <div class="cam-gallery-wrap">
+
+      <!-- Camera selector tabs + tracking toggle -->
+      <div class="cam-selector-wrap">
+        <div class="cam-controls-row">
+          <div class="cam-selector-label">Select Target Camera Trajectory</div>
+          <label class="track-toggle" title="Show 3D point tracks overlaid on both videos">
+            <input type="checkbox" id="trackToggle">
+            <span class="track-toggle-slider"></span>
+            <span class="track-toggle-label">Show Tracking Points</span>
+          </label>
+        </div>
+        <div class="cam-tabs" id="camTabs">
+          <button class="cam-tab active" data-cam="00">Cam 0 (Static)</button>
+          <button class="cam-tab" data-cam="01">Cam 1</button>
+          <button class="cam-tab" data-cam="02">Cam 2</button>
+          <button class="cam-tab" data-cam="03">Cam 3</button>
+          <button class="cam-tab" data-cam="04">Cam 4</button>
+          <button class="cam-tab" data-cam="05">Cam 5</button>
+          <button class="cam-tab" data-cam="06">Cam 6</button>
+          <button class="cam-tab" data-cam="07">Cam 7</button>
+          <button class="cam-tab" data-cam="08">Cam 8</button>
+          <button class="cam-tab" data-cam="09">Cam 9</button>
+          <button class="cam-tab" data-cam="10">Cam 10</button>
+        </div>
+      </div>
+
+      <!-- 2-col viewer -->
+      <div class="cam-viewer" id="camViewer" title="Click to pause / resume">
+
+        <!-- Left column: source (top) + camera trajectory (bottom) -->
+        <div class="cam-left">
+          <div class="cam-panel">
+            <div class="cam-panel-label">Source Video</div>
+            <div class="cam-vid-wrap">
+              <video autoplay muted loop playsinline>
+                <source src="static/videos/cybertruck/source.mp4" type="video/mp4">
+              </video>
+              <div class="cam-overlay"><i class="fas fa-play"></i></div>
+            </div>
+          </div>
+          <div class="cam-panel cam-panel-pose">
+            <div class="cam-panel-label">Camera Trajectory</div>
+            <div class="cam-pose-wrap" id="poseWrap">
+              <img id="poseImg" src="static/images/cybertruck/cam00_pose.jpg" alt="Camera trajectory visualization" draggable="false">
+              <div class="cam-zoom-controls">
+                <button class="cam-zoom-btn" id="poseZoomIn" type="button" title="Zoom in"><i class="fas fa-plus"></i></button>
+                <button class="cam-zoom-btn" id="poseZoomOut" type="button" title="Zoom out" disabled><i class="fas fa-minus"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right column: generated video fills full height of left column -->
+        <div class="cam-right">
+          <div class="cam-panel cam-panel-generated">
+            <div class="cam-panel-label">Generated Video</div>
+            <div class="cam-vid-wrap">
+              <video id="targetVideo" autoplay muted loop playsinline>
+                <source id="targetVideoSrc" src="static/videos/cybertruck/cam00.mp4" type="video/mp4">
+              </video>
+              <div class="cam-overlay"><i class="fas fa-play"></i></div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.cam-viewer -->
+
+    </div><!-- /.cam-gallery-wrap -->
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     COMPARISON WITH STATE-OF-THE-ART
+══════════════════════════════════════════════════════ -->
+<section class="t2v-section" id="comparison">
+  <div class="section-inner section-inner-wide">
+    <h2 class="section-title">Comparison with State-of-the-Art</h2>
+
+    <h3 class="subsec-title">Qualitative</h3>
+    <p class="section-subtitle">
+      Every method re-renders the same source video under the same target camera trajectory.
+      All clips play in sync — <strong>click any video to pause or resume them all together</strong>.
+    </p>
+
+    <!-- Scene selector -->
+    <div class="cmp-controls">
+      <button class="cmp-nav" id="cmpPrev" type="button" aria-label="Previous scene">&#8249;</button>
+      <select class="cmp-select" id="cmpSelect" aria-label="Select scene"></select>
+      <button class="cmp-nav" id="cmpNext" type="button" aria-label="Next scene">&#8250;</button>
+    </div>
+
+    <!-- 4-up synchronized comparison -->
+    <div class="cmp-grid" id="cmpGrid" title="Click to pause / resume all videos">
+      <div class="cmp-panel">
+        <div class="cmp-label">Source</div>
+        <div class="cmp-video-wrap">
+          <video class="cmp-video" data-role="source" muted loop playsinline preload="auto"></video>
+          <div class="cmp-overlay"><i class="fas fa-play"></i></div>
+        </div>
+      </div>
+      <div class="cmp-panel cmp-panel-ours">
+        <div class="cmp-label">Ours</div>
+        <div class="cmp-video-wrap">
+          <video class="cmp-video" data-role="ours" muted loop playsinline preload="auto"></video>
+          <div class="cmp-overlay"><i class="fas fa-play"></i></div>
+        </div>
+      </div>
+      <div class="cmp-panel">
+        <div class="cmp-label">ReCamMaster</div>
+        <div class="cmp-video-wrap">
+          <video class="cmp-video" data-role="recammaster" muted loop playsinline preload="auto"></video>
+          <div class="cmp-overlay"><i class="fas fa-play"></i></div>
+        </div>
+      </div>
+      <div class="cmp-panel">
+        <div class="cmp-label">Gen3C</div>
+        <div class="cmp-video-wrap">
+          <video class="cmp-video" data-role="gen3c" muted loop playsinline preload="auto"></video>
+          <div class="cmp-overlay"><i class="fas fa-play"></i></div>
+        </div>
+      </div>
+    </div><!-- /.cmp-grid -->
+
+    <h3 class="subsec-title">Quantitative</h3>
+    <p class="section-subtitle">
+      On the <strong>RealCam-Vid</strong> benchmark (400 videos: 200 static from RealEstate10K,
+      200 dynamic from MiraData). Each baseline is matched at its native frame length;
+      <strong>Ours</strong> highlighted, improvement vs. that baseline in green.
+    </p>
+    <div class="results-table-wrap">
+      <table class="results-table">
+        <thead>
+          <tr>
+            <th rowspan="2" class="ta-left">Method</th>
+            <th rowspan="2">Frames</th>
+            <th colspan="3">Visual Quality</th>
+            <th colspan="2">View Sync.</th>
+            <th colspan="2">Camera Accuracy</th>
+          </tr>
+          <tr>
+            <th>FID&darr;</th><th>CLIP-T&uarr;</th><th>CLIP-F&uarr;</th>
+            <th>CLIP-V&uarr;</th><th>Mat.Pix.&uarr;</th>
+            <th>RotErr&deg;&darr;</th><th>TransErr&darr;</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ta-left">Trajectory Attention<sup>*</sup></td><td>25</td>
+            <td>38.25</td><td>28.57</td><td>98.49</td><td>94.87</td><td>0.826</td><td>3.54</td><td>0.309</td>
+          </tr>
+          <tr class="ours">
+            <td class="ta-left">Track2View (Ours)</td><td>25</td>
+            <td>33.95</td><td>29.06</td><td>99.28</td><td>95.81</td><td>1.070</td>
+            <td>1.24<span class="imp">&minus;65%</span></td><td>0.085<span class="imp">&minus;72%</span></td>
+          </tr>
+          <tr class="group-start">
+            <td class="ta-left">TrajectoryCrafter<sup>*</sup></td><td>49</td>
+            <td>29.34</td><td>28.87</td><td>98.70</td><td>94.70</td><td>0.737</td><td>2.12</td><td>0.721</td>
+          </tr>
+          <tr class="ours">
+            <td class="ta-left">Track2View (Ours)</td><td>49</td>
+            <td>29.30</td><td>29.07</td><td>99.35</td><td>94.71</td><td>0.876</td>
+            <td>1.31<span class="imp">&minus;38%</span></td><td>0.280<span class="imp">&minus;61%</span></td>
+          </tr>
+          <tr class="group-start">
+            <td class="ta-left">Gen3C</td><td>81</td>
+            <td>30.32</td><td>28.55</td><td>99.04</td><td>92.47</td><td>0.644</td><td>4.21</td><td>3.715</td>
+          </tr>
+          <tr>
+            <td class="ta-left">ReCamMaster</td><td>81</td>
+            <td>33.85</td><td>28.48</td><td>99.33</td><td>92.93</td><td>0.579</td><td>2.20</td><td>2.096</td>
+          </tr>
+          <tr class="ours">
+            <td class="ta-left">Track2View (Ours)</td><td>81</td>
+            <td>26.82</td><td>28.89</td><td>99.38</td><td>93.22</td><td>0.695</td>
+            <td>1.55<span class="imp">&minus;30%</span></td><td>0.818<span class="imp">&minus;61%</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-caption">
+      <sup>*</sup> Camera accuracy evaluated in I2V mode (trajectory relative to the source frame).
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     METHOD / FRAMEWORK
+══════════════════════════════════════════════════════ -->
+<section class="t2v-section alt-bg" id="method">
+  <div class="section-inner">
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-subtitle">
+      Track2View conditions a video diffusion transformer on <strong>paired 3D point tracks</strong> —
+      sparse scene-point trajectories projected into both the source and target camera views. These tracks
+      give the model an explicit, temporally continuous link between <em>what content appears where and
+      when</em>, replacing the noisy renderings and implicit correspondences used by prior methods.
+    </p>
+
+    <!-- Framework figure -->
+    <figure class="framework-figure-wrap">
+      <img class="framework-figure" src="static/images/framework.jpg"
+           alt="Overview of the Track2View framework">
+      <figcaption class="figure-caption">
+        <strong>Overview of Track2View.</strong>&nbsp; &oplus; denotes element-wise addition;
+        PE denotes Fourier positional encoding; <em>N</em> is the number of point tracks.
+      </figcaption>
+    </figure>
+
+    <!-- Pipeline steps -->
+    <div class="pipeline-steps">
+      <div class="pipeline-step">
+        <div class="step-head">
+          <span class="step-num">1</span>
+          <i class="fas fa-diagram-project"></i>
+        </div>
+        <h3>Paired 3D Track Estimation</h3>
+        <p>
+          A 3D point tracker (SpatialTrackerV2) jointly recovers the source camera poses and sparse
+          3D point tracks from the input video. Given a user-specified target trajectory, the same
+          3D points are reprojected into the target view — producing <strong>one-to-one paired tracks</strong>,
+          split into screen-space coordinates (xy) and per-view depth (z).
+        </p>
+      </div>
+
+      <div class="pipeline-step pipeline-step-core">
+        <div class="step-head">
+          <span class="step-num">2</span>
+          <i class="fas fa-layer-group"></i>
+        </div>
+        <h3>Dual-View Track Conditioner</h3>
+        <p>
+          The core module turns sparse tracks into dense conditioning tokens. It bilinearly
+          <strong>samples</strong> source video features along each track, <strong>aggregates</strong>
+          them across time with an 8-layer transformer (filling in frames where a point is occluded),
+          then <strong>scatters</strong> them back into both views. Every geometric operation is
+          parameter-free, so camera geometry is encoded directly rather than memorized.
+        </p>
+      </div>
+
+      <div class="pipeline-step">
+        <div class="step-head">
+          <span class="step-num">3</span>
+          <i class="fas fa-wand-magic-sparkles"></i>
+        </div>
+        <h3>Track-Conditioned Diffusion</h3>
+        <p>
+          The dual-view track tokens are added to the source and noised-target video tokens and fed to a
+          pretrained DiT backbone (WAN-2.1). Only lightweight <strong>LoRA</strong> adapters and the
+          conditioner are trained — the base video prior stays frozen. The model denoises the target view
+          and decodes it into the final re-rendered video.
+        </p>
+      </div>
+    </div>
+
+    <!-- Data curation sub-block -->
+    <div class="method-subblock">
+      <h3 class="subblock-title">
+        <i class="fas fa-database"></i> Training Data Curation
+      </h3>
+      <p class="subblock-lead">
+        Training needs paired videos of the same scene from two viewpoints, with one-to-one track
+        correspondences. We temporally <strong>reverse the source camera</strong> and concatenate it
+        with the target camera — because both share an identical first frame, this forms a seamless
+        161-frame clip. Running the tracker <strong>once</strong> over this sequence yields tracks that
+        span both segments, establishing one-to-one source&nbsp;&harr;&nbsp;target correspondences
+        <em>by construction</em> — no explicit matching, and no learned parameters in the geometry path.
+      </p>
+      <figure class="curation-figure-wrap">
+        <img src="static/images/data_curation.jpg" alt="Paired track extraction pipeline">
+        <figcaption class="figure-caption">
+          <strong>Paired track extraction.</strong>&nbsp; The source clip (camera A) is reversed and
+          concatenated with the target clip (camera B), sharing a first frame. Matching colors across the
+          source (top) and target (bottom) rows mark one-to-one 3D point correspondences.
+        </figcaption>
+      </figure>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     BIBTEX
+══════════════════════════════════════════════════════ -->
+<section class="t2v-section" id="bibtex">
+  <div class="section-inner">
+    <h2 class="section-title">BibTeX</h2>
+    <div class="bibtex-box">
+      <button class="bibtex-copy" id="bibtexCopy" type="button" title="Copy to clipboard">
+        <i class="fas fa-copy"></i> Copy
+      </button>
+<pre id="bibtexContent">@article{track2view2026,
+  title   = {Track2View: 4D-Consistent Camera-Controlled Video Generation
+             via Paired 3D Point Tracks},
+  author  = {Feng Qiao and Zhaochong An and Zhexiao Xiong and Serge Belongie and Nathan Jacobs},
+  journal = {arXiv preprint},
+  year    = {2026}
+}</pre>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════ -->
+<footer class="t2v-footer">
+  <p>
+    Built with the
+    <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+    &nbsp;|&nbsp;
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>
+  </p>
+</footer>
+
+<!-- ══════════════════════════════════════════════════════
+     JS — camera tab interaction
+══════════════════════════════════════════════════════ -->
+<script>
+(function () {
+  /* ── Camera tab switching ─────────────────────────── */
+  const tabs     = document.querySelectorAll('.cam-tab');
+  const poseImg  = document.getElementById('poseImg');
+  const video    = document.getElementById('targetVideo');
+  const videoSrc = document.getElementById('targetVideoSrc');
+
+  const sourceVideo = document.querySelector('.cam-panel video');
+  const sourceSrc   = sourceVideo.querySelector('source');
+  const trackToggle = document.getElementById('trackToggle');
+  const camViewer   = document.getElementById('camViewer');
+
+  let currentCam   = '00';
+  let showTracks   = false;
+
+  function videoPath(cam, role) {
+    // role: 'source' | 'target'
+    if (showTracks) {
+      return `static/videos/cybertruck/tracks/cam${cam}_${role}.mp4`;
+    }
+    return role === 'source'
+      ? `static/videos/cybertruck/source.mp4`
+      : `static/videos/cybertruck/cam${cam}.mp4`;
+  }
+
+  function loadAndSync() {
+    const srcPath = videoPath(currentCam, 'source');
+    const tgtPath = videoPath(currentCam, 'target');
+
+    // Update sources
+    sourceSrc.src = srcPath;
+    videoSrc.src  = tgtPath;
+
+    sourceVideo.load();
+    video.load();
+
+    // Start together once ready — with a fallback so a slow/stalled
+    // canplay (e.g. decoder under load) never leaves it stuck faded.
+    let started = false;
+    function start() {
+      if (started) return;
+      started = true;
+      sourceVideo.currentTime = 0;
+      video.currentTime = 0;
+      sourceVideo.dataset.userPaused = '0';
+      video.dataset.userPaused = '0';
+      Promise.all([sourceVideo.play(), video.play()]).catch(() => {});
+      video.classList.remove('fading');
+      if (camViewer) camViewer.classList.remove('paused');
+    }
+    let readyCount = 0;
+    function onReady() { if (++readyCount === 2) start(); }
+    sourceVideo.addEventListener('canplay', onReady, { once: true });
+    video.addEventListener('canplay', onReady, { once: true });
+    setTimeout(start, 700);   // fallback
+  }
+
+  function switchCamera(cam) {
+    currentCam = cam;
+    poseImg.src = `static/images/cybertruck/cam${cam}_pose.jpg`;
+    if (typeof resetPose === 'function') resetPose();
+    video.classList.add('fading');
+    setTimeout(loadAndSync, 220);
+  }
+
+  trackToggle.addEventListener('change', () => {
+    showTracks = trackToggle.checked;
+    video.classList.add('fading');
+    setTimeout(loadAndSync, 220);
+  });
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      switchCamera(tab.dataset.cam);
+    });
+  });
+
+  /* ── Camera-trajectory zoom in / out (+ drag to pan) ── */
+  const poseWrap    = document.getElementById('poseWrap');
+  const poseZoomIn  = document.getElementById('poseZoomIn');
+  const poseZoomOut = document.getElementById('poseZoomOut');
+  let pz = 1, ppx = 0, ppy = 0;
+  function applyPose() {
+    if (!poseWrap) return;
+    poseImg.style.transform = `translate(${ppx}px, ${ppy}px) scale(${pz})`;
+    poseWrap.classList.toggle('zoomed', pz > 1.01);
+    if (poseZoomOut) poseZoomOut.disabled = pz <= 1.01;
+    if (poseZoomIn)  poseZoomIn.disabled  = pz >= 3.99;
+  }
+  function resetPose() { pz = 1; ppx = 0; ppy = 0; applyPose(); }
+  if (poseWrap && poseZoomIn && poseZoomOut) {
+    poseZoomIn.addEventListener('click', e => { e.stopPropagation(); pz = Math.min(4, pz * 1.4); applyPose(); });
+    poseZoomOut.addEventListener('click', e => { e.stopPropagation(); pz = Math.max(1, pz / 1.4); if (pz <= 1.01) { ppx = 0; ppy = 0; } applyPose(); });
+    poseImg.addEventListener('click', e => e.stopPropagation());  // never pause videos via the diagram
+    let drag = false, dx = 0, dy = 0;
+    poseImg.addEventListener('pointerdown', e => {
+      if (pz <= 1.01) return;
+      e.stopPropagation(); e.preventDefault();
+      drag = true; dx = e.clientX - ppx; dy = e.clientY - ppy;
+      poseWrap.classList.add('dragging');
+      try { poseImg.setPointerCapture(e.pointerId); } catch (_) {}
+    });
+    poseImg.addEventListener('pointermove', e => {
+      if (!drag) return;
+      ppx = e.clientX - dx; ppy = e.clientY - dy; applyPose();
+    });
+    const endDrag = () => { if (drag) { drag = false; poseWrap.classList.remove('dragging'); } };
+    poseImg.addEventListener('pointerup', endDrag);
+    poseImg.addEventListener('pointercancel', endDrag);
+    applyPose();
+  }
+
+  /* ── Click-to-pause: source + generated together ──── */
+  if (camViewer) {
+    camViewer.addEventListener('click', () => {
+      const vids = [sourceVideo, video];
+      const anyPlaying = vids.some(v => !v.paused && !v.ended);
+      if (anyPlaying) {
+        vids.forEach(v => { v.pause(); v.dataset.userPaused = '1'; });
+        camViewer.classList.add('paused');
+      } else {
+        const t = Math.min(...vids.map(v => v.currentTime || 0));
+        vids.forEach(v => { v.currentTime = t; v.dataset.userPaused = '0'; });
+        Promise.all(vids.map(v => v.play())).catch(() => {});
+        camViewer.classList.remove('paused');
+      }
+    });
+  }
+
+  /* ── Height sync: left column = right column height ─
+     Right column drives the height (generated video at
+     its natural 960/480 aspect ratio).
+     Left column is forced to the same height; the pose
+     image flexes to fill whatever space remains.        */
+  const leftCol  = document.querySelector('.cam-left');
+  const rightCol = document.querySelector('.cam-right');
+
+  function syncHeights() {
+    leftCol.style.height = '';          // reset → let right col set the reference
+    const h = rightCol.offsetHeight;
+    if (h > 0) leftCol.style.height = h + 'px';
+  }
+
+  window.addEventListener('load',   syncHeights);
+  window.addEventListener('resize', syncHeights);
+  // Also sync after fonts/images load (height may shift)
+  document.fonts.ready.then(syncHeights);
+
+  /* ── Nav scroll-spy: highlight the section in view ──── */
+  const navLinks = document.querySelectorAll('.t2v-nav-links a');
+  const linkFor  = {};
+  navLinks.forEach(a => {
+    const id = a.getAttribute('href').slice(1);
+    if (document.getElementById(id)) linkFor[id] = a;
+  });
+  if (Object.keys(linkFor).length) {
+    const spy = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(a => a.classList.remove('active'));
+          if (linkFor[e.target.id]) linkFor[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    Object.keys(linkFor).forEach(id => spy.observe(document.getElementById(id)));
+  }
+
+  /* ── BibTeX copy-to-clipboard ──────────────────────── */
+  const bibtexCopy = document.getElementById('bibtexCopy');
+  const bibtexContent = document.getElementById('bibtexContent');
+  if (bibtexCopy && bibtexContent) {
+    const showCopied = () => {
+      bibtexCopy.classList.add('copied');
+      bibtexCopy.innerHTML = '<i class="fas fa-check"></i> Copied';
+      setTimeout(() => {
+        bibtexCopy.classList.remove('copied');
+        bibtexCopy.innerHTML = '<i class="fas fa-copy"></i> Copy';
+      }, 1800);
+    };
+    const fallbackCopy = (text) => {
+      try {
+        const ta = document.createElement('textarea');
+        ta.value = text; ta.style.position = 'fixed'; ta.style.top = '-9999px';
+        document.body.appendChild(ta); ta.focus(); ta.select();
+        document.execCommand('copy'); document.body.removeChild(ta); showCopied();
+      } catch (e) {}
+    };
+    bibtexCopy.addEventListener('click', () => {
+      const text = bibtexContent.textContent.trim();
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(showCopied).catch(() => fallbackCopy(text));
+      } else {
+        fallbackCopy(text);
+      }
+    });
+  }
+
+  /* ── Method-comparison synchronized player ─────────── */
+  const cmpGrid = document.getElementById('cmpGrid');
+  if (cmpGrid) {
+    const cmpScenes = [];
+    for (let i = 1; i <= 21; i++) {
+      const idx = String(i).padStart(2, '0');
+      cmpScenes.push({ id: 'scene' + idx });
+    }
+
+    const cmpSelect = document.getElementById('cmpSelect');
+    const cmpPrev   = document.getElementById('cmpPrev');
+    const cmpNext   = document.getElementById('cmpNext');
+    const cmpVideos = Array.from(cmpGrid.querySelectorAll('.cmp-video'));
+    const fileFor   = { source: 'source.mp4', ours: 'ours.mp4',
+                        recammaster: 'recammaster.mp4', gen3c: 'gen3c.mp4' };
+    let cmpIdx = 0;
+
+    // Populate dropdown
+    cmpScenes.forEach((s, i) => {
+      const o = document.createElement('option');
+      o.value = i;
+      o.textContent = `Scene ${i + 1}`;
+      cmpSelect.appendChild(o);
+    });
+
+    function cmpLoad(i) {
+      cmpIdx = (i + cmpScenes.length) % cmpScenes.length;
+      cmpSelect.value = cmpIdx;
+      const sc = cmpScenes[cmpIdx];
+      cmpGrid.classList.remove('paused');
+
+      let started = false;
+      function startAll() {
+        if (started) return;
+        started = true;
+        cmpVideos.forEach(x => { x.currentTime = 0; x.dataset.userPaused = '0'; });
+        if (cmpInView) Promise.all(cmpVideos.map(x => x.play())).catch(() => {});
+      }
+      let ready = 0;
+      cmpVideos.forEach(v => {
+        v.src = `static/videos/comparison/${sc.id}/${fileFor[v.dataset.role]}`;
+        v.load();
+        v.addEventListener('canplay', () => { if (++ready === cmpVideos.length) startAll(); }, { once: true });
+      });
+      setTimeout(startAll, 900);   // fallback if canplay stalls under load
+    }
+
+    function cmpToggle() {
+      const anyPlaying = cmpVideos.some(v => !v.paused && !v.ended);
+      if (anyPlaying) {
+        cmpVideos.forEach(v => { v.pause(); v.dataset.userPaused = '1'; });
+        cmpGrid.classList.add('paused');
+      } else {
+        const t = Math.min(...cmpVideos.map(v => v.currentTime || 0));
+        cmpVideos.forEach(v => { v.currentTime = t; v.dataset.userPaused = '0'; });
+        Promise.all(cmpVideos.map(v => v.play())).catch(() => {});
+        cmpGrid.classList.remove('paused');
+      }
+    }
+
+    // Only autoplay the comparison grid while it is on screen
+    let cmpInView = false;
+    new IntersectionObserver(es => es.forEach(e => { cmpInView = e.isIntersecting; }),
+      { threshold: 0.15 }).observe(cmpGrid);
+
+    cmpGrid.addEventListener('click', cmpToggle);
+    cmpSelect.addEventListener('change', () => cmpLoad(parseInt(cmpSelect.value, 10)));
+    cmpPrev.addEventListener('click', () => cmpLoad(cmpIdx - 1));
+    cmpNext.addEventListener('click', () => cmpLoad(cmpIdx + 1));
+
+    cmpLoad(0);
+  }
+
+  /* ── Perf: only decode videos that are on-screen ─────
+     The page has many autoplay videos (hero bg, teaser,
+     gallery, comparison). Decoding them all at once causes
+     lag and stalls the gallery toggle. Pause off-screen
+     videos; resume on-screen ones unless manually paused. */
+  const vObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      const v = e.target;
+      if (e.isIntersecting) {
+        if (v.dataset.userPaused !== '1') v.play().catch(() => {});
+      } else if (!v.paused) {
+        v.pause();
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('video').forEach(v => vObserver.observe(v));
+})();
+</script>
+
+</body>
+</html>
