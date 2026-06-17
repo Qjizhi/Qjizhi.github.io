@@ -64,6 +64,7 @@ I'm a CS PhD candidate at [WashU](https://washu.edu/) in the [Multimodal Vision 
 **Feng Qiao**, [Zhaochong An](https://zhaochongan.github.io/), [Zhexiao Xiong](https://steven-xiong.github.io/), [Serge Belongie](https://belongielab.org/), [Nathan Jacobs](https://jacobsn.github.io/)<br>
 arXiv, 2026
 <br><a class="paper-link" href="https://arxiv.org/abs/2606.15534">arXiv</a>
+<a class="paper-link" href="https://github.com/mvrl/Track2View">Code</a>
 <a class="paper-link" href="https://qjizhi.github.io/track2view/">Project</a>
 <br><span class="paper-tag">#Generation</span><span class="paper-tag">#Video</span><span class="paper-tag">#Camera</span><span class="paper-tag">#3D</span>
 </td>
