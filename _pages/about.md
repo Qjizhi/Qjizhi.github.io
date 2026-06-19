@@ -58,7 +58,7 @@ I'm a CS PhD candidate at [WashU](https://washu.edu/) in the [Multimodal Vision 
 <tbody>
 
 <tr class="publication-item" data-keywords="generation 3d selected">
-<td markdown="span"><video class="pub-vid" src="{{ site.baseurl }}/images/track2view_grid.mp4" autoplay muted loop playsinline></video></td>
+<td markdown="span"><video class="pub-vid" src="{{ site.baseurl }}/images/track2view_grid.mp4" autoplay muted loop playsinline aria-label="Track2View teaser"></video></td>
 <td markdown="span">
 **Track2View: 4D-Consistent Camera-Controlled Video Generation via Paired 3D Point Tracks** 🌟<br>
 **Feng Qiao**, [Zhaochong An](https://zhaochongan.github.io/), [Zhexiao Xiong](https://steven-xiong.github.io/), [Serge Belongie](https://belongielab.org/), [Nathan Jacobs](https://jacobsn.github.io/)<br>
@@ -71,7 +71,7 @@ arXiv, 2026
 </tr>
 
 <tr class="publication-item" data-keywords="generation 3d">
-<td markdown="span"><img src="{{ site.baseurl }}/images/stereogenbench_resized_512x1024.png"></td>
+<td markdown="span"><img src="{{ site.baseurl }}/images/stereogenbench_resized_512x1024.png" alt="StereoGenBench"></td>
 <td markdown="span">
 **StereoGenBench: A Synthetic Multi-Camera Benchmark for Stereo Generation under Controlled Baseline Regimes**<br>
 Yangzhi Cui<sup>*</sup>, **Feng Qiao**<sup>*</sup>, [Nathan Jacobs](https://jacobsn.github.io/)<br>
@@ -83,7 +83,7 @@ arXiv, 2026
 </tr>
 
 <tr class="publication-item" data-keywords="generation">
-<td markdown="span"><img src="{{ site.baseurl }}/images/2026_arxiv_genopticalflow_resized_512x1024.png"></td>
+<td markdown="span"><img src="{{ site.baseurl }}/images/2026_arxiv_genopticalflow_resized_512x1024.png" alt="GenOpticalFlow"></td>
 <td markdown="span">
 **GenOpticalFlow: A Generative Approach to Unsupervised Optical Flow Learning**<br>
 [Yixuan Luo](https://www.computerscience.uchicago.edu/people/yixuan-luo/)<sup>*</sup>, **Feng Qiao**<sup>*</sup>, [Zhexiao Xiong](https://steven-xiong.github.io/), [Yanjing Li](https://people.cs.uchicago.edu/~yanjingl/index.html), [Nathan Jacobs](https://jacobsn.github.io/)<br>
@@ -94,7 +94,7 @@ arXiv, 2026
 </tr>
 
 <tr class="publication-item" data-keywords="generation 3d">
-<td markdown="span"><img src="{{ site.baseurl }}/images/2026_arxiv_physical_resized_512x1024.png"></td>
+<td markdown="span"><img src="{{ site.baseurl }}/images/2026_arxiv_physical_resized_512x1024.png" alt="PhysAlign"></td>
 <td markdown="span">
 **PhysAlign: Physics-Coherent Image-to-Video Generation through Feature and 3D Representation Alignment**<br>
 [Zhexiao Xiong](https://steven-xiong.github.io/), [Yizhi Song](https://song630.github.io/yizhisong.github.io/), [Liu He](https://arking1995.github.io/), [Wei Xiong](https://wxiong.me/), [Yu Yuan](https://yuanyuspace.cn/about/), **Feng Qiao**, [Nathan Jacobs](https://jacobsn.github.io/)<br>
@@ -106,7 +106,7 @@ arXiv, 2026
 </tr>
 
 <tr class="publication-item" data-keywords="generation 3d">
-<td markdown="span"><img src="{{ site.baseurl }}/images/2026_MIR_VideoUnderstanding_resized_512x1024.png"></td>
+<td markdown="span"><img src="{{ site.baseurl }}/images/2026_MIR_VideoUnderstanding_resized_512x1024.png" alt="Video Understanding survey"></td>
 <td markdown="span">
 **Video Understanding: From Geometry and Semantics to Unified Models**<br>
 [Zhaochong An](https://zhaochongan.github.io/), Zirui Li, Mingqiao Ye, **Feng Qiao**, Jiaang Li, Zongwei Wu, Vishal Thengane, Chengzu Li, Lei Li, Luc Van Gool, Guolei Sun, Serge Belongie<br>
@@ -117,7 +117,7 @@ Machine Intelligence Research (MIR), 2026
 </tr>
 
 <tr class="publication-item" data-keywords="3d selected">
-<td markdown="span"><img src="{{ site.baseurl }}/images/2026_WACV_MCPDepth2_resized.png"></td>
+<td markdown="span"><img src="{{ site.baseurl }}/images/2026_WACV_MCPDepth2_resized.png" alt="MCPDepth"></td>
 <td markdown="span">
 **MCPDepth: Panorama Depth Estimation from Multi Cylindrical Panorama by Stereo Matching** 🌟<br>
 **Feng Qiao**, [Zhexiao Xiong](https://steven-xiong.github.io/), [Xinge Zhu](https://xingezhu.me/), [Yuexin Ma](https://yuexinma.me/), Qiumeng He, [Nathan Jacobs](https://jacobsn.github.io/)<br>
@@ -129,7 +129,7 @@ CVPR Omnidirectional Computer Vision Workshop, 2026
 </tr>
 
 <tr class="publication-item" data-keywords="generation 3d selected">
-<td markdown="span"><img src="{{ site.baseurl }}/images/2025_ICCV_GenStereo_resized.png"></td>
+<td markdown="span"><img src="{{ site.baseurl }}/images/2025_ICCV_GenStereo_resized.png" alt="GenStereo"></td>
 <td markdown="span">
 **Towards Open-World Generation of Stereo Images and Unsupervised Matching** 🌟<br>
 **Feng Qiao**, [Zhexiao Xiong](https://steven-xiong.github.io/), [Eric Xing](https://ericx003.github.io/), [Nathan Jacobs](https://jacobsn.github.io/)<br>
@@ -144,7 +144,7 @@ ICCV, 2025
 </tr>
 
 <tr class="publication-item" data-keywords="perception domain 3d">
-<td markdown="span"><img src="{{ site.baseurl }}/images/2024_CVPR_SAM3DSEG_resized.png"></td>
+<td markdown="span"><img src="{{ site.baseurl }}/images/2024_CVPR_SAM3DSEG_resized.png" alt="SAM-guided 3D Segmentation"></td>
 <td markdown="span">
 **SAM-guided Unsupervised Domain Adaptation for 3D Segmentation**<br>
 Xidong Peng, Runnan Chen, **Feng Qiao**, Lingdong Kong, Youquan Liu, Tai Wang, [Xinge Zhu](https://xingezhu.me/), [Yuexin Ma](https://yuexinma.me/)<br>
@@ -155,7 +155,7 @@ ECCV, 2024
 </tr>
 
 <tr class="publication-item" data-keywords="generation domain">
-<td markdown="span"><img src="{{ site.baseurl }}/images/2023_BMVC_StereoFlowGAN_resized.png"></td>
+<td markdown="span"><img src="{{ site.baseurl }}/images/2023_BMVC_StereoFlowGAN_resized.png" alt="StereoFlowGAN"></td>
 <td markdown="span">
 **StereoFlowGAN: Co-training for Stereo and Flow with Unsupervised Domain Adaptation**<br>
 Zhexiao Xiong, **Feng Qiao**, Yu Zhang, Nathan Jacobs<br>
@@ -166,7 +166,7 @@ BMVC, 2023
 </tr>
 
 <tr class="publication-item" data-keywords="perception">
-<td markdown="span"><img src="{{ site.baseurl }}/images/2023_PRCV_DUFormer_resized.png"></td>
+<td markdown="span"><img src="{{ site.baseurl }}/images/2023_PRCV_DUFormer_resized.png" alt="DUFormer"></td>
 <td markdown="span">
 **DUFormer: Solving Power Line Detection Task in Aerial Images using Semantic Segmentation**<br>
 Deyu An, Qiang Zhang, Jianshu Chao, Ting Li, **Feng Qiao**, Yong Deng, Zhenpeng Bian<br>
@@ -177,7 +177,7 @@ PRCV, 2023
 </tr>
 
 <tr class="publication-item" data-keywords="perception domain">
-<td markdown="span"><img src="{{ site.baseurl }}/images/2024_UR_Quadformer_resized.png"></td>
+<td markdown="span"><img src="{{ site.baseurl }}/images/2024_UR_Quadformer_resized.png" alt="QuadFormer"></td>
 <td markdown="span">
 **QuadFormer: Quadruple Transformer for Unsupervised Domain Adaptation in Power Line Segmentation of Aerial Images**<br>
 Pratyaksh Prabhav Rao<sup>*</sup>, **Feng Qiao**<sup>*</sup>, Weide Zhang, Yiliang Xu, Yong Deng, Guangbin Wu, Qiang Zhang<br>
@@ -188,7 +188,7 @@ UR, 2024
 </tr>
 
 <tr class="publication-item" data-keywords="perception 3d">
-<td markdown="span"><img src="{{ site.baseurl }}/images/2022_CVPR_STCrowd_resized.png"></td>
+<td markdown="span"><img src="{{ site.baseurl }}/images/2022_CVPR_STCrowd_resized.png" alt="STCrowd"></td>
 <td markdown="span">
 **STCrowd: A Multimodal Dataset for Pedestrian Perception in Crowded Scenes**<br>
 Peishan Cong, [Xinge Zhu](https://xingezhu.me/), **Feng Qiao**, Yiming Ren, Xidong Peng, Yuenan Hou, Lan Xu, Ruigang Yang, Dinesh Manocha, [Yuexin Ma](https://yuexinma.me/)<br>
@@ -200,7 +200,7 @@ CVPR, 2022
 </tr>
 
 <tr class="publication-item" data-keywords="generation domain">
-<td markdown="span"><img src="{{ site.baseurl }}/images/2021_CVPR_MetaSAug_resized.png"></td>
+<td markdown="span"><img src="{{ site.baseurl }}/images/2021_CVPR_MetaSAug_resized.png" alt="MetaSAug"></td>
 <td markdown="span">
 **MetaSAug: Meta Semantic Augmentation for Long-Tailed Visual Recognition**<br>
 Shuang Li, Kaixiong Gong, Chi Harold Liu, Yulin Wang, **Feng Qiao**, Xinjing Cheng<br>
