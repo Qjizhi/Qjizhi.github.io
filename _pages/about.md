@@ -100,7 +100,7 @@ arXiv, 2026
 <td markdown="span">
 **GenOpticalFlow: A Generative Approach to Unsupervised Optical Flow Learning**<br>
 [Yixuan Luo](https://www.computerscience.uchicago.edu/people/yixuan-luo/)<sup>*</sup>, **Feng Qiao**<sup>*</sup>, [Zhexiao Xiong](https://steven-xiong.github.io/), [Yanjing Li](https://people.cs.uchicago.edu/~yanjingl/index.html), [Nathan Jacobs](https://jacobsn.github.io/)<br>
-WACV, 2027 (accepted)
+WACV, 2027
 <br><a class="paper-link" href="https://arxiv.org/abs/2603.22270">arXiv</a>
 <br><span class="paper-tag">#Generation</span><span class="paper-tag">#OpticalFlow</span>
 </td>
