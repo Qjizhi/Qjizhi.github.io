@@ -13,10 +13,11 @@ I'm a CS PhD candidate at [WashU](https://washu.edu/) in the [Multimodal Vision 
 ## News
 
 <ul class="news-list" id="news-list">
+    <li>Oct 2026, our work <a href="https://arxiv.org/abs/2603.22270">GenOpticalFlow</a> was accepted by WACV 2027.</li>
     <li>Mar 2026, our work <a href="https://github.com/Qjizhi/MCPDepth">MCPDepth</a> was accepted by <a href="https://sites.google.com/view/omnicv2026/home">CVPR 2026 Omnidirectional Computer Vision 6th Workshop</a>.</li>
     <li>Jun 2025, our work <a href="https://qjizhi.github.io/genstereo">GenStereo</a> was accepted by ICCV 2025.</li>
     <li>Jul 2024, one paper was accepted by ECCV 2024.</li>
-    <li>Apr 2024, I will join WashU CSE as a PhD student.</li>
+    <li class="news-extra">Apr 2024, I will join WashU CSE as a PhD student.</li>
     <li class="news-extra">Apr 2024, our work <a href="https://arxiv.org/abs/2211.16988">QuadFormer</a> was accepted by UR 2024.</li>
     <li class="news-extra">Nov 2023, our work <a href="https://arxiv.org/abs/2309.01842">StereoFlowGAN</a> was accepted by BMVC 2023.</li>
 </ul>
@@ -82,17 +83,6 @@ arXiv, 2026
 </td>
 </tr>
 
-<tr class="publication-item" data-keywords="generation">
-<td markdown="span"><img src="{{ site.baseurl }}/images/2026_arxiv_genopticalflow_resized_512x1024.png" alt="GenOpticalFlow"></td>
-<td markdown="span">
-**GenOpticalFlow: A Generative Approach to Unsupervised Optical Flow Learning**<br>
-[Yixuan Luo](https://www.computerscience.uchicago.edu/people/yixuan-luo/)<sup>*</sup>, **Feng Qiao**<sup>*</sup>, [Zhexiao Xiong](https://steven-xiong.github.io/), [Yanjing Li](https://people.cs.uchicago.edu/~yanjingl/index.html), [Nathan Jacobs](https://jacobsn.github.io/)<br>
-arXiv, 2026
-<br><a class="paper-link" href="https://arxiv.org/abs/2603.22270">arXiv</a>
-<br><span class="paper-tag">#Generation</span><span class="paper-tag">#OpticalFlow</span>
-</td>
-</tr>
-
 <tr class="publication-item" data-keywords="generation 3d">
 <td markdown="span"><img src="{{ site.baseurl }}/images/2026_arxiv_physical_resized_512x1024.png" alt="PhysAlign"></td>
 <td markdown="span">
@@ -102,6 +92,17 @@ arXiv, 2026
 <br><a class="paper-link" href="https://arxiv.org/abs/2603.13770">arXiv</a>
 <a class="paper-link" href="https://physalign.github.io/PhysAlign/">Project</a>
 <br><span class="paper-tag">#Generation</span><span class="paper-tag">#Video</span><span class="paper-tag">#3D</span>
+</td>
+</tr>
+
+<tr class="publication-item" data-keywords="generation">
+<td markdown="span"><img src="{{ site.baseurl }}/images/2026_arxiv_genopticalflow_resized_512x1024.png" alt="GenOpticalFlow"></td>
+<td markdown="span">
+**GenOpticalFlow: A Generative Approach to Unsupervised Optical Flow Learning**<br>
+[Yixuan Luo](https://www.computerscience.uchicago.edu/people/yixuan-luo/)<sup>*</sup>, **Feng Qiao**<sup>*</sup>, [Zhexiao Xiong](https://steven-xiong.github.io/), [Yanjing Li](https://people.cs.uchicago.edu/~yanjingl/index.html), [Nathan Jacobs](https://jacobsn.github.io/)<br>
+WACV, 2027 (accepted)
+<br><a class="paper-link" href="https://arxiv.org/abs/2603.22270">arXiv</a>
+<br><span class="paper-tag">#Generation</span><span class="paper-tag">#OpticalFlow</span>
 </td>
 </tr>
 
@@ -281,7 +282,7 @@ CVPR, 2021
 
 <div class="services">
     <h3>Conference Reviewer</h3>
-    <p>CVPR (2023–2026), ICCV (2025), ECCV (2024, 2026), NeurIPS (2026), AAAI (2025, 2026), WACV (2026), BMVC (2026), ITSC (2024, 2025)</p>
+    <p>CVPR, ICCV, ECCV, NeurIPS, ICLR, AAAI, WACV, BMVC, ITSC</p>
 
     <h3>Journal Reviewer</h3>
     <p>TPAMI, T-ITS, T-IV, JAUTO, IJVD</p>
