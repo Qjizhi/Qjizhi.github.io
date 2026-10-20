@@ -112,7 +112,7 @@ WACV, 2027
 **Video Understanding: From Geometry and Semantics to Unified Models**<br>
 [Zhaochong An](https://zhaochongan.github.io/), Zirui Li, Mingqiao Ye, **Feng Qiao**, Jiaang Li, Zongwei Wu, Vishal Thengane, Chengzu Li, Lei Li, Luc Van Gool, Guolei Sun, Serge Belongie<br>
 Machine Intelligence Research (MIR), 2026
-<br><a class="paper-link" href="https://arxiv.org/abs/2603.17840v1">arXiv</a>
+<br><a class="paper-link" href="https://link.springer.com/article/10.1007/s11633-026-1656-7">Paper</a>
 <br><span class="paper-tag">#Survey</span><span class="paper-tag">#Video</span>
 </td>
 </tr>
